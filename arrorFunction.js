@@ -48,7 +48,7 @@ size
 32
 // this will apear in a tablular format
 
-// Usind filter
+// Using filter
 let age = [2, 2, 5, 8, 6, 8, 2, 4 , 6]
 let fil = age.filter(age => age > 2 );
 console.log(fil) - Array(6)[5, 8, 6, 8, 4, 6]
