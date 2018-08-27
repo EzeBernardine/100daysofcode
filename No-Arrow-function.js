@@ -31,4 +31,32 @@ let obj = {
   }
 }
 
-// when you need to add a prototype method
+// when you need to add a  method using a prototype
+class car{
+  constructor(make, colour){
+    this.make = make,
+    this.colour = colour
+  }
+}
+ let bux = new car('make', 'red')
+ let keke = new car('mAKE', 'yellow')
+ car.prototype.surmarize=function(){
+   return `this car is ${this.make} make and the colour is ${this.colour}`
+ }
+  keke.surmarize() - "this car is undefined make and the colour is undefined"
+  // To avoid this
+  class car{
+    constructor(make, colour){
+      this.make = make,
+      this.colour = colour
+    }
+  }
+  let bux = new car('make', 'red')
+  let keke = new car('mAKE', 'yellow')
+  car.prototype.surmarize=function(){
+    return `this car is ${this.make} make and the colour is ${this.colour}`
+  }
+    keke.surmarize() - "this car is mAKE make and the colour is yellow"
+
+    // When you need the arguement object
+    
