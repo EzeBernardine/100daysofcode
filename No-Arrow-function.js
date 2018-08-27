@@ -23,3 +23,12 @@ let obj = {
     console.log(this.name)
   }
 }
+// or this will also  work
+let obj = {
+  name: 'May',
+  school(){
+    console.log(this.name)
+  }
+}
+
+// when you need to add a prototype method
