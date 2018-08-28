@@ -49,7 +49,7 @@ class car{
     constructor(make, colour){
       this.make = make,
       this.colour = colour
-    }
+    }   
   }
   let bux = new car('make', 'red')
   let keke = new car('mAKE', 'yellow')
@@ -59,4 +59,12 @@ class car{
     keke.surmarize() - "this car is mAKE make and the colour is yellow"
 
     // When you need the arguement object
-    
+    const obj = ()=>{ 
+      console.log(arguments)
+    }
+    obj('ada', 'Obi', 'Ebuka') - ReferenceError: arguements is not defined
+    // But this can be gotten by using the function key word
+const obj = function() { 
+  console.log(arguments)
+}
+obj('ada', 'Obi', 'Ebuka') - Arguments { 0: "ada", 1: "Obi", 2: "Ebuka", … }
