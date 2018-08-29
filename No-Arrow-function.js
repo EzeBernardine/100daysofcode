@@ -68,3 +68,4 @@ const obj = function() {
   console.log(arguments)
 }
 obj('ada', 'Obi', 'Ebuka') - Arguments { 0: "ada", 1: "Obi", 2: "Ebuka", … }
+   
