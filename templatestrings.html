@@ -36,7 +36,7 @@
   const detail = `
     <div>
       <h2>I love Immanuel</h2>
-      <p>${arr.map(each => `${each } is a good girl`)}</p>
+      <p>${arr.map(each => `<li>${each } is a good girl </li>`).join('')}</p>
     </div>
   `
   document.body.innerHTML=detail
