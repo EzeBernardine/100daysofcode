@@ -20,5 +20,25 @@
   const ages = 21;
   const descriptions = ` ${name} is ${ages} years old`
   console.log(descriptions)
+
+
+  // using template strings to create a text
+  const details = `
+    <div>
+      <h2>I love Immanuel</h2>
+      <p>This is my favourite part</p>
+    </div>
+  `
+  document.body.innerHTML=details
+
+  // You can also next it insideof it
+  const arr = ['ada', 'obi', 'ngozi']
+  const detail = `
+    <div>
+      <h2>I love Immanuel</h2>
+      <p>${arr.map(each => `${each } is a good girl`)}</p>
+    </div>
+  `
+  document.body.innerHTML=detail
 </script>
 </html>
