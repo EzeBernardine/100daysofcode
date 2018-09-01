@@ -43,9 +43,37 @@
 
   const list = ['one', 'two', 'three', 'four', 'five'];
   let  list1 = `
-      <p> ${list.map(each => `${each} is a number `) ${</br}}  </p>
+      <p> ${list.map(each => `${each} is a number `).join('')} </p> 
     `
   document.body.innerHTML = list1
    
+  //  Can pass it in as an arguement
+  function take(a, b){
+    // console.log(b)
+    return a
+  }
+  const  school = 'MOUAU'
+  const str = take`my name is Ada ${school}`;
+  // console.log(str)
+
+  function called(a,  ...values){
+    let empty 
+    let result = a.forEach((each, index) => {
+      empty += values[index] 
+    })
+    console.log(empty)
+  }
+  const myName = 'Bernardine',
+        myAge = 21
+  const word = called`I know where ${myName} leaves. Aad i know ${myName}'s ${myAge}`
+
+  // Also in
+  const obj = {
+    HTML: `hyper test markup language`,
+    CSS: `cascading styling sheet`,
+    JS: `javascript`
+  };
+  const occupation = ` ${CSS} `;
+  console.log(occupation)
 </script>
 </html>
