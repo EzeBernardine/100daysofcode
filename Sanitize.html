@@ -8,15 +8,20 @@
 </head>
 <body>
   <div class="empty">
-
   </div>
+ <!-- <img src="img/kring.png" alt="" onload="alert('i love you')"> -->
 </body>
   <script>
+// NOTE! sss-across site scripting is when a user runs javascript on a page 
+    function sanitize(strings, ){
 
+    }
     const me = `My name is Bernardine`
-    const word = `I hate to hark your account <img src='img/king.png>'`
+    const word = `I hate to hark your account <img src="img/kring.png" alt="" onload="alert('will love to hack you')">'`
     
-    const html = `${me} ${word}`
+    const html = `
+      <p>${me}</p>
+      <p>${word}</p>`
     let bod = document.querySelector('.empty')
     bod.innerHTML = html
   </script>
