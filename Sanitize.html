@@ -11,12 +11,13 @@
   </div>
 </body>
   <script>
-// NOTE! sss-across site scripting is when a user runs javascript on a page 
-    function sanitize(strings, ){
-
+// NOTE! XSS-across site scripting is when a user runs javascript on a page 
+    function sanitize(strings, ...values){
+      const dirty = strings.reduce((prev, next, i) => `${prev}${next}${values[i] || ''}`, '')
+      return DOMPurify.sanitize(dirty)
     }
     const me = `My name is Bernardine`
-    const word = `I hate to hark your account <img src="img/kring.png" alt="" onload="alert('will love to hack you')">'`
+    const word = sanitize `I hate to hark your account <img src="img/kring.png" alt="" onload="alert('will love to hack you')">'`
     
     const html = `
       <p>${me}</p>
