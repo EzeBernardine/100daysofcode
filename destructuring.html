@@ -22,6 +22,24 @@
   console.log(first, last, city)
 
 
-  const
+  const detail = {
+    first: 'Eze',
+    last: 'Bernardine',
+    facebook: {
+      account: 'Eze Bernardine May',
+      occupation: 'spftware developer',
+      password: {
+        pin: 'Why do you want to know',
+        phone: "11111111111"
+      }
+    },
+    twitter: 'Eze Bernardine May',
+    city: 'Aba',
+    country: 'Nigeria'
+  }
+  const {pin, phone} = detail.facebook.password
+  // If you want to change the name
+  const {pin:pinCode, phone:number} = detail.facebook.password
+  console.log(pinCode, number)
 </script>
 </html>
