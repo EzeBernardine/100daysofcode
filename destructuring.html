@@ -41,5 +41,22 @@
   // If you want to change the name
   const {pin:pinCode, phone:number} = detail.facebook.password
   console.log(pinCode, number)
+
+  // Setting default values
+  const settings = {
+    color: 'blue',
+    height: 4
+  }
+  const {color = 'red', height = 20, fontSize =  'bold', width = 20} = settings
+  console.log(color, fontSize)
+
+  // Setting default values and renaming the variables
+  const profile = {
+    age: 20,
+    school: 'MOUAU',
+    loved: true
+  }
+  const {loved: loving = true, age: old = 21.5, school: academics = 'Umudike', happy= true, sad: angry = 'no'} = profile
+  console.log(loving, old, academics, happy,angry )
 </script>
 </html>
