@@ -32,5 +32,18 @@
   let include = account.includes('IU')
   // This checks id the charater is containedwithin the variable
   console.log(include)
+
+  // --repeat()
+  // It takes a string and repeats it particular number times
+  let age = 'many'
+  let rep = age.repeat(20)
+  console.log(rep)
+  function pad(str, length = 10){
+    return ` ${' '.repeat(length - str.length)}${str}`
+  }
+ console.log(pad('vil' ))
+ console.log(pad('table' ))
+ console.log(pad('age' ))
+  
 </script>
 </html>
