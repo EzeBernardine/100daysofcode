@@ -10,6 +10,7 @@
   
 </body>
 <script>
+  // Destructuring objects
   const person = {
     first: 'Eze',
     last: 'Bernardine',
@@ -58,5 +59,20 @@
   }
   const {loved: loving = true, age: old = 21.5, school: academics = 'Umudike', happy= true, sad: angry = 'no'} = profile
   console.log(loving, old, academics, happy,angry )
+
+
+  // Destructuringarrays
+  const myProfile = ['May','MOUAU', 21]
+  const [name, school, age] = myProfile
+  console.log(name, school, age)
+
+  const figure = 'jugging,laughing,winner,intellingent'
+  const [hobby, like, position, IQ] = figure.split(',')
+  console.log(hobby, like, position, IQ)
+
+  // applying the rest operator
+  const friends = ['Izekiel', 'Dan', 'George', 'Wisdom', 'Chidera']
+  const [bestFriend, niceFriend, ...others] = friends
+  console.log(niceFriend, others)
 </script>
 </html>
