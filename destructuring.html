@@ -71,8 +71,15 @@
   console.log(hobby, like, position, IQ)
 
   // applying the rest operator
-  const friends = ['Izekiel', 'Dan', 'George', 'Wisdom', 'Chidera']
+  const friends = ['Micheal', 'Dan', 'Jude', 'Wisdom', 'Chidera']
   const [bestFriend, niceFriend, ...others] = friends
   console.log(niceFriend, others)
+
+
+  // Swapping variables with destructuring
+  let sister = 'Matilda';
+  let sis = 'Jane';
+  [sister, sis] = [sis, sister]
+  console.log(sister, sis)
 </script>
 </html>
