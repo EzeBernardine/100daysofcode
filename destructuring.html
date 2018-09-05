@@ -81,5 +81,21 @@
   let sis = 'Jane';
   [sister, sis] = [sis, sister]
   console.log(sister, sis)
+
+  // Destructuring function, and named defaults
+  function add({a, c = 23, b = 20}) {
+    return a * b + c
+  }
+  const sum = add({  a: 1, b: 5})
+  // But if you donot pass any object arguement
+  //  sum = add()
+    // (destructured parameter) is undefined
+  console.log(sum)
+  // To avoid this, assign a default  destructured obj
+  function adding({a = 2, c = 23, b = 20} = {}) {
+    return a * b + c
+  }
+  const suming= adding()
+  console.log(suming)
 </script>
 </html>
