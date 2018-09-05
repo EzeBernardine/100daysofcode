@@ -20,5 +20,20 @@
     console.log(name)
   }
   // This gives the elements of the arrays
+
+//Also
+  for(const name in names){
+    if(names[name] === 'Ugo'){
+      break
+    }
+    console.log(name)
+  }
+  for(const name of names){
+    if(name === 'Ugo'){
+      continue
+    }
+    console.log(name) 
+  }
+  // NOTE; the major difference in both is that for-of ignores any prototype values added, but for-in displays all added prototype value
 </script>
 </html>
