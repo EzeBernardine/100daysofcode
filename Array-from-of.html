@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="people">
+    <p>Emeka</p>
+    <p>jude</p>
+    <p>lilian</p>
+  </div>
+</body>
+  <script>
+    const people =Array.from (document.querySelectorAll('.people p')).map(each => each.innerHTML)
+            //------ 0: "Emeka"1: "jude"2: "lilian"
+
+//Array,from takes a second argument with the ability to map through an array
+    const people =Array.from (document.querySelectorAll('.people p'), each => each.innerHTML)
+    console.log(people)
+            //------ 0: "Emeka"1: "jude"2: "lilian"
+  </script>
+</html>

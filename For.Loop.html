@@ -35,5 +35,30 @@
     console.log(name) 
   }
   // NOTE; the major difference in both is that for-of ignores any prototype values added, but for-in displays all added prototype value
+
+  // In the case of  objects
+  const family = {
+    brother: 'Callixtus',
+    sister: 'Matilda',
+    cousin: 'Blessing'
+  }
+  // You cannot iterate  with for-of ihrough an object. But With for-in, its possible
+  for(const index in family){
+    console.log(index)
+    //-------- brother sister cousin
+  }
+
+  for(const index of family){
+    console.log(index)
+    // -------- family is not iterable
+  }
+
+  // but if 
+  for(const lead of Object.keys(family)){
+    console.log(lead)
+    //---------- brother sister cousin
+  }
+    // this means we are iterating over the keys
+
 </script>
 </html>
