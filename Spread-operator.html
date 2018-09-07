@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  const names = 'Eze Bernardine May'
+  const spreads = [...names]
+  console.log(spreads)
+    // 0: "E"​ 1: "z"​ 2: "e"​ 3: " "​   4: "B"​ 5: "e"​ 6: "r"​ 7: "n"​ 8: "a"​  9: "r"​ 10: "d" ​11: "i" ​12: "n" ​13: "e" ​14: " " ​15: "M" ​16: "a" ​17: "y"​length: 18
+  
+  const month = ['jan', 'feb', 'match']
+  const day = ['mon', 'tues', 'wed']
+  const all = [...month, 'hi', ...day]
+  const copy = all
+    copy[0] = 'january'
+  console.log(copy)
+        // Array(7) [ "january", "feb", "match", "hi", "mon", "tues", "wed" ]
+  console.log(all)
+        // Array(7) [ "january", "feb", "match", "hi", "mon", "tues", "wed" ]
+// Note: This over wrote the inital array and this is b/c copy is abtual a reference of all. To avoid this
+
+  const months = ['jan', 'feb', 'match']
+  const days = ['mon', 'tues', 'wed']
+  const both = [...month, 'hi', ...day]
+  const join = [...both]
+  // Note: Here, yu created a new copy of the array
+  both[0] = 'JANUARY'
+  console.log(both)
+      // Array(7) [ "JANUARY", "feb", "match", "hi", "mon", "tues", "wed" ]
+  console.log(join)
+      // Array(7) [ "jan", "feb", "match", "hi", "mon", "tues", "wed" ]
+</script>
+</html>
