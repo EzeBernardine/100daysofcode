@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  const detail = [
+   { 
+      name: 'Bernardine', 
+      nickname: 'Bernar', 
+      friend: 'Immanuel',
+      school: 'MOUAU', 
+      lecturer: "ILO", 
+      lecture: 'Strngth of material',
+      age: 21,
+      likes: 'Movies',
+   },{
+      name: 'Immanuel', 
+      nickname: 'Grace', 
+      friend: 'Bernardine',
+      school: 'Heave', 
+      lecturer: "Omini", 
+      lecture: 'Praise',
+      age: 'infinity',
+      likes: 'Bernar',
+   },{
+      name: 'unknown', 
+      nickname: 'love', 
+      friend: 'Bernar',
+      school: 'unknown', 
+      lecturer: "Omini", 
+      lecture: 'love',
+      age: 25,
+      likes: 'Bernar',
+   }
+  ]
+  const choice = 'Immanuel'
+  const search = detail.find(one => one.name === choice)
+  console.log(search)
+      // age: "infinity"​
+      // friend: "Bernardine"
+      // lecture: "Praise"​
+      // lecturer: "Omini"​
+      // likes: "Bernar"​
+      // name: "Immanuel"​
+      // nickname: "Grace"​
+      // school: "Heave"
+
+  const index = detail.findIndex(one => one.name === choice)
+  console.log(index)
+      // 1
+</script>
+</html>
