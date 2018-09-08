@@ -1,0 +1,10 @@
+.spread span:hover {
+  color: rgb(72, 22, 7);
+  font-size: 40px;transform: translateY(-5px) rotate(10deg) scale(2)
+}
+.spread span{
+  color: #b13722;
+  display: inline-block;
+  transition: transform 0.2s;
+  margin: 3%
+}

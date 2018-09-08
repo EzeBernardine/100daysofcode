@@ -4,16 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="day17.css">
   <title>Document</title>
 </head>
 <body>
   <h2 class="spread" style="font-size: 40px">SPREADS!</h2>
 </body>
 <script>
+  // Using spread, map and DOM, transform the content of the h2 tag above, and return it in span tags.
   const get = document.querySelector('.spread'),
         content = get.textContent,
         spread = [...content]
-        .map(each => ` <span>${each}</span>`)
+        .map(each => `<span>${each}</span>`)
         .join('');
   get.innerHTML = spread;
   console.log(content)
