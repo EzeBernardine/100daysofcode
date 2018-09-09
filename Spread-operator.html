@@ -36,5 +36,27 @@
       // Array(7) [ "JANUARY", "feb", "match", "hi", "mon", "tues", "wed" ]
   console.log(join)
       // Array(7) [ "jan", "feb", "match", "hi", "mon", "tues", "wed" ]
+
+  // To get a single concatenated array
+  const arr = ['come', 'go', 'eat']
+  const arr2 = ['don\'', 'never']
+  arr.push(arr2)
+  console.log(arr)
+    // Array(4) [ "come", "go", "eat", (2) […] ]
+    // this gives you a nested array. But to get a single array,
+  const arr3 = ['come', 'go', 'eat']
+  const arr4 = ['don\'', 'never']
+  arr3.push(...arr4)
+  console.log(arr3)
+    // Array(5) [ "come", "go", "eat", "don'", "never" ]
+
+
+    // Spreadin a function
+    const data = ['May', 'Eze']
+    function spread (first, second) {
+      console.log(`Hello ${first} ${second}`)
+    }
+    spread(...data)
+      // Hello May Eze
 </script>
 </html>
