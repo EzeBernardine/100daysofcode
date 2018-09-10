@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+
+  const key = 'Name',
+        type = '#ffffff'
+  const obj = {
+    [key]: type,
+  }
+  console.log(obj)
+// Object { Name: "#ffffff" }
+
+  const siblings =['Callixtus', 'Adaure', 'Ugo']
+  const rank =  ['King', 'Queen', 'Princess']
+  const merge = {
+    [rank.shift()]:siblings.shift(),
+    [rank.shift()]:siblings.shift(),
+    [rank.shift()]:siblings.shift(),
+  }
+  console.log(merge)
+// King: "Callixtus"
+// Princess: "Ugo"
+// Queen: "Adaure"
+
+</script>
+</html>

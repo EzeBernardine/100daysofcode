@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  function rest(res, ...others) {
+    return others.map(each => res + (res * each))
+  }
+const result = rest(0.5, 4, 12, 14, 32, 5, 7);
+console.log(result)
+    // Array(6) [ 2.5, 6.5, 7.5, 16.5, 3, 4 ]
+
+  // Rest in destructuring
+  const detail = ['May', 'Obi', 'Micheal', 'Immanuel']
+  const [mine, him, ...others] = detail
+  console.log(mine, him, others)
+    // May Obi
+    // Array [ "Micheal", "Immanuel" ]
+</script>
+</html>
