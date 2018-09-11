@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+       <!-- Internal stylr sheet is a collection of styles that is part of the html's code
+        It appears between <script></script>
+        It appaers in the head section
+    NOTE: script tag ia HTML code, not css. It just tells the wed browser that its content        is css, not html
+     
+
+
+      
+        LINKING CSS
+        1. Via css
+          <script>
+            @import url(css/styles.css)
+          </script>
+        2. Via html: 5;
+          <link rel="stylesheet" href="css/styles.css">
+        3. Formulti css
+          <style type="text/css">
+            @import url(css/styles.css);
+            @import url(css/form.css);
+          </style>
+       -->
+  <style>
+
+      p:first-letter{
+        font-size: 30px;
+        color: blue
+      }
+      h2::before{
+        content: '*';
+      }
+      ::-moz-selection{
+        background-color: rgb(165, 30, 210)
+      }
+      h3:-moz-focus{
+        color: brown
+      }
+  </style>
+</head>
+<body>
+  <p>The name of my teacher is Priscilia. She is a nice woman </p>
+  <h2>You  are pretty</h2>
+  <h3>This a h3 tag</h3>
+</body>
+</html>
