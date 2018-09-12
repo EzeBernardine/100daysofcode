@@ -5,14 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <script>
-
-  </script>
+  <style>
+    #main p{
+      color: blue
+    }
+    p{
+      color: aqua
+    }
+    .sub{
+      color: blueviolet
+    }
+    .main1 p{
+      color: blue
+    }
+    p{
+      color: #3cff00
+    }
+    #sub1{
+      color: rgb(226, 43, 43)
+    }
+  </style>
 </head>
 <body>
-  <div>
-    <p>This is a paragraph</p>
-    <h2>Hello world</h2>
+  <div id="main">
+    <p class="sub">This is a paragraph1</p>
+  </div>
+  <div class="main1">
+    <p id="sub1">This is a paragraph2</p>
   </div>
 </body>
+<!-- This is a paragraph1 - blue
+
+This is a paragraph2 - red -->
+
 </html>
