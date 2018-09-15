@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    article div:nth-child(1),article li:nth-child(5){
+      color: darkorange;
+      font-size: 20px
+    }
+    .list li:nth-child(even){
+      background-color: burlywood
+    }
+    .list li:nth-child(odd){
+      background-color: darkturquoise
+    }
+    #h3 h3:nth-child(2n + 1){
+      background-color: rgb(0, 139, 23)
+    }
+    div:nth-of-type(2){
+      color: rgb(139, 235, 4)
+    }
+  </style>
+</head>
+<body>
+   <article>
+    <div>I am different</div>
+    <li>We are from article tag</li>
+    <li>We are from article tag</li>
+    <li>We are from article tag</li>
+    <li>We are from article tag</li>
+    <li>We are from article tag</li>
+    <li>We are from article tag</li>
+  </article>
+  <div class="list">
+    <li>We are the list tags</li>
+    <li>We are the list tags</li>
+    <li>We are the list tags</li>
+    <li>We are the list tags</li>
+    <li>We are the list tags</li>
+    <li>We are the list tags</li>
+  </div>
+  <div id="h3">
+    <h3>We are in the h3 tags</h3>
+    <h3>We are in the h3 tags</h3>
+    <h3>We are in the h3 tags</h3>
+    <h3>We are in the h3 tags</h3>
+    <h3>We are in the h3 tags</h3>
+    <h3>We are in the h3 tags</h3>
+  </div>
+</body>
+</html>
