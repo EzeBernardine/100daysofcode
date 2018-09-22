@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div:first-child{
+      border: 1px solid greenyellow;
+      background-color: green;
+      width: 100px;
+      border-radius: 50px;
+      text-align: center;
+      margin: 200px;
+      padding: 40px 0;
+      color: rgb(193, 240, 201);
+      transition: 1s;
+    }
+    div:first-child:hover{
+      background-color: rgb(3, 163, 3);
+      transform: rotate(360deg)
+    }
+    div:nth-child(2) {
+      border: 1px solid rgb(67, 68, 1);
+      background-color: rgb(128, 4, 0);
+      width: 100px;
+      border-radius: 50px;
+      text-align: center;
+      margin: 0 200px;
+      padding: 40px 0;
+      color: rgb(193, 240, 201);
+      transition: background 1s, transform 0.8s 1s ease-in;
+    }
+    div:nth-child(2):hover{
+      background-color: rgb(187, 22, 4);
+      transform: rotate(360deg)
+    }
+  </style>
+</head>
+<body>
+  <div>GOD</div>
+  <div>LOVE</div>
+</body>
+</html>
