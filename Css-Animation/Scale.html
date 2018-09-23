@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+        div:nth-child(1) {
+      height: 200px;
+      width: 200px;
+      background-color: #dbf080;
+      margin: 50px;
+      font-size: 30px;
+      border: 1px solid rgba(233, 2, 0, .2);
+      transform: scale(.7)
+    }
+    div:nth-child(2) {
+      height: 200px;
+      width: 200px;
+      background-color: #f0b280;
+      margin: -150px 200px;
+      font-size: 30px;
+      border: 1px solid rgba(233, 2, 0, .2);
+      transform: scale(.5, 1.5)
+    }
+    div:nth-child(3)  {
+      height: 200px;
+      width: 200px;
+      background-color: #809ef0;
+      margin: -350px 400px;
+      font-size: 30px;
+      border: 1px solid rgba(233, 2, 0, .2);
+      transform: scaleY(.5)
+    }
+    div:nth-child(4)  {
+      height: 200px;
+      width: 200px;
+      background-color: #e780f0;
+      margin: 95px 550px;
+      font-size: 30px;
+      border: 1px solid rgba(233, 2, 0, .2);
+      transform: scaleX(.5)
+    }
+    div:nth-child(5)  {
+      height: 200px;
+      width: 200px;
+      background-color: #84f080;
+      margin: 95px 400px;
+      font-size: 30px;
+      border: 1px solid rgba(233, 2, 0, .2);
+      transform: scaleY(-1.2);
+    }
+  </style>
+</head>
+<body>
+<!-- Scale change the size of an element. It affects its content and can be negatively(reduction), or positively(increament) -->
+
+  <!-- Scale -->
+  <div>transform scale</div>
+  <!-- Scaling   horizontal and vertical dimension together but seperatly -->
+  <div>Transform scale H-V</div>
+  <!-- Scalling just vertically -->
+  <div>Transform scale vertically Y-axis</div>
+  <!-- Scalling just horizontally -->
+  <div>Transform scale horizontally X-axis</div>
+  <!-- Fliping an element -->
+  <!-- X-axis will flip it in the x direction while Y-axis will flip it in the Y direction  -->
+  <div>Transform scale negatively</div>
+</body>
+</html>
