@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body{
+      /* display: flex; */
+      margin: 100px;
+    }
+    div:nth-child(1) {
+      height: 200px;
+      width: 200px;
+      background-color: chartreuse;
+      transform: skewX(20deg);
+    }
+    div:nth-child(2) {
+      height: 200px;
+      width: 200px;
+      background-color: cyan;
+      transform: skewY(20deg);
+    }
+    div:nth-child(3) {
+      height: 200px;
+      width: 200px;
+      background-color: darkorchid;
+      transform: skew(25deg, 25deg);
+    }
+  </style>
+</head>
+<body>
+  <!-- Skew helps slant an element hori or verticlly -->
+  <!-- This tilts towards the left -->
+  <div>Skew horizontally</div>
+  <!-- This tilts towards the right -->
+  <div>Skew vertically</div>
+  <div>Skew both ways</div>
+</body>
+</html>

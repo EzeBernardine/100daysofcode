@@ -5,9 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <style>
+    div:first-child {
+      height: 200px;
+      width: 200px;
+      background-color: coral;
+    }
+    div:first-child:hover {
+      transform: translate(50px, 100px)
+    }
+    div:nth-child(2) {
+      height: 200px;
+      width: 200px;
+      background-color: #50ff59;
+    }
+    div:nth-child(2):hover {
+      transform: translateX(300px)
+    }
+    div:nth-child(3) {
+      height: 200px;
+      width: 200px;
+      background-color: #a250ff;
+    }
+    div:nth-child(3):hover {
+      transform: translateY(100px)
+    }
+    div:nth-child(4) {
+      height: 200px;
+      width: 200px;
+      background-color: #ff5059;
+    }
+    div:nth-child(4):hover {
+      transform: translateY(-100px)
+    }
+  </style>
 </head>
 <body>
   <!-- Translate -->
-  <div></div>
+  <!-- It moves an element from its current position to another -->
+  <div>Translate H/V</div>
+  <div>Translate Hori</div>
+  <div>Translate Verti</div>
+  <div>Translate -Verti</div>
 </body>
 </html>
