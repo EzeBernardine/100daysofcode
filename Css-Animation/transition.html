@@ -6,40 +6,50 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <style>
-    div:first-child{
-      border: 1px solid greenyellow;
-      background-color: green;
+    div {
+
       width: 100px;
-      border-radius: 50px;
-      text-align: center;
-      margin: 200px;
+      margin: 100px;
       padding: 40px 0;
+      text-align: center;
+      border-radius: 50px;
+    }
+    div:first-child{
+      background-color: green;
       color: rgb(193, 240, 201);
-      transition: 1s;
+      transition-duration:  10s;
+      transition-property: transform;
     }
     div:first-child:hover{
-      background-color: rgb(3, 163, 3);
-      transform: rotate(360deg)
+      background-color: rgb(207, 237, 207);
+      transform: rotate(360deg);
+      color: rgb(16, 56, 8)
     }
     div:nth-child(2) {
-      border: 1px solid rgb(67, 68, 1);
       background-color: rgb(128, 4, 0);
-      width: 100px;
-      border-radius: 50px;
-      text-align: center;
-      margin: 0 200px;
-      padding: 40px 0;
       color: rgb(193, 240, 201);
-      transition: background 1s, transform 0.8s 1s ease-in;
+      transition: background-color 15s, transform 0.8s 1s ease-in;
     }
     div:nth-child(2):hover{
-      background-color: rgb(187, 22, 4);
+      background-color: rgb(31, 198, 228);
       transform: rotate(360deg)
+    }
+    div:nth-child(3)  {
+      background-color: darkblue;
+      color: aliceblue;
+      transition-duration: 12s,12s;
+      transition-property: bcakground-color color;
+    }
+    div:nth-child(3):hover  {
+      background-color: cadetblue;
+      color: blue;
+      transform: rotate(90deg)
     }
   </style>
 </head>
 <body>
   <div>GOD</div>
   <div>LOVE</div>
+  <div>Complet transition syntax</div>
 </body>
 </html>
