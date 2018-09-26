@@ -7,30 +7,32 @@
   <title>Document</title>
   <style>
     div {
-
       width: 100px;
       margin: 100px;
       padding: 40px 0;
       text-align: center;
       border-radius: 50px;
     }
-    div:first-child{
+    div:first-child {
       background-color: green;
       color: rgb(193, 240, 201);
       transition-duration:  10s;
       transition-property: transform;
     }
-    div:first-child:hover{
+    /* This means to the transform property give it a duration of 10seconds */
+    div:first-child:hover {
       background-color: rgb(207, 237, 207);
       transform: rotate(360deg);
       color: rgb(16, 56, 8)
     }
+    /* Here, the transform property has been given which is to rotate the element. So this should happen within 10s */
     div:nth-child(2) {
       background-color: rgb(128, 4, 0);
       color: rgb(193, 240, 201);
       transition: background-color 15s, transform 0.8s 1s ease-in;
     }
-    div:nth-child(2):hover{
+    /* Here, the short cut is uesd. The transition is applied to background-color and transform. The background-coloris made do change after 15s while the transform is made (from below)  rotate within 0.8s, but after a delay of 1s*/
+    div:nth-child(2):hover  {
       background-color: rgb(31, 198, 228);
       transform: rotate(360deg)
     }
@@ -38,16 +40,51 @@
       background-color: darkblue;
       color: aliceblue;
       transition-duration: 12s,12s;
-      transition-property: bcakground-color color;
+      transition-property: bcakground-color transform;
+      /* transition-delay: 12s, 0s */
     }
     div:nth-child(3):hover  {
       background-color: cadetblue;
       color: blue;
-      transform: rotate(90deg)
+      transform: rotate(90deg);
+      
     }
   </style>
 </head>
 <body>
+  <!-- Transition controls four properties
+  A___which property to animate{
+        ___--transition-property  {
+          __background-color
+          __color
+          __font-size
+          __all css properties
+        }
+      }
+
+  B___how long the animation will take  {
+        __--transition-duration {
+          __in s (seconds)
+          __in ms (milliseconds)
+        }
+      }
+
+  C___the type of animation used  {
+        __--transition-timing {
+            It can take five key words
+            __linear (provides a steady change throughout the duration of the animation)
+            __ease-in
+            __ease-out
+            __ease-in-out
+            __ease (default----begins slowly, get faster at the middle, then slows down at the end)
+        }
+    }
+  D___the optional animation delay required {
+      __--transition-delay  {
+        __in s (seconds)
+        __in ms (milliseconds)
+      }      
+    }-->
   <div>GOD</div>
   <div>LOVE</div>
   <div>Complet transition syntax</div>
