@@ -19,7 +19,7 @@
       transition-duration:  10s;
       transition-property: transform;
     }
-    /* This means to the transform property give it a duration of 10seconds */
+    /* This means, to the transform property give it a duration of 10seconds */
     div:first-child:hover {
       background-color: rgb(207, 237, 207);
       transform: rotate(360deg);
@@ -33,19 +33,20 @@
     }
     /* Here, the short cut is uesd. The transition is applied to background-color and transform. The background-coloris made do change after 15s while the transform is made (from below)  rotate within 0.8s, but after a delay of 1s*/
     div:nth-child(2):hover  {
-      background-color: rgb(31, 198, 228);
+      background-color: #1fc6e4;
       transform: rotate(360deg)
     }
     div:nth-child(3)  {
-      background-color: darkblue;
+      background-color: rgb(139, 0, 69);
       color: aliceblue;
-      transition-duration: 12s,12s;
-      transition-property: bcakground-color transform;
-      /* transition-delay: 12s, 0s */
+      transition-property: background-color, color;
+      transition-duration: 12s, 1s;
+      transition-delay: 0s, 12s;
     }
     div:nth-child(3):hover  {
       background-color: cadetblue;
       color: blue;
+      border: 1px solid #f0f410;
       transform: rotate(90deg);
       
     }
@@ -88,5 +89,13 @@
   <div>GOD</div>
   <div>LOVE</div>
   <div>Complet transition syntax</div>
+
+
+  <!-- Transition shorthand
+   -- Transition: transition-props transition-duration transition-time transition-delay
+    Which is___
+      --Transition: props dura time delay
+      (Pls Don't Tell Dad)
+  -->
 </body>
 </html>
