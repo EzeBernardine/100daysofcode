@@ -12,13 +12,17 @@
       background-color: mediumslateblue;
       margin: 100px;
       animation-name: first;
-      animation-duration: 3s;
+      animation-duration: 13s;
       animation-timing-function: ease-in-out
     }
     @keyframes first{
       from{
-        background-color: chocolate
-      } to  {
+        background-color: chocolate;
+      } 
+      50%, 70% {
+        background-color: darkgreen
+      }
+      to  {
         background-color: aqua
       }
     }
