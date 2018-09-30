@@ -7,29 +7,42 @@
   <title>Document</title>
   <style>
     div:first-child  {
-      height: 200px;
-      width: 200px;
-      background-color: mediumslateblue;
+      height: 300px;
+      width: 300px;
+      background-color: black;
       margin: 100px;
       animation-name: first;
       animation-duration: 13s;
-      animation-timing-function: ease-in-out
+      animation-timing-function: ease;
+      animation-iteration-count: infinite
+    }
+    div:nth-child(2) {
+      height: 300px;
+      width: 300px;
+      background: -moz-linear-gradient(left, rgba(10, 10, 0, 0.9) 20%, rgba(0, 0, 0, 0.5))100%;
+      margin: -400px 100px;
     }
     @keyframes first{
       from{
-        background-color: chocolate;
+        background: url('../img/bag.jpeg') no-repeat center center;
+        animation-timing-function: cubic-bezier(1, .03, 1, .115);
       } 
-      50%, 70% {
-        background-color: darkgreen
+      50%{
+        background: url('../img/green.jpg')no-repeat center center;
+        animation-timing-function: cubic-bezier(1, .03, 1, .115);
+      }
+       70% {
+        background: url('../img/kring.png')no-repeat center center;animation-timing-function: cubic-bezier(1, .03, 1, .115);
       }
       to  {
-        background-color: aqua
+        background: url('../img/halflady.jpeg') no-repeat center center;
+        animation-timing-function: cubic-bezier(1, .03, 1, .115);
       }
     }
   </style>
 </head>
 <body>
-  
-  <div>Hello World</div>
+  <div></div>
+  <div></div>
 </body>
 </html>
