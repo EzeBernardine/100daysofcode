@@ -6,6 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <style>
+    @keyframes first{
+      from{
+        background: url('../img/bag.jpeg') no-repeat center center;
+      } 
+      50%{
+        background: url('../img/green.jpg')no-repeat center center;
+      }
+       75% {
+        background: url('../img/kring.png')no-repeat center center;
+      }
+      to  {
+        background: url('../img/halflady.jpeg') no-repeat center center;
+      }
+    }
     div:first-child  {
       height: 300px;
       width: 300px;
@@ -14,7 +28,9 @@
       animation-name: first;
       animation-duration: 13s;
       animation-timing-function: ease;
-      animation-iteration-count: infinite
+      /* animation-iteration-count: infinite; */
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
     }
     div:nth-child(2) {
       height: 300px;
@@ -22,27 +38,41 @@
       background: -moz-linear-gradient(left, rgba(10, 10, 0, 0.9) 20%, rgba(0, 0, 0, 0.5))100%;
       margin: -400px 100px;
     }
-    @keyframes first{
-      from{
-        background: url('../img/bag.jpeg') no-repeat center center;
-        animation-timing-function: cubic-bezier(1, .03, 1, .115);
-      } 
-      50%{
-        background: url('../img/green.jpg')no-repeat center center;
-        animation-timing-function: cubic-bezier(1, .03, 1, .115);
+    @keyframes second {
+      from  {
+        opacity: 1;
       }
-       70% {
-        background: url('../img/kring.png')no-repeat center center;animation-timing-function: cubic-bezier(1, .03, 1, .115);
+      to {
+        opacity: 0.5
       }
-      to  {
-        background: url('../img/halflady.jpeg') no-repeat center center;
-        animation-timing-function: cubic-bezier(1, .03, 1, .115);
-      }
+    }
+    h2 {
+      height: 300px;
+      width: 300px;
+      background-color: #b10202;
+      border-radius: 50%;
+      margin: 400px 0;
+      animation: second .5s ease-in infinite alternate 0s backwards 
+    }
+    h2:hover {
+      animation-play-state: paused
     }
   </style>
 </head>
 <body>
   <div></div>
   <div></div>
+
+
+  <!-- 
+    Animation short hand
+      1--animation-name,
+      2--animation-duration, 3--animation-timing-function, 4--animation-iteration-count,
+      5--animation-direction, 
+      6--animation-delay, 
+      7--and animation-fill-mode
+   -->
+
+   <h2></h2>
 </body>
 </html>
