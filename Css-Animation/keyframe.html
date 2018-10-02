@@ -28,7 +28,6 @@
       animation-name: first;
       animation-duration: 13s;
       animation-timing-function: ease;
-      /* animation-iteration-count: infinite; */
       animation-direction: alternate;
       animation-fill-mode: forwards;
     }
@@ -52,7 +51,7 @@
       background-color: #b10202;
       border-radius: 50%;
       margin: 400px 0;
-      animation: second .5s ease-in infinite alternate 0s backwards 
+      animation: second .5s ease-in infinite alternate 0s backwards ;
     }
     h2:hover {
       animation-play-state: paused
@@ -67,8 +66,23 @@
   <!-- 
     Animation short hand
       1--animation-name,
-      2--animation-duration, 3--animation-timing-function, 4--animation-iteration-count,
+      2--animation-duration, 
+        It only taks the time in s or ms
+      3--animation-timing-function, 
+        It tells how the css should move within its its duration
+        
+      4--animation-iteration-count,
+        Tis is the number of time you want the animation to take place. It could be decimal, whole number or infinite keyword
       5--animation-direction, 
+        It accepts the  four keywards
+        --animation-direction: normal;
+          It plays in the specified direction
+        --animation-direction: reverse;
+          It plays opposite the specified direction. timing function is alse revered
+        --animation-direction: alternate;
+          It plays in the specified direction, then immediately followed by the opposite direction.
+        --animation-direction: alternate-reverse;
+          It plays first to opposite the specified direction, followed by the specified direction
       6--animation-delay, 
       7--and animation-fill-mode
    -->
