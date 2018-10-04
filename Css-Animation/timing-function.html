@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    section h3{
+      margin-top: auto;
+      margin-bottom: auto;
+      height: 80px;
+      width: 250px;
+      border-radius: 2%;
+      text-align: center;
+      color: #ebe7e6;
+      border-bottom: 3px dashed #fcfcfc;
+      font-size: 25px;
+      animation-duration: 10s;
+      animation-name: timing;
+      animation-fill-mode: forwards;
+    }
+    section img{
+       height: 80px;
+      width: 80px;
+    }
+    @keyframes timing{
+      from{
+        transform: translateX(0);
+      }
+      to{
+        transform: translateX(1000px);
+        background-color: #424040
+      }
+    }
+    h3:first-child{
+      animation-timing-function: ease;
+      margin-top: -670px
+    }
+    h3:nth-child(2){
+      animation-timing-function: ease-in;
+    }
+    h3:nth-child(3){
+      animation-timing-function: ease-out;
+    }
+    h3:nth-child(4){
+      animation-timing-function: ease-in-out;
+    }
+    h3:nth-child(5){
+      animation-timing-function: linear;
+    }
+    h3:nth-child(6){
+      animation-timing-function: step-start;
+    }
+    h3:nth-child(7){
+      animation-timing-function: step-end;
+    } 
+    h3:nth-child(8){
+      animation-timing-function: steps(10, end);
+    } 
+    div{
+      height: 670px;
+      width: 1300px;
+      background-color: rgb(112, 112, 112);
+      margin-top: -30px;
+    }
+    div h1{
+      padding: 150px;
+      font-size: 50px
+    }
+  </style>
+</head>
+<body>
+<div>
+  <h1>All have same timing and duration</h1>
+</div>
+
+
+<section>
+  <h3><img src="../img/car.png" alt="">ease </h3>
+  <h3><img src="../img/car.png" alt=""> ease-in</h3>
+  <h3><img src="../img/car.png" alt=""> ease-out</h3>
+  <h3><img src="../img/car.png" alt=""> ease-in-out</h3>
+  <h3><img src="../img/car.png" alt=""> linear</h3>
+  <h3><img src="../img/car.png" alt=""> step-start</h3>
+  <h3><img src="../img/car.png" alt=""> step-end</h3>
+  <h3><img src="../img/car.png" alt=""> step()</h3>
+</section>
+  
+</body>
+</html>
