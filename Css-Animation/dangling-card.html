@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    section p {
+      font-size: 35px;
+      margin-left: 15px;
+      margin-top: 10px;
+      color: #ffffff;
+      background-color: black;
+      height: 30px;
+      width: 30px;
+      text-align: center;
+      border-radius: 50%
+    }
+    section h2 {
+      color: white;
+      text-align: center;
+    }
+
+    @keyframes bounce {
+      0%{opacity: 0; }
+      70%{ transform: translateY(600px)}
+      to{transform: translateY(550px);
+        opacity: 1 }
+    };
+    @keyframes turn {
+      0%{transform: translateY(550px) rotateZ(0deg)}
+      40%{transform: translateY(550px) rotateZ(90deg)}
+      70%{transform: translateY(550px) rotateZ(70deg)}
+      100%{transform: translateY(550px) rotateZ(75deg)};
+    }
+    section {
+      border: 1px solid black;
+      height: 200px;
+      width: 350px;
+      background-color: chocolate;
+      margin: 200px ;
+      margin-top: -400px;
+      animation: bounce 0.5s ease forwards, turn 2s 1s ease forwards;
+    }
+  </style>
+</head>
+<body>
+  
+  <section>
+    <div>
+      <p>*</p>
+      <h2>ID card</h2>
+    </div>
+  </section>
+</body>
+</html>
