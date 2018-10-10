@@ -21,19 +21,30 @@
       color: white;
       text-align: center;
     }
-
-    @keyframes bounce {
-      0%{opacity: 0; }
-      70%{ transform: translateY(600px)}
-      to{transform: translateY(550px);
-        opacity: 1 }
-    };
-    @keyframes turn {
-      0%{transform: translateY(550px) rotateZ(0deg)}
-      40%{transform: translateY(550px) rotateZ(90deg)}
-      70%{transform: translateY(550px) rotateZ(70deg)}
-      100%{transform: translateY(550px) rotateZ(75deg)};
+    img{
+      height: 100px;
+      width: auto;
     }
+    .img {
+      background-color: aqua;
+      height: 200px;
+      width: 300px;
+      margin: 150px 600px ;
+      transform-origin: 10px 10px;
+      animation: jump 1s ease  forwards
+    }
+    @keyframes jump {
+      0%{
+        transform: translateY(10px); 
+        background-color: gold}
+      70%{
+        transform: translateY(250deg) rotateZ(60deg);
+        background-color: forestgreen}
+      100% {
+        transform: translateY(100deg);
+        background-color: deeppink}
+    }
+
     section {
       border: 1px solid black;
       height: 200px;
@@ -41,8 +52,21 @@
       background-color: chocolate;
       margin: 200px ;
       margin-top: -400px;
-      animation: bounce 0.5s ease forwards, turn 2s 1s ease forwards;
+      transform-origin: 20px 10px;
+      animation: bounce 0.5s ease forwards, turn 2s .5s ease forwards;
     }
+    @keyframes turn{
+      0%{transform: translateY(650px) rotateZ(0deg)  }
+      40%{transform: translateY(650px) rotateZ(90deg)}
+      70%{transform: translateY(650px) rotateZ(70deg)}
+      100%{transform: translateY(650px) rotateZ(75deg)};
+    }
+    @keyframes bounce {
+      0% {opacity: 0; }
+      70%{ transform: translateY(700px)}
+      100% { transform: translateY(650px);
+        opacity: 1 }
+    };
   </style>
 </head>
 <body>
@@ -53,5 +77,9 @@
       <h2>ID card</h2>
     </div>
   </section>
+
+  <div class="img">
+    <img src="../img/emoji.png" alt="">
+  </div>
 </body>
 </html>
