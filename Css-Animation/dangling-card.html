@@ -26,23 +26,40 @@
       width: auto;
     }
     .img {
-      background-color: aqua;
-      height: 200px;
-      width: 300px;
-      margin: 150px 600px ;
-      transform-origin: 10px 10px;
-      animation: jump 1s ease  forwards
+      background-color: rgb(253, 255, 255);
+      height: 100px;
+      width: 100px;
+      margin-left:  1250px ;
+      margin-top: 450px;
+      transform-origin: 5px 5px;
+      animation: jump 3s ease 0.5s forwards,
+       drop 2s ease 3.5s forwards
     }
+    
     @keyframes jump {
-      0%{
-        transform: translateY(10px); 
-        background-color: gold}
+      from{
+        transform: translateY(0px)
+        }
+        40% {
+          transform: translateX(-600px) translateY(0px)
+        }
       70%{
-        transform: translateY(250deg) rotateZ(60deg);
-        background-color: forestgreen}
-      100% {
-        transform: translateY(100deg);
-        background-color: deeppink}
+        transform: translateY(-250px) translateX(-800px) rotateZ(-50deg)
+        }
+        80%{
+          transform: translateY(-95px) translateX(-800px)
+        }
+       100% {
+          transform: translateY(-200px) translateX(-800px)
+        }
+    }
+    @keyframes drop {
+      from{
+        transform: translateY(-200px) translateX(-800px)
+        }
+      to {
+        transform: translateY(300px)translateX(-800px)
+        }
     }
 
     section {
@@ -53,7 +70,7 @@
       margin: 200px ;
       margin-top: -400px;
       transform-origin: 20px 10px;
-      animation: bounce 0.5s ease forwards, turn 2s .5s ease forwards;
+      animation: bounce 0.5s ease forwards, turn 2s 2.8s ease forwards;
     }
     @keyframes turn{
       0%{transform: translateY(650px) rotateZ(0deg)  }
@@ -78,7 +95,7 @@
     </div>
   </section>
 
-  <div class="img">
+  <div class="img" id='img'>
     <img src="../img/emoji.png" alt="">
   </div>
 </body>
