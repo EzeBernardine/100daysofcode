@@ -21,19 +21,24 @@
       color: white;
       text-align: center;
     }
-    img{
+    .image{
       height: 100px;
       width: auto;
+      float: right;
+      animation: spin 2s ease 2s forwards;
     }
-    .img {
-      background-color: rgb(253, 255, 255);
+    @keyframes spin {
+      0% {-moz-transform: rotateZ(180deg)}
+      100% {-moz-transform: rotateZ(180deg)}
+    }
+    .imgDiv {
+      background-color: none;
       height: 100px;
-      width: 100px;
-      margin-left:  1250px ;
+      width: 200px;
+      margin-left:  1150px ;
       margin-top: 450px;
       transform-origin: 5px 5px;
-      animation: jump 3s ease 0.5s forwards,
-       drop 2s ease 3.5s forwards
+      animation: jump 3s ease 0.5s forwards,drop 2.5s linear 3.8s forwards;
     }
     
     @keyframes jump {
@@ -41,24 +46,21 @@
         transform: translateY(0px)
         }
         40% {
-          transform: translateX(-600px) translateY(0px)
+          transform: translateX(-400px) translateY(0px)
         }
       70%{
-        transform: translateY(-250px) translateX(-800px) rotateZ(-50deg)
-        }
-        80%{
-          transform: translateY(-95px) translateX(-800px)
+        transform: translateY(-10px) translateX(-600px) rotateZ(-183deg)
         }
        100% {
-          transform: translateY(-200px) translateX(-800px)
+          transform: translateY(-150px) translateX(-600px) rotateZ(-180deg)
         }
     }
     @keyframes drop {
       from{
-        transform: translateY(-200px) translateX(-800px)
+        transform: translateY(-150px) translateX(-600px) rotateZ(-180deg)
         }
       to {
-        transform: translateY(300px)translateX(-800px)
+        transform: translateY(400px)translateX(-600px)rotateZ(-180deg)
         }
     }
 
@@ -70,7 +72,7 @@
       margin: 200px ;
       margin-top: -400px;
       transform-origin: 20px 10px;
-      animation: bounce 0.5s ease forwards, turn 2s 2.8s ease forwards;
+      animation: bounce 0.5s ease forwards, turn 2s 2.4s ease forwards;
     }
     @keyframes turn{
       0%{transform: translateY(650px) rotateZ(0deg)  }
@@ -95,8 +97,8 @@
     </div>
   </section>
 
-  <div class="img" id='img'>
-    <img src="../img/emoji.png" alt="">
+  <div class="imgDiv" id='img'>
+    <img src="../img/emoji.png" alt="" class="image">
   </div>
 </body>
 </html>
