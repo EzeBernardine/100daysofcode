@@ -15,12 +15,15 @@
     .main .right {
       height: 300px;
       width: 50px;
-      /* background-color: rgb(1, 49, 49); */
-      transform: rotateZ(145deg);
+      background-color: rgb(1, 49, 49);
+      transform: rotateZ(-35deg);
       margin: 0 300px;
+      position: absolute;
+      transform-origin: 5px 5px;
+      animation: backward 2s ease 2s forwards 
     }
     .main .container {
-      transform: rotateZ(180deg);
+      /* transform: rotateZ(180deg); */
     }
     .main .cloth {
       height: 100px;
@@ -38,18 +41,22 @@
       background-color: crimson;
       border-radius: 0 0 20px 2px;
     }
+    .left .right {
+
+    }
     /* ================= */
      .main .left {
       height: 300px;
       width: 50px;
+      /* margin: -270px 220px; */
       background-color: rgb(180, 187, 187);
-      transform: rotateZ(-150deg);
-      margin: -280px 150px;
+      transform: rotateZ(33deg);
+      position: absolute;;
       transform-origin: 5px 5px;
-      animation: walk 12s ease forwards 
+      animation: forward 2s ease forwards 
     }
     .main .container2 {
-      transform: rotateZ(180deg);
+      /* transform: rotateZ(180deg); */
     }
     .main .cloth2 {
       height: 100px;
@@ -73,15 +80,26 @@
       border-radius: 50px;
     }
     /* ============== */
-    @keyframes walk {
+    @keyframes forward {
       from {
-        transform: rotateZ(-150deg)
+        transform: rotateZ(0deg)
       }
       70% {
-        transform: rotateZ(-300deg)
+        transform: rotateZ(-30deg)
       }
       to {
-        transform: rotateZ(-150deg);
+        transform: rotateZ(30deg);
+      }
+    }
+    @keyframes backward {
+      from {
+        transform: rotateZ(0deg)
+      }
+      70% {
+        transform: rotateZ(30deg)
+      }
+      to {
+        transform: rotateZ(-30deg);
       }
     }
   </style>
