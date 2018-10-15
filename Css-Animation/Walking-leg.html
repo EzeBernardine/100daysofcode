@@ -68,6 +68,15 @@
       margin-top: 20px;
       transform: rotateZ(-50deg)
     }
+    .upperhand1 {
+      height: 80px;
+      width: 30px;
+      border-radius: 50px ;
+      background-color: none;
+      margin-left: 60px;
+      margin-top: 20px;
+      transform: rotateZ(-50deg)
+    }
     .lowerhand {
       height: 80px;
       width: 20px;
@@ -86,6 +95,16 @@
       margin-top: -79px;
       transform: rotateZ(50deg)
 
+    }
+    .righthand {
+      transform-origin: 2px 2px;
+      animation: righthand 2s ease infinite;
+      position: absolute;
+    }
+    .lefthand {
+      transform-origin: 2px 2px;
+      animation: lefthand 2s ease infinite;
+      position: absolute;
     }
 
 
@@ -177,6 +196,34 @@
          margin: 0px 100px;
       }
     }
+    @keyframes righthand {
+      from {
+        transform: rotateZ(0deg);
+         margin: 0px 0px;
+      }
+      70% {
+        transform: rotateZ(40deg);
+         margin: 0px 15px;
+      }
+      to {
+        transform: rotateZ(10deg);
+         margin: 10px 7px;
+      }
+    }
+    @keyframes lefthand {
+      from {
+        transform: rotateZ(0deg);
+         margin: 0px 0px;
+      }
+      70% {
+        transform: rotateZ(-10deg);
+         margin: 0px 1px;
+      }
+      to {
+        transform: rotateZ(40deg);
+         margin: 10px 7px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -187,8 +234,15 @@
       <div class="main">
         <div class="head"></div>
         <div class="body">
-          <div class="hand">
+          <div class="righthand">
             <div class="upperhand">
+                <div class="handNut"></div>
+            </div>
+            <div class="lowerhand"> </div>
+            <div class="finger"></div>
+          </div>
+          <div class="lefthand">
+            <div class="upperhand1">
                 <div class="handNut"></div>
             </div>
             <div class="lowerhand"> </div>
