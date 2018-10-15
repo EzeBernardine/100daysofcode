@@ -8,17 +8,16 @@
   <title>Document</title>
   <style>
     .main .right {
-      height: 300px;
-      width: 50px;
       transform: rotateZ(-35deg);
       position: absolute;
-      transform-origin: 5px 5px;
-      animation: backward 2s ease 1s forwards 
+      text-align: center;
+      transform-origin: 2px 2px;
+      animation: backward 2s ease 0s infinite
     }
     .main .cloth {
       height: 100px;
       width: 25px;
-      border-radius: 0 0 20px 0;
+      border-radius:  10px 10px 20px 0;
       background-color: rgb(172, 168, 43);
     }
     .main .leg {
@@ -33,9 +32,66 @@
       border-radius: 0 0 20px 2px;
     }
 
+/* ================General================ */
+    .main {
+      display: flex;
+      flex-direction: column;
+    }
+    .main .body {
+      height: 155px;
+      width: 105px;
+      background-color: brown;
+      border-radius: 30px 100px 50px 50px;
+      animation: movebody 2s ease  infinite
+    }
+    .main .head {
+      height: 55px;
+      width: 55px;
+      margin-left: 30px;
+      background-color: black;
+      border-radius: 50px;
+      animation: movehead 2s ease  infinite
+    }
+    .handNut {
+      height: 10px;
+      width: 10px;
+      background-color: #964c03;
+      margin: auto;
+      border-radius: 50%;
+    }
+    .upperhand {
+      height: 80px;
+      width: 30px;
+      border-radius: 50px ;
+      background-color: #3a1f01;
+      margin-left: 60px;
+      margin-top: 20px;
+      transform: rotateZ(-50deg)
+    }
+    .lowerhand {
+      height: 80px;
+      width: 20px;
+      border-radius: 50px ;
+      background-color: #3a1f01;
+      margin-left: 110px;
+      margin-top: -80px;
+      transform: rotateZ(50deg)
+    }
+    .finger {
+      height: 20px;
+      width: 20px;
+      border-radius: 50px ;
+      background-color: #3a1f01;
+      margin-left: 145px;
+      margin-top: -79px;
+      transform: rotateZ(50deg)
+
+    }
+
+
     /* ================= */
     .person1{
-      margin: 50px 200px;    
+      margin: 50px 200px;  
     }
     .person2{
       margin: 50px 600px;    
@@ -48,15 +104,14 @@
      .main .left {
       height: 300px;
       width: 50px;
-      transform: rotateZ(33deg);
       position: absolute;
-      transform-origin: 5px 5px;
-      animation: forward 2s ease forwards 
+      transform-origin: 2px 2px;
+      animation: forward 2s ease  infinite
     }
     .main .cloth2 {
       height: 100px;
       width: 25px;
-      border-radius: 0 0 20px 0;
+      border-radius: 10px 10px  20px 0;
       background-color: rgb(172, 168, 43);
     }
     .main .leg2 {
@@ -67,35 +122,59 @@
     .main .foot2 {
       height:20px;
       width: 30px;
-      background-color: black;
+      background-color: rgb(21, 228, 225);
       border-radius: 0 0 20px 2px;
     }
-    .main .body {
-      height: 35px;
-      width: 35px;background-color: brown;
-      border-radius: 50px;
-    }
+
     /* ============== */
     @keyframes forward {
       from {
-        transform: rotateZ(0deg)
+        transform: rotateZ(0deg);
+         margin: 0px 30px;
       }
       70% {
-        transform: rotateZ(-30deg)
+        transform: rotateZ(-20deg);
+         margin: 0px 80px; 
       }
       to {
-        transform: rotateZ(30deg);
+        transform: rotateZ(20deg);
+         margin: 0px 100px;
+      }
+    }
+    @keyframes movebody {
+      from {
+         margin: 0px 0px;
+      }
+      70% {
+         margin: 0px 50px; 
+      }
+      to {
+         margin: 0px 70px;
+      }
+    }
+    @keyframes movehead {
+      from {
+         margin: 0px 30px;
+      }
+      70% {
+         margin: 0px 70px; 
+      }
+      to {
+         margin: 0px 90px;
       }
     }
     @keyframes backward {
       from {
-        transform: rotateZ(0deg)
+        transform: rotateZ(0deg);
+         margin: 0px 30px;
       }
       70% {
-        transform: rotateZ(30deg)
+        transform: rotateZ(14deg);
+         margin: 0px 80px;
       }
       to {
         transform: rotateZ(-30deg);
+         margin: 0px 100px;
       }
     }
   </style>
@@ -106,17 +185,23 @@
 
     <div class="person1">
       <div class="main">
-        <div class="right">
-          <div class="container">
-            <div class="body"></div>
+        <div class="head"></div>
+        <div class="body">
+          <div class="hand">
+            <div class="upperhand">
+                <div class="handNut"></div>
+            </div>
+            <div class="lowerhand"> </div>
+            <div class="finger"></div>
+          </div>
+        </div>
+        <div class="legs">
+          <div class="right">
             <div class="cloth"></div>
             <div class="leg"></div>
             <div class="foot"></div>
           </div>
-        </div>
-        <div class="left">
-          <div class="container2">
-              <div class="body"></div>
+          <div class="left">
             <div class="cloth2"></div>
             <div class="leg2"></div>
             <div class="foot2"></div>
@@ -127,17 +212,15 @@
 
     <div class="person2">
       <div class="main">
-        <div class="right">
-          <div class="container">
-            <div class="body"></div>
+        <div class="head"></div>
+        <div class="body"></div>
+        <div class="legs">
+          <div class="right">
             <div class="cloth"></div>
             <div class="leg"></div>
             <div class="foot"></div>
           </div>
-        </div>
-        <div class="left">
-          <div class="container2">
-              <div class="body"></div>
+          <div class="left">
             <div class="cloth2"></div>
             <div class="leg2"></div>
             <div class="foot2"></div>
@@ -148,17 +231,15 @@
 
     <div class="person3">
       <div class="main">
-        <div class="right">
-          <div class="container">
-            <div class="body"></div>
+        <div class="head"></div>
+        <div class="body"></div>
+        <div class="legs">
+          <div class="right">
             <div class="cloth"></div>
             <div class="leg"></div>
             <div class="foot"></div>
           </div>
-        </div>
-        <div class="left">
-          <div class="container2">
-              <div class="body"></div>
+          <div class="left">
             <div class="cloth2"></div>
             <div class="leg2"></div>
             <div class="foot2"></div>
@@ -166,6 +247,8 @@
         </div>
       </div>
     </div>
+
+   
 
   </section>
 </body>
