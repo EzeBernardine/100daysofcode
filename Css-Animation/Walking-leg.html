@@ -128,13 +128,13 @@
 
     /* ================= */
     .person1{
-      margin: 50px 200px;  
+      margin: 50px 100px;  
     }
     .person2{
-      margin: -250px 600px;    
+      margin: -250px 400px;    
     }
     .person3{
-      margin: 40px 1000px;    
+      margin: 40px 700px;    
     }
 
     /* =================== */
@@ -150,13 +150,13 @@
       width: 25px;
       border-radius: 10px 10px  20px 0;
       background-color: rgb(172, 168, 43);
-      animation: cloth 3s 2.5s ease  infinite;
+      animation: cloth2 3s  ease  infinite;
     }
     .main .leg2 {
       height: 150px;
       width: 15px;
       background-color: brown;
-      animation: leg 3s 2.5s ease  infinite;
+      animation: leg2 3s  ease  infinite;
     }
     .main .foot2 {
       height:20px;
@@ -260,7 +260,10 @@
         transform: rotateZ(0deg);
       }
       70% {
-        transform: rotateZ(-9deg);
+        transform: rotateZ(2deg);
+      }
+      90% {
+        transform: rotateZ(-10deg);
       }
       to {
         transform: rotateZ(2deg);
@@ -271,11 +274,47 @@
         transform: rotateZ(0deg);
       }
       70% {
+        transform: rotateZ(5deg);
+        margin: -2px  -5px;
+      }
+      90% {
         transform: rotateZ(11deg);
         margin: -2px  -5px;
       }
       to {
         transform: rotateZ(2deg);
+      }
+    }
+    @keyframes cloth2 {
+      from {
+        transform: rotateZ(0deg);
+      }
+      60% {
+        transform: rotateZ(-6deg);
+      }
+      80% {
+        transform: rotateZ(0deg);
+      }
+      to {
+        transform: rotateZ(-2deg);
+        /* transform: rotateZ(2deg); */
+      }
+    }
+    @keyframes leg2 {
+      from {
+        transform: rotateZ(0deg);
+      }
+      60% {
+        transform: rotateZ(5deg);
+        margin: -2px  2px;
+      }
+      90% {
+        /* transform: rotateZ(11deg); */
+        margin: 0px  3px;
+      }
+      to {
+        transform: rotateZ(2deg);
+        margin: 0px  0px;
       }
     }
   </style>
