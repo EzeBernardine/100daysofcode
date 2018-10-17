@@ -12,7 +12,7 @@
       position: absolute;
       text-align: center;
       transform-origin: 2px 2px;
-      animation: backward 2s ease 0s infinite
+      animation: backward 3s ease 0s infinite
     }
     .main .cloth {
       height: 100px;
@@ -41,8 +41,13 @@
       height: 155px;
       width: 105px;
       background-color: brown;
+      z-index: 1;
       border-radius: 30px 100px 50px 50px;
-      animation: movebody 2s ease  infinite
+      animation: movebody 3s ease  infinite
+    }
+    .main .hand {
+      margin: 0px 10px;
+      animation: movehand 3s ease  infinite
     }
     .main .head {
       height: 55px;
@@ -50,7 +55,7 @@
       margin-left: 30px;
       background-color: black;
       border-radius: 50px;
-      animation: movehead 2s ease  infinite
+      animation: movehead 3s ease  infinite
     }
     .handNut {
       height: 10px;
@@ -72,7 +77,7 @@
       height: 80px;
       width: 30px;
       border-radius: 50px ;
-      background-color: none;
+      background-color: #3a1f01;
       margin-left: 60px;
       margin-top: 20px;
       transform: rotateZ(-50deg)
@@ -98,13 +103,21 @@
     }
     .righthand {
       transform-origin: 2px 2px;
-      animation: righthand 2s ease infinite;
+      animation: righthand 3s ease infinite;
       position: absolute;
     }
     .lefthand {
       transform-origin: 2px 2px;
-      animation: lefthand 2s ease infinite;
+      animation: lefthand 3s ease infinite;
       position: absolute;
+      z-index: 2;
+    }
+    body {
+      background-color: darkslategrey
+    }
+    .line {
+      border: 3px solid white;
+      margin-top: 200px
     }
 
 
@@ -113,10 +126,10 @@
       margin: 50px 200px;  
     }
     .person2{
-      margin: 50px 600px;    
+      margin: -250px 600px;    
     }
     .person3{
-      margin: 50px 1000px;    
+      margin: 40px 1000px;    
     }
 
     /* =================== */
@@ -125,7 +138,7 @@
       width: 50px;
       position: absolute;
       transform-origin: 2px 2px;
-      animation: forward 2s ease  infinite
+      animation: forward 3s ease  infinite
     }
     .main .cloth2 {
       height: 100px;
@@ -141,7 +154,7 @@
     .main .foot2 {
       height:20px;
       width: 30px;
-      background-color: rgb(21, 228, 225);
+      background-color: black;
       border-radius: 0 0 20px 2px;
     }
 
@@ -157,29 +170,7 @@
       }
       to {
         transform: rotateZ(20deg);
-         margin: 0px 100px;
-      }
-    }
-    @keyframes movebody {
-      from {
-         margin: 0px 0px;
-      }
-      70% {
-         margin: 0px 50px; 
-      }
-      to {
-         margin: 0px 70px;
-      }
-    }
-    @keyframes movehead {
-      from {
-         margin: 0px 30px;
-      }
-      70% {
-         margin: 0px 70px; 
-      }
-      to {
-         margin: 0px 90px;
+         margin: 0px 180px;
       }
     }
     @keyframes backward {
@@ -193,7 +184,40 @@
       }
       to {
         transform: rotateZ(-30deg);
-         margin: 0px 100px;
+         margin: 0px 180px;
+      }
+    }
+    @keyframes movebody {
+      from {
+         margin: 0px 0px;
+      }
+      70% {
+         margin: 0px 50px; 
+      }
+      to {
+         margin: 0px 150px;
+      }
+    }
+    @keyframes movehead {
+      from {
+         margin: 0px 30px;
+      }
+      70% {
+         margin: 0px 70px; 
+      }
+      to {
+         margin: 0px 170px;
+      }
+    }
+    @keyframes movehand {
+      from {
+         margin: 0px 0px;
+      }
+      70% {
+         margin: 0px 40px;
+      }
+      to {
+         margin: 0px 150px;
       }
     }
     @keyframes righthand {
@@ -203,11 +227,11 @@
       }
       70% {
         transform: rotateZ(40deg);
-         margin: 0px 15px;
+         margin: 0px 25px;
       }
       to {
         transform: rotateZ(10deg);
-         margin: 10px 7px;
+         margin: 10px 17px;
       }
     }
     @keyframes lefthand {
@@ -216,12 +240,12 @@
          margin: 0px 0px;
       }
       70% {
-        transform: rotateZ(-10deg);
-         margin: 0px 1px;
+        transform: rotateZ(5deg);
+         margin: 0px 5px;
       }
       to {
         transform: rotateZ(40deg);
-         margin: 10px 7px;
+         margin: -4px 30px;
       }
     }
   </style>
@@ -233,22 +257,23 @@
     <div class="person1">
       <div class="main">
         <div class="head"></div>
-        <div class="body">
-          <div class="righthand">
-            <div class="upperhand">
-                <div class="handNut"></div>
+        <div class="hand">
+            <div class="righthand">
+              <div class="upperhand">
+                  <div class="handNut"></div>
+              </div>
+              <div class="lowerhand"> </div>
+              <div class="finger"></div>
             </div>
-            <div class="lowerhand"> </div>
-            <div class="finger"></div>
-          </div>
-          <div class="lefthand">
-            <div class="upperhand1">
-                <div class="handNut"></div>
+            <div class="lefthand">
+              <div class="upperhand1">
+                  <div class="handNut"></div>
+              </div>
+              <div class="lowerhand"> </div>
+              <div class="finger"></div>
             </div>
-            <div class="lowerhand"> </div>
-            <div class="finger"></div>
-          </div>
         </div>
+        <div class="body"></div>
         <div class="legs">
           <div class="right">
             <div class="cloth"></div>
@@ -267,6 +292,22 @@
     <div class="person2">
       <div class="main">
         <div class="head"></div>
+        <div class="hand">
+            <div class="righthand">
+              <div class="upperhand">
+                  <div class="handNut"></div>
+              </div>
+              <div class="lowerhand"> </div>
+              <div class="finger"></div>
+            </div>
+            <div class="lefthand">
+              <div class="upperhand1">
+                  <div class="handNut"></div>
+              </div>
+              <div class="lowerhand"> </div>
+              <div class="finger"></div>
+            </div>
+        </div>
         <div class="body"></div>
         <div class="legs">
           <div class="right">
@@ -286,6 +327,22 @@
     <div class="person3">
       <div class="main">
         <div class="head"></div>
+        <div class="hand">
+            <div class="righthand">
+              <div class="upperhand">
+                  <div class="handNut"></div>
+              </div>
+              <div class="lowerhand"> </div>
+              <div class="finger"></div>
+            </div>
+            <div class="lefthand">
+              <div class="upperhand1">
+                  <div class="handNut"></div>
+              </div>
+              <div class="lowerhand"> </div>
+              <div class="finger"></div>
+            </div>
+        </div>
         <div class="body"></div>
         <div class="legs">
           <div class="right">
@@ -302,7 +359,8 @@
       </div>
     </div>
 
-   
+
+  <div class="line"></div>
 
   </section>
 </body>
