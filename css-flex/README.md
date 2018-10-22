@@ -1,7 +1,32 @@
 
 
 # Flex
-This helps in aligning your page and make it responsive at once
+This helps in aligning your page and makes it responsive at once
+
+# Display Values are
+* flex
+* inline-flex 
+* inline 
+* block
+* contents
+* grid
+* inline-block
+* inline-grid
+* inline-table 
+* list-item 
+* run-in
+* table 
+* table-caption
+* table-column-group 
+* table-header-group 
+* table-footer-group
+* table-row-group
+* table-cell
+* table-column
+* table-row 
+* none 
+* initial 
+* inherit 
 
 ## Display: flex
 This makes the content of your page stack close to ano another ia a horizontal format. 
@@ -10,6 +35,36 @@ This makes the content of your page stack close to ano another ia a horizontal f
 ## Display: inline-flex
 This equally displays the elements stack horizontally,but its difference fron display: flex, is that
 *it doest not take over the entire row, it takes the exact wdth, whethear, small or big*
+
+#Display: inline
+Y=This display the element as an inline element just like  span tag.
+*Any height and width will be ignored*
+
+# Display: block
+This display the element as a block element like the p tag.
+*Each element takes up the whole width*
+
+# Display: content
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Height: 100vh
 This simplay sayslet the hieght be 100%. Ie, it should cover the entire height of the page
