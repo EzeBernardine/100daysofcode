@@ -4,29 +4,29 @@
 This helps in aligning your page and makes it responsive at once
 
 # Display Values are
-* flex
-* inline-flex 
-* inline 
-* block
-* contents
-* grid
-* inline-block
-* inline-grid
-* inline-table 
-* list-item 
-* run-in
-* table 
-* table-caption
-* table-column-group 
-* table-header-group 
-* table-footer-group
-* table-row-group
-* table-cell
-* table-column
-* table-row 
-* none 
-* initial 
-* inherit 
+1.  flex
+2.  inline-flex 
+3.  inline 
+4.  block
+5.  contents
+6.  grid
+7.  inline-block
+8.  inline-grid
+9.  inline-table 
+10. list-item 
+11. run-in
+12. table 
+13. table-caption
+14. table-column-group 
+15. table-header-group 
+16. table-footer-group
+17. table-row-group
+18. table-cell
+19. table-column
+20. table-row 
+21. none 
+22. initial 
+23. inherit 
 
 ## Display: flex
 This makes the content of your page stack close to ano another ia a horizontal format. 
@@ -42,9 +42,13 @@ Y=This display the element as an inline element just like  span tag.
 
 # Display: block
 This display the element as a block element like the p tag.
-*Each element takes up the whole width*
+*Each element takes up the whole width on a seperate line*
 
-# Display: content
+# Display: contents
+It makes the containing container disappear
+1. *Every property that has to do with the container disappears. Only the children stays*
+2. *The color, border, margin, padding of the containing element disappears*
+3. *But the color and font does show up*
 
 
 
