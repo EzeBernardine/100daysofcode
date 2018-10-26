@@ -50,6 +50,23 @@ It makes the containing container disappear
 2. *The color, border, margin, padding of the containing element disappears*
 3. *But the color and font does show up*
 
+# Display: grid
+This makes the children of a contaning element take up the full width of the container equally
+1. if the cotainer  has a width of 
+```css
+   width: 300px;
+```
+while the children, a width of 
+```css
+   width: 100px; (in  total)
+```
+the chlden will dhare the remaining 200px among them selvesequally
+
+#Display: inline-block
+This considers the margin of the containing element and also the padding.
+1. It wraps the element and removes spaces or width of the element execpt the is an implicit width
+2. It treats the element as an inline element and also a block element. 
+3. Extra remaining space is occupied by other elements.
 
 
 
