@@ -91,6 +91,9 @@ list-style-position:
 The element behaves like a table.
 1. It waps the element releasing excess space
 
+#Display: table-caption 
+1. The key part is that they are rendered as normal block boxes and hence each of them is displayed one below the other (as in, in their own row).
+
 
 
 
