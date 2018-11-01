@@ -87,6 +87,9 @@ It goes wee with
 ```css
 list-style-position:
 ```
+#Display: table 
+The element behaves like a table.
+1. It waps the element releasing excess space
 
 
 
