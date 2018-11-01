@@ -60,16 +60,26 @@ while the children, a width of
 ```css
    width: 100px; (in  total)
 ```
-the chlden will dhare the remaining 200px among them selvesequally
+the chlden will share the remaining 200px among them selves equally
 
 #Display: inline-block
 This considers the margin of the containing element and also the padding.
-1. It wraps the element and removes spaces or width of the element execpt the is an implicit width
+1. It wraps the element and removes spaces or extra width of the element execpt there is an implicit width
 2. It treats the element as an inline element and also a block element. 
 3. Extra remaining space is occupied by other elements.
 
+#Display: inline-grid
+This is similar to grid. The difference is
+1. its inline. It takes the width of the content. Extra with is letf for other elements to.
+eg. if width of the content is 200px, the container will justcover it up leaving other space around it for other elements
 
+# Display: inline-table
+1. This ignores the width of the children.
+2. If a width is given to the container, it takes the width only if it covers he children, Else, it ignores the width and wraps the children.
+3. The children arranges itself to be contained in the container, taking the next line if the width is not enough for another child
 
+#Display: run-in
+Displays an element as either block or inline, depending on context 
 
 
 
