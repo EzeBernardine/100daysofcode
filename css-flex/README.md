@@ -81,6 +81,13 @@ eg. if width of the content is 200px, the container will justcover it up leaving
 #Display: run-in
 Displays an element as either block or inline, depending on context 
 
+#Display: list-item
+Let the element behave like a <li> element
+It goes wee with 
+```css
+list-style-position:
+```
+
 
 
 
