@@ -94,9 +94,35 @@ The element behaves like a table.
 #Display: table-caption 
 1. The key part is that they are rendered as normal block boxes and hence each of them is displayed one below the other (as in, in their own row).
 
+### Flex-direction values
+1. row
+2. row-reverse
+3. column
+4. column-reverse
+5. initial
+6. inherit
 
+# Flex-direction: row
+This is the default setting. It makes the elements to stack fromleft to right
 
+# flex-direction: roww-reverse
+This is somehow similar to row. The major difference is 
+1. It arranges itself from right to left
+2. It starts from right side of the page to the left side
 
+# flex-diection: column
+This arranges the element fro top to bottom
+
+#flex-direction: column-resverse
+This is like column. The major difference is
+1. It arranges itselffrom bottom to top
+2. The aarangement starts from the bottom page to the top
+
+#flex-direction: initial
+Sets this property to its default value
+
+#flex-direction: initial
+Inherits this property from its parent element.
 
 
 
