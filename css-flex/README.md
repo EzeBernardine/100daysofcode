@@ -94,6 +94,7 @@ The element behaves like a table.
 #Display: table-caption 
 1. The key part is that they are rendered as normal block boxes and hence each of them is displayed one below the other (as in, in their own row).
 
+<!-- --------------fle-direction---------- -->
 ### Flex-direction values
 1. row
 2. row-reverse
@@ -121,10 +122,25 @@ This is like column. The major difference is
 #flex-direction: initial
 Sets this property to its default value
 
-#flex-direction: initial
+#flex-direction: inherit
 Inherits this property from its parent element.
 
+<!------------flex properties --------->
 
+1. flex-basis: 
+2. flex-flow: 
+3. flex-grow: 
+4. flex-shrink:
+5. flex-wrap: 
+# flex-wrap: wrap;
+This ensures that the items maintain there width. 
+1. They all take up the designated width, moving over to next line if there is no more space left.
+2. They all share the available  height equally
+
+# flex-wrap: wrap-reverse;
+This is similar to wrap. the difference is that it move from bottom to top, still maintainin its from left to fight position. 
+1. They all take up the designated width, moving over to next line if there is no more space left.
+2. They all share the available  height equally
 
 
 
