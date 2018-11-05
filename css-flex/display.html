@@ -10,10 +10,10 @@
     .box {
      text-align: center;
      box-shadow: 4px 4px 0 #201f021a;
-     font-size:80px;
+     /* font-size:80px; */
      border: 3px solid #0011ff;
-     width: 300px;
-     margin: 10px;
+     /* width: 300px;   */
+     order: 1
    }
 
    .box1 {background-color: #001380}
@@ -28,11 +28,19 @@
    .box0 {background-color: #7e8000}
 
     .container {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      /* flex-direction: column; */
       border: 5px solid red;
-      flex-direction: column;
       height: 100vh;
+    }
+    .box2 {
+      /* order: 2 */
+    }
+    .box5 {
+      order: inherit
+    }
+    .box6 {
+      /* order: 0 */
     }
   </style>
 </head>

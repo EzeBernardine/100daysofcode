@@ -1,8 +1,6 @@
 
 
-# Flex
-This helps in aligning your page and makes it responsive at once
-
+---------------*display--------------*
 # Display Values are
 1.  flex
 2.  inline-flex 
@@ -30,37 +28,39 @@ This helps in aligning your page and makes it responsive at once
 
 ## Display: flex
 This makes the content of your page stack close to ano another ia a horizontal format. 
-*the container covers the whole horizontal area of page*
+1. the container covers the whole horizontal area of page
 
 ## Display: inline-flex
 This equally displays the elements stack horizontally,but its difference fron display: flex, is that
-*it doest not take over the entire row, it takes the exact wdth, whethear, small or big*
+1. it doest not take over the entire row, it takes the exact wdth, whethear, small or big*
 
 #Display: inline
 Y=This display the element as an inline element just like  span tag.
-*Any height and width will be ignored*
+1. Any height and width will be ignored*
 
 # Display: block
 This display the element as a block element like the p tag.
-*Each element takes up the whole width on a seperate line*
+1. Each element takes up the whole width on a seperate line
 
 # Display: contents
 It makes the containing container disappear
-1. *Every property that has to do with the container disappears. Only the children stays*
-2. *The color, border, margin, padding of the containing element disappears*
-3. *But the color and font does show up*
+1. Every property that has to do with the container disappears. Only the children stays*
+2. The color, border, margin, padding of the containing element disappears*
+3. But the color and font does show up*
 
 # Display: grid
-This makes the children of a contaning element take up the full width of the container equally
+This makes the children of a contaning element take up the full width and height of the container equally
 1. if the cotainer  has a width of 
 ```css
    width: 300px;
+   height: 500px
 ```
 while the children, a width of 
 ```css
-   width: 100px; (in  total)
+   width: 100px; (in  total) and 
+   height: 400px
 ```
-the chlden will share the remaining 200px among them selves equally
+the chlden will share the remaining 200px in width and 100px in height among them selves equally
 
 #Display: inline-block
 This considers the margin of the containing element and also the padding.
@@ -94,7 +94,8 @@ The element behaves like a table.
 #Display: table-caption 
 1. The key part is that they are rendered as normal block boxes and hence each of them is displayed one below the other (as in, in their own row).
 
-<!-- --------------fle-direction---------- -->
+
+-----------------*fle-direction----------*
 ### Flex-direction values
 1. row
 2. row-reverse
@@ -125,13 +126,14 @@ Sets this property to its default value
 #flex-direction: inherit
 Inherits this property from its parent element.
 
-<!------------flex properties --------->
 
-1. flex-basis: 
-2. flex-flow: 
-3. flex-grow: 
-4. flex-shrink:
-5. flex-wrap: 
+---------------*flex wrap-------------*
+#flex-wrap values
+1. nowrap
+2. wrap
+3. wrap-reverse
+4. inital
+5. inhrit
 # flex-wrap: wrap;
 This ensures that the items maintain there width. 
 1. They all take up the designated width, moving over to next line if there is no more space left.
@@ -142,7 +144,33 @@ This is similar to wrap. the difference is that it move from bottom to top, stil
 1. They all take up the designated width, moving over to next line if there is no more space left.
 2. They all share the available  height equally
 
+#flex-wrap: nowrap
+This is the default value. it simply tells the items not to wrap
 
+#flew-wrap: initial
+This sets the item to a default value.
+
+#flew-wrap: inherit
+This says inherits the parent property
+
+
+---------------*order-----------------*
+Its sets the order in which an item is layed in a grid or flex container
+1. The item must be displayed flex or grid
+
+#order: value
+The values could be negative and positive integers
+1. negative nomber stay atop
+2. Positive number says below
+3. Zero and novalue remains in position
+
+
+---------------*flex basis------------------*
+
+1. flex-basis: 
+2. flex-flow: 
+3. flex-grow: 
+4. flex-shrink:
 
 
 
