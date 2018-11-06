@@ -163,6 +163,54 @@ The values could be negative and positive integers
 1. negative nomber stay atop
 2. Positive number says below
 3. Zero and novalue remains in position
+order = 
+(at the beginning)... -2, -1, 1, 0(default), 1, 2 , ...(at the end)
+4. Order changes the arrangement of a text if being copied
+
+
+-------------*justify-content---------------*
+1. justify-content: space-around;
+2. justify-content: space-between;
+3. justify-content: space-evenly;
+4. justify-content: initial;
+5. justify-content: inherit;
+6. justify-content: flex-end;
+7. justify-content: flex-start;
+7. justify-content: center;
+# justify-content: space-round;
+The items are evenly distributed along main axis with with spaces sroung them.
+
+# justify-content: space-between;
+The items are evenly distributed along main axis but fist item is on the start=line while the last itemis on the end-line.
+
+# justify-content: space-evenly;
+The items are evenly distributed along main axis. From the fisrt to last element.
+
+# justify-content: initial
+This sets the property to its default value
+
+# justify-content: inherit
+Inherits this property from its parent element.
+
+# justify-content: flex-end
+The items are parked towards theend of the container
+
+# justify-content: flex-start
+(default): items are packed toward the start line
+
+# justify-content: content
+ items are centered along the line
+
+
+
+
+
+
+
+
+
+
+
 
 
 ---------------*flex basis------------------*
@@ -171,36 +219,3 @@ The values could be negative and positive integers
 2. flex-flow: 
 3. flex-grow: 
 4. flex-shrink:
-
-
-
-
-
-
-
-
-
-## Height: 100vh
-This simplay sayslet the hieght be 100%. Ie, it should cover the entire height of the page
-
-## Flex-direction: row
-This  stacks the elements row by row. Ie from left to right
-*It is the defaut setting*
-
-## Flex-direction: colunm
-This stacks the elemnts column by column. Ie one on top the other, from top to buttom
-
-## fex-direction: row-reverse
-This is similar to row, just that is dslpays fromright to left
-
-## flex-diretion: cloumn-reverse
-This stacks the elements form bottom to top. It is the oppasoti of column
-
-## flex-wrap: wrap
-THis simplay tells the brower to assign the exact width. 
-*If the width is less enough, it should move over to the nest line to ensure the with are all the required value.*
-*The entire height will be split to accomodate the changes and will at the same time fill up the height*
-
-## flex-wrap: nowrap
-*This the default setting*
-It does not allow for the elements to maintain there width. It just shares the entire width within the elements
