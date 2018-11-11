@@ -12,6 +12,7 @@
      box-shadow: 4px 4px 0 #201f021a;
      font-size: 30px;
      color: white;
+     width: 200px;
    }
 
    .box1 {background-color: #001380}
@@ -27,17 +28,17 @@
 
     .container {
       display: flex;
-      /* flex-direction: column; */
+      /* display: grid; */
       border: 5px solid red;
-      /* justify-content: space-around; */
-      justify-content: space-between;
-      /* justify-content: space-evenly; */
-      /* justify-content: inherit; */
-      /* justify-content: flex-end; */
-      /* justify-content: flex-start; */
-      /* justify-content: center; */
-      flex-direction: column;
+      /* flex-direction: row; */
       min-height: 100vh;
+      flex-wrap: wrap;
+      /* align-content: center; */
+      align-items: center;
+      /* justify-content: center; */
+    }
+    .box5 {
+      /* font-size: 150px */
     }
   </style>
 </head>

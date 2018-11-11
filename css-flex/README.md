@@ -178,13 +178,13 @@ order =
 7. justify-content: flex-start;
 7. justify-content: center;
 # justify-content: space-round;
-The items are evenly distributed along main axis with with spaces sroung them.
+The items are evenly distributed along main axis(vertical) with  spaces around them.
 
 # justify-content: space-between;
-The items are evenly distributed along main axis but fist item is on the start=line while the last itemis on the end-line.
+The items are evenly distributed along main axis but fist item is on the start line while the last itemis on the end-line.
 
 # justify-content: space-evenly;
-The items are evenly distributed along main axis. From the fisrt to last element.
+The items are evenly distributed along main axis. From the first to last element.
 
 # justify-content: initial
 This sets the property to its default value
@@ -193,15 +193,80 @@ This sets the property to its default value
 Inherits this property from its parent element.
 
 # justify-content: flex-end
-The items are parked towards theend of the container
+The items are parked towards the end of the container
 
 # justify-content: flex-start
 (default): items are packed toward the start line
 
-# justify-content: content
+# justify-content: center
  items are centered along the line
 
 
+-----------*align-items----------------*
+NOTE. 
+ 1. In Flexbox it controls the alignment of items on the Cross Axis(vertical direction)
+ 2. In Grid Layout it controls the alignment of items on the Block Axis(horizontal direction) within their grid area.
+ 3. Align-item works better along side with display flex or grid
+CSS Syntax
+1. stretch(default)
+2. center
+3. flex-start
+3. flex-end
+4. baseline
+5. initial
+6. inherit;
+# align-item: stretch
+This vertically streches the width of the content of the element to the entire width
+its is the default value
+
+# align-item: center
+This centers the element along the vertical axis when using 
+```css
+display: flex
+```
+But along horizontal axis when using 
+```css
+display: grid
+```
+
+# align-item: flex-start
+This aligns the content from the top of the page down verticaly
+
+# align-item: flex-end
+Unlike flex-start, it starts from the bottom and moves upwards
+
+# align-item: baseline
+This makes all the write up of the page have the same base margin. ie, the content will be positined at the same baseline  of the cotainer  
+
+------------------*align-content-------------*
+The CSS align-content property sets how the browser distributes space between and around content items along the cross-axis(horizontal) of a flexbox container, and the main-axis of a grid container.
+
+1. flex-start
+2. flex-end:
+3. center:
+4. space-between: 
+5. space-around:
+6. stretch (default)
+#flex-start: 
+lines packed to the start othe container(horizontally)
+#flex-end:
+ lines packed to the end of thcontainer(horizontally)
+#center:
+ lines packed to the center of the container (horizontally)
+#space-between:
+ This evenly distributes the first line  at the start of the container while the last one is at the end
+#space-around:
+ This evenly distributes the elements with equal space around each line
+#stretch (default):
+ lines stretch to take up the remaining space
+
+
+*difference between justify-content, align-content and align-item*
+The align-items property of flex-box aligns the items inside a *flex container(using display: flex)* along the *cross axis (vertical ||)* just like 
+
+justify-content does along the *main axis(horizontal ==)*. (For the default flex-direction: row the cross axis corresponds to vertical and the main axis corresponds to horizontal. With flex-direction: column those two are interchanged respectively).
+
+But align-content is for multi line flexible boxes. It has no effect when items are in a single line. It aligns the whole structure according to its value. The CSS align-content property sets how the browser distributes space between and around content items along the cross-axis(horizontal) of a flexbox container, and the main-axis of a grid container.
 
 
 
@@ -209,13 +274,3 @@ The items are parked towards theend of the container
 
 
 
-
-
-
-
----------------*flex basis------------------*
-
-1. flex-basis: 
-2. flex-flow: 
-3. flex-grow: 
-4. flex-shrink:
