@@ -272,8 +272,43 @@ ___But align-content is for multi line flexible boxes. (*flex-wrap: wrap and wra
 (*To maintain the width of the elements and yet keep them at the say bottom, use fles-wrap: wrap and align-content: flex-end. To keep an element at the bottom without regarding its individual width, use flex-wrap: nowrap and align-items; flex-end*)
 
 
+-------------*align-self-------------*
+The align-self CSS property aligns (*flex items*) of the current flex line overriding the (*align-items*) value
+Note
+If any of the item's cross-axis margin is set to auto, then align-self is ignored. In Grid layout align-self aligns the item inside the grid area.
+```css
+.box5 {
+    align-self: flex-end;/*will not  not take effect*/
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+```
 
+---------------*flex------------------*
+It determines at what proprotion should i scale my selve up or down whaen there is an extra space or not enough space
+One could assign figures like 1 to the flex property
+```css
+  .box {
+     flex: 1/*This simply tells the elements to take up the entire width of the page proportionally*/
+   }
+  .container {
+      display: flex;
+    }
+  .box5 {
+    flex: 4 /*The fourth box will take up 4 * the size of every other box size if there is extra space. Esle, will remain the samesize as the others*/
+  }
+```
 
+-------------*flex-grow--------------------*
+IT defines the ability for a flex item to grow if necessary. 
+Syntax
+```css
+flex-grow: <number>
+```
+
+----------------*flex-shrink------------------*
+
+3. flex: flex-basis
 
 
 
