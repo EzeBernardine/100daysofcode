@@ -207,6 +207,7 @@ NOTE.
  1. In Flexbox it controls the alignment of items on the Cross Axis(vertical direction)
  2. In Grid Layout it controls the alignment of items on the Block Axis(horizontal direction) within their grid area.
  3. Align-item works better along side with display flex or grid
+ Think of it as the justify-content version for the cross-axis (perpendicular to the main-axis).
 CSS Syntax
 1. stretch(default)
 2. center
@@ -240,7 +241,7 @@ This makes all the write up of the page have the same base margin. ie, the conte
 
 ------------------*align-content-------------*
 The CSS align-content property sets how the browser distributes space between and around content items along the cross-axis(horizontal) of a flexbox container, and the main-axis of a grid container.
-
+@!Always be used along side with flex-wrap: wrap!@
 1. flex-start
 2. flex-end:
 3. center:
@@ -262,11 +263,13 @@ lines packed to the start othe container(horizontally)
 
 
 *difference between justify-content, align-content and align-item*
-The align-items property of flex-box aligns the items inside a *flex container(using display: flex)* along the *cross axis (vertical ||)* just like 
+___The align-items property of flex-box aligns the items inside a *flex container(using display: flex)* along the *cross axis (vertical ||)* just like 
 
-justify-content does along the *main axis(horizontal ==)*. (For the default flex-direction: row the cross axis corresponds to vertical and the main axis corresponds to horizontal. With flex-direction: column those two are interchanged respectively).
+___justify-content does along the *main axis(horizontal ==)*. (For the default flex-direction: row the cross axis corresponds to vertical and the main axis corresponds to horizontal. With flex-direction: column those two are interchanged respectively).
 
-But align-content is for multi line flexible boxes. It has no effect when items are in a single line. It aligns the whole structure according to its value. The CSS align-content property sets how the browser distributes space between and around content items along the cross-axis(horizontal) of a flexbox container, and the main-axis of a grid container.
+___But align-content is for multi line flexible boxes. (*flex-wrap: wrap and wrap-reverse create a multi-line flex container*) It has no effect when items are in a single line (*flex-wrap: nowrap creates a single-line flex container*). It aligns the whole structure according to its value. The CSS align-content property sets how the browser distributes space between and around content items along the cross-axis(horizontal) of a flexbox container, and the main-axis of a grid container.
+
+(*To maintain the width of the elements and yet keep them at the say bottom, use fles-wrap: wrap and align-content: flex-end. To keep an element at the bottom without regarding its individual width, use flex-wrap: nowrap and align-items; flex-end*)
 
 
 
