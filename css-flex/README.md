@@ -304,9 +304,38 @@ IT defines the ability for a flex item to grow if necessary.
 Syntax
 ```css
 flex-grow: <number>
+  .container {
+      display: flex;
+      flex-grow: 1
+    }
+    .box5 {
+      flex-grow: 1
+    }
+    .box8 {
+      flex-grow: 5
+    }
 ```
+From the code above, box 8 and box 5 will share the remaining space left.  While box5 grows at the rate of 1, box 8 grows at the rate of 5
+NOTE: The space is not really  shared into 6 (5 + 1) while box5 takes 1 part, box8  takes up the other part. The boxes  simply grow. That is to say, box8 is not necessarily 5 time box5
 
 ----------------*flex-shrink------------------*
+This  helps determine how an element is shrinked or reduces  as the browser gets smaller
+```css
+flex-shrink: <number>
+  .container {
+      display: flex;
+      flex-shrink: 1
+    }
+    .box5 {
+      flex-shrink: 1
+    }
+    .box8 {
+      flex-shrink: 5
+    }
+```
+From the above code, when the page is reduced or shrinked, box8 reduces or shrinks faster and gets smaller than box5
+NOTE: The higher the value the more it shrinks
+
 
 3. flex: flex-basis
 
