@@ -12,7 +12,8 @@
       box-shadow: 4px 4px 0 #201f021a;
       font-size: 30px;
       color: white;
-      width: 100px
+      flex-grow: 1;
+      /* width: 100px */
     }
 
    .box1 {background-color: #001380}
@@ -28,15 +29,17 @@
 
     .container {
       display: flex;
-      flex-grow: 1
+      border: 1px solid red;
     }
     .box5 {
       /* flex-grow: 1 */
-      flex-shrink: 5
+      /* flex-shrink: 5 */
+      flex-basis: 200px
     }
     .box8 {
       /* flex-grow: 4 */
-      flex-shrink: 1
+      flex-basis: 500px
+      /* flex-shrink: 1 */
     }
   </style>
 </head>
