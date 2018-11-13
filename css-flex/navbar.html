@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .navbar a {
+      /* width: 100%; */
+      text-decoration: none;
+      color: white;
+    }
+    .navbar {
+      margin: 0 auto;
+      max-width: 600px;
+      background-color: rgb(52, 189, 52);
+      color: white;
+      padding: 50px
+    }
+    .navbar ul{
+      background-color: rgb(11, 87, 11);
+      border: 1px solid rgb(1, 26, 1);
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+    .navbar li {
+      flex: 3;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      justify-content: center;
+      text-align: center
+    }
+    .navbar li:hover {
+      background-color: rgb(19, 71, 6);
+    }
+    .navbar .number {
+      flex: 1;
+    }
+
+    @media all and  (max-width: 800px) {
+      .navbar ul {
+        flex-wrap: wrap
+      }
+      .navbar li {
+        flex-basis: 50%;
+        flex-shrink: 1;
+        flex-grow: 1
+      }
+      .navbar .number {
+        flex: 1 1 20%
+      }
+    }
+    @media all and (max-width: 500px) {
+      .navbar li {
+        flex: 1 1 100%
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <ul>
+      <li><a href="#">one</a></li>
+      <li><a href="#">two</a></li>
+      <li><a href="#">three</a></li>
+      <li><a href="#">four</a></li>
+      <li><a href="#">five</a></li>
+      <li><a href="#">six</a></li>
+      <li class="number">1</li>
+      <li class="number">2</li>
+      <li class="number">3</li>
+      <li class="number">4</li>
+      <li class="number">5</li>
+    </ul>
+  </div>
+</body>
+</html>

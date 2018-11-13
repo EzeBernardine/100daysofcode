@@ -341,5 +341,7 @@ NOTE: The higher the value the more it shrinks
 The flex-basis CSS property sets the initial main size of a flex item. It sets the size of the content box unless otherwise set with box-sizing.
 Note: If the element is not a flexible item, the flex-basis property has no effect.
 
-
+-------------------*flex shorthand--------*
+*Syntax flex: flex-grow flex shrink flex basis*
+This is a shorthand property that sets flex-grow, flex-shrink, and flex-basis.
 
