@@ -17,8 +17,7 @@
       width:  100%
     }
     input {
-      margin: 0;
-      padding: 0;
+      padding: 10px;
       border: 0;
     }
     body {
@@ -32,10 +31,9 @@
       display: flex;
       flex-direction: column;
     }
-    .wrapper > * {
+    .menu {
       display: flex;
       flex-direction: column;
-      order: 999;
     }
     
     .header h1{
@@ -43,7 +41,6 @@
       text-align: center;
     }
     a {
-      padding: 0;
       text-decoration: none;
       color: white;
     }
@@ -51,33 +48,51 @@
     .navbar {
       background-color: rgb(46, 63, 11);
     }
-    .navbar ul {
+    .navbarLinks {
       display: flex;
       margin: 0;
       padding: 0;
       list-style-type: none;
-    }
-    .navbar li{
       text-align: center;
-      flex: 3;
+    }
+    .word{
+      flex: 3 ;
     }
     .nomber {
-      flex: 1;
+      flex: 1 ;
+    }
+    section, footer{
+      background-color:  rgb(46, 63, 11);
+      color: white;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      margin: 20px 0;
     }
 
+
+
     @media all and (max-width: 700px ) {
-      .navbar {
-        display: none;
-        order: 2;
+        .wrapper > * {
+          order: 999;
         }
       .menu div{
         display: block;
       }
-      .menu {
-        order: 1;
+      .navabr {
+        display: none
       }
       .Navbar__open {
         display: flex;
+      }
+      .navbar ul {
+         /* flex-wrap: wrap; */
+      }
+      .word {
+        flex-basis: 3 1  50%;
+      }
+      .navbar .nomber {
+      flex-basis:  1 1 25%;
       }
     }
 
@@ -97,12 +112,12 @@
     
     <nav class="navbar">
       <ul class="navbarLinks">
-        <li><a href="#">one</a></li>
-        <li><a href="#">two</a></li>
-        <li><a href="#">three</a></li>
-        <li><a href="#">four</a></li>
-        <li><a href="#">five</a></li>
-        <li><a href="#">six</a></li>
+        <li><a href="#" class="word">one</a></li>
+        <li><a href="#" class="word">two</a></li>
+        <li><a href="#" class="word">three</a></li>
+        <li><a href="#" class="word">four</a></li>
+        <li><a href="#" class="word">five</a></li>
+        <li><a href="#" class="word">six</a></li>
         <li><a href="#" class="nomber">1</a></li>
         <li><a href="#" class="nomber">2</a></li>
         <li><a href="#" class="nomber">3</a></li>
@@ -133,7 +148,6 @@
   <script>
       function classToggle() {
       const navs = document.querySelectorAll('.navbar')
-      console.log(navs)
       navs.forEach(nav => nav.classList.toggle('Navbar__open'));
      }
 
