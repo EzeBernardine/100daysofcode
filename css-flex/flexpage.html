@@ -17,12 +17,17 @@
       width:  100%
     }
     input {
-      padding: 10px;
+      padding: 5px;
       border: 0;
+      margin: 2px;
+      width: 20%;
+      border-radius: 5px
     }
     body {
       margin: 0;
       padding: 0;
+      font-size: 80%;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
       background-color: rgb(102, 143, 20);
     }
     .wrapper {
@@ -45,15 +50,17 @@
       color: white;
     }
    
-    .navbar {
-      background-color: rgb(46, 63, 11);
-    }
     .navbarLinks {
+      background-color: rgb(46, 63, 11);
       display: flex;
       margin: 0;
       padding: 0;
       list-style-type: none;
       text-align: center;
+      width: 100%
+    }
+    .navbarLinks li {
+      margin: 5px 0
     }
     .word{
       flex: 3 ;
@@ -66,10 +73,12 @@
       color: white;
       text-align: center;
       padding: 0;
-      margin: 0;
       margin: 20px 0;
     }
-
+    .inputs {
+      padding: 5px;
+      flex: 1
+    }
 
 
     @media all and (max-width: 700px ) {
@@ -79,23 +88,41 @@
       .menu div{
         display: block;
       }
-      .navabr {
-        display: none
+      .menu {
+        order: 1
+      }
+      .navbar {
+        display: none;
+        order: 2;
       }
       .Navbar__open {
         display: flex;
       }
       .navbar ul {
-         /* flex-wrap: wrap; */
+         flex-wrap: wrap;
       }
       .word {
-        flex-basis: 3 1  50%;
+        flex-basis:   50%;
       }
       .navbar .nomber {
-      flex-basis:  1 1 25%;
+      flex-basis:   25%;
       }
     }
 
+    @media all and (max-width: 400px) {
+    .word{
+      flex-basis: 100%
+    }
+    .nomber {
+      flex-basis: 25%
+    }
+    .header {
+      order: 3;
+    }
+    .detail {
+      order: 4;
+    }
+    }
   </style>
 </head>
 <body>
@@ -112,16 +139,16 @@
     
     <nav class="navbar">
       <ul class="navbarLinks">
-        <li><a href="#" class="word">one</a></li>
-        <li><a href="#" class="word">two</a></li>
-        <li><a href="#" class="word">three</a></li>
-        <li><a href="#" class="word">four</a></li>
-        <li><a href="#" class="word">five</a></li>
-        <li><a href="#" class="word">six</a></li>
-        <li><a href="#" class="nomber">1</a></li>
-        <li><a href="#" class="nomber">2</a></li>
-        <li><a href="#" class="nomber">3</a></li>
-        <li><a href="#" class="nomber">4</a></li>
+        <li class="word"><a href="#" >one</a></li>
+        <li class="word"><a href="#" >two</a></li>
+        <li class="word"><a href="#" >three</a></li>
+        <li class="word"><a href="#" >four</a></li>
+        <li class="word"><a href="#" >five</a></li>
+        <li class="word"><a href="#" >six</a></li>
+        <li  class="nomber"><a href="#">1</a></li>
+        <li  class="nomber"><a href="#">2</a></li>
+        <li  class="nomber"><a href="#">3</a></li>
+        <li  class="nomber"><a href="#">4</a></li>
       </ul>
     </nav>
 
@@ -141,7 +168,7 @@
     </section>
 
     <footer class="footer">
-      <p>Author: Ben</p>
+      <p>&copy; Ben</p>
     </footer>
   </div>
 
