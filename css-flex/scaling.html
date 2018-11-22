@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Scalling</title>
+  <style> 
+    ul li {
+      list-style: none;
+      padding: 20px;
+      background: yellow
+    }
+    a {
+      text-decoration: none;
+    }
+    body {
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      margin: 0;
+      padding: 0
+    }
+    .wrapper {
+      margin: 0 auto;
+      max-width: 500px;
+      display: flex
+    }
+    .clue {
+      /* padding: 5px; */
+      background: red;
+      color: white;
+      border-radius: 4px
+    }
+    .scale {
+      flex: 1;
+      background: rgba(255, 0, 0, 0.116);
+      margin: 20px;
+      padding: 10px;
+      border-radius: 4px;
+      /* text-align: center; */
+      display: flex;
+      flex-wrap: wrap
+    }
+    .scale > * {
+      flex: 1 1 100%
+    }
+    .cost {
+      font-size: 150%;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+
+    <div class="scale scale1">
+      <h2>Scale1</h2>
+      <p>This the paragraph of the first scling box</p>
+      <ul class="props">
+        <li>Scalling link 1</li>
+        <li>Scalling link 2</li>
+        <li>Scalling link 3</li>
+      </ul>
+      <p class="cost">Medium</p>
+      <a href="#" class="clue">Cool</a>
+    </div>
+    
+
+    <div class="scale scale1">
+      <h2>Scale2</h2>
+      <p>This the paragraph of the second scling box, and its really cool</p>
+      <ul class="props">
+        <li>Scalling link 1</li>
+        <li>Scalling link 2</li>
+        <li>Scalling link 3</li>
+        <li>Scalling link 3</li>
+      </ul>
+      <p class="cost">&nacute;59</p>
+      <a href="#" class="clue">&naira</a>
+    </div>
+
+    <div class="scale scale1">
+      <h2>Scale3</h2>
+      <p>This the paragraph of the third scling box. It just simply nice too</p>
+      <ul class="props">
+        <li>Scalling link 1</li>
+        <li>Scalling link 2</li>
+        <li>Scalling link 3</li>
+      </ul>
+      <p class="cost">&nacute;20</p>
+      <a href="#" class="clue">Perfect</a>
+    </div>
+
+  </div>
+</body>
+</html>
