@@ -6,13 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Scalling</title>
   <style> 
+    html {
+      box-sizing: border-box 
+    }
+    *, *:before, *:after {
+      box-sizing: inherit
+    }
     ul li {
       list-style: none;
-      padding: 20px;
-      background: yellow
+      padding: 5px;
+      border-bottom: 1px solid rgba(255, 0, 0, 0.26)
+    }
+    ul li:last-child {
+      border-bottom: none
     }
     a {
       text-decoration: none;
+      padding: 10px !important;
     }
     body {
       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -22,13 +32,14 @@
     .wrapper {
       margin: 0 auto;
       max-width: 500px;
-      display: flex
+      display: flex;
+      align-items: center
     }
     .clue {
-      /* padding: 5px; */
       background: red;
       color: white;
-      border-radius: 4px
+      border-radius: 4px;
+      align-self: flex-end;
     }
     .scale {
       flex: 1;
@@ -36,15 +47,18 @@
       margin: 20px;
       padding: 10px;
       border-radius: 4px;
-      /* text-align: center; */
+      text-align: center;
       display: flex;
       flex-wrap: wrap
     }
     .scale > * {
-      flex: 1 1 100%
+      flex: 1 1 100%;
+      margin: 0;
+      padding: 0;
     }
     .cost {
       font-size: 150%;
+      color: grey
     }
   </style>
 </head>
@@ -66,7 +80,7 @@
 
     <div class="scale scale1">
       <h2>Scale2</h2>
-      <p>This the paragraph of the second scling box, and its really cool</p>
+      <p>This the paragraph of the second scling box, and its really cool. This the paragraph of the second scling box, and its really cool</p>
       <ul class="props">
         <li>Scalling link 1</li>
         <li>Scalling link 2</li>

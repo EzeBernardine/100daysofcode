@@ -345,3 +345,57 @@ Note: If the element is not a flexible item, the flex-basis property has no effe
 *Syntax flex: flex-grow flex shrink flex basis*
 This is a shorthand property that sets flex-grow, flex-shrink, and flex-basis.
 
+
+
+
+
+
+-----------*Preprocessor------------------*
+A preprocessor adds an additional step before our css code its self. It is usually having  a language on top css such scss or sas. 
+# Reasons for writing scss instead of css
+It has a powerful capability
+1. Variability
+2. Nexting
+3. Mixings
+4. Automatic Vendor Prefixing
+5. More flexible
+6. Has powerful frameworks and can equally make use of bootstrap right from your scss code
+
+# Differences between Sass and SCSS
+## SASS ______ Syntactically Awesome Stlte-Sheets
+1. Its is the original language that came up with this extral capabilities on top of css to be able to write much moer reuseable code
+2. It also the original syntaxing language
+3. The syntax is shorter
+4. Does not use semicolons or {}
+5. you must use a new line for every line of code you make instead of semicolon ; (You can't write tow dierent lines in the same line)
+6. Strict rules for whitespaces
+7. =my-mixin
+8. +my-mixin
+9. @import foo 
+10. @extend foo
+EG
+```css
+.container 
+  float: left
+  width: 100%
+p
+  color: #333
+```
+## SCSS  ______ Sassy CSS
+1. It was built with the purpose to make it closer to css language so that people using usig css can easily transition to scss withpout having to learn a new syntax. 
+2. The css syntax is basically the subset of scss syntax
+3. Ignore whitespaces
+4. @mixin my-mixin
+5. @include my-mixin
+6. @import foo
+7. @ extend foo
+Eg
+```css
+.container {
+  float: left;
+  width: 100%;
+  p {
+    color: #333;
+  }
+}
+```
