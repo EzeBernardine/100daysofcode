@@ -351,7 +351,7 @@ This is a shorthand property that sets flex-grow, flex-shrink, and flex-basis.
 
 
 -----------*Preprocessor------------------*
-A preprocessor adds an additional step before our css code its self. It is usually having  a language on top css such scss or sas. 
+A preprocessor adds an additional step before o<!--  -->ur css code its self. It is usually having  a language on top css such scss or sas. 
 # Reasons for writing scss instead of css
 It has a powerful capability
 1. Variability
