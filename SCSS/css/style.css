@@ -1,4 +1,8 @@
 body {
-  background-color: #e2f0e2; }
-  body p {
-    color: #d89191; }
+  background-color: #72765a;
+  margin: 0;
+  padding: 0; }
+  body header {
+    color: #e4560a; }
+    body header h1 {
+      color: #e4560a; }

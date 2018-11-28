@@ -1,11 +1,17 @@
 
-$text-color: rgb(216, 145, 145);
-$background-color: rgb(226, 240, 226);
-$font-size:  80%; 
+@import '_variables.scss';
+
 
 body {
   background-color: $background-color;
-  p {
-    color: $text-color;
-  }
+  margin:0;
+  padding: 0;
+    header {
+      color: $text-color;
+      h1 {
+        color: $text-color;
+      }
+    }
+  
+  
 }
