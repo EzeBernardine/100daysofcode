@@ -1,10 +1,36 @@
-.wrapper {
-  background-color: #72765a;
+body {
   margin: 0;
-  padding: 0; }
-  .wrapper header {
-    color: #e4560a; }
-    .wrapper header h1 {
-      color: #e4560a;
-      background-color: #614432;
-      border-color: #614432; }
+  padding: 0;
+  border: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #00091017; }
+
+input {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+.wrapper {
+  max-width: 1000px;
+  margin: 10% auto;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: none; }
+  .wrapper .intro {
+    flex: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center; }
+  .wrapper .line {
+    border: 1px solid #000910b6;
+    width: 0;
+    height: 100%;
+    margin: 5%; }
+  .wrapper .card {
+    flex: 2;
+    box-shadow: 5px 5px 8px 1px #00091044;
+    background-color: #00091004; }

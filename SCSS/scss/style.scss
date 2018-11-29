@@ -2,16 +2,31 @@
 @import '_variables.scss';
 @import '_mixins.scss';
 
-
+body {
+  @include margin-padding-border(0, 0, 0);
+  width: 100%;
+  height: 100vh;
+  background-color: $body-color;
+}
+input {
+  @include margin-padding-border(0, 0, 0);
+}
 .wrapper {
-  background-color: $background-color;
-  margin:0;
-  padding: 0;
-    header {
-      color: $text-color;
-      h1 {
-        color: $text-color;
-        @include first;
-      }
-    }
+  max-width: 1000px;
+  margin: 10% auto;
+  height: 300px;
+  @include display($direction: row, $text-align: none);
+  .intro {
+    flex: 3;
+    @include display($direction: row, $text-align: center);
+  }
+  .line {
+    border: 1px solid $border-color;
+    @include width-height($width: 0, $height: 100%, $margin: 5%);
+  }
+  .card{
+    flex: 2;
+    @include box-shadow;
+    background-color: $background-color;
+  }
 }

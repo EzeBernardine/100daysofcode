@@ -4,3 +4,30 @@
   background-color: $header-color;
   border-color: $header-color;
 }
+
+@mixin button {
+  border: 1px solid $background-color;
+}
+
+@mixin box-shadow {
+  box-shadow: 5px 5px 8px 1px $box-shadow-color;
+}
+
+@mixin display($direction, $text-align) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  text-align: $text-align;
+}
+
+@mixin width-height($width, $height, $margin) {
+  width: $width;
+  height: $height;
+  margin: $margin;
+}
+
+@mixin margin-padding-border($margin, $padding, $border) {
+  margin: $margin;
+  padding: $padding;
+  border: $border;
+}
