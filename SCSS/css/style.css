@@ -1,8 +1,10 @@
-body {
+.wrapper {
   background-color: #72765a;
   margin: 0;
   padding: 0; }
-  body header {
+  .wrapper header {
     color: #e4560a; }
-    body header h1 {
-      color: #e4560a; }
+    .wrapper header h1 {
+      color: #e4560a;
+      background-color: #614432;
+      border-color: #614432; }
