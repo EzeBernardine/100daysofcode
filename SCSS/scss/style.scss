@@ -8,42 +8,40 @@ body {
   background-color: $body-color;
 }
 input {
-  @include margin-padding-border(0, 0, 0);
+  @include margin-padding-border(-10px 0 0 0, 0, 0);
+  background-color:  transparent;
+  border-bottom: 1px solid #000910b6;
+  width: 100%;
+  @include border-radius;
 }
 .wrapper {
   max-width: 1000px;
-  @include margin-padding-border(10% auto 0, 5%, 1px solid red);
+  @include margin-padding-border(5% auto 0, 5%,0);
   height: 300px;
   color: $text-color;
   font-size: $text-font;
   font-family: $text-font-family;
-  @include display($direction: row, $text-align: none);
-  .intro {
-    flex: 4;
-    @include display($direction: row,$text-align: center);
-  }
-  .line {
-    border: 1px solid $border-color;
-    @include width-height-margin(0, 100%, 5%);
-  }
-  .signup {
-    .card{
-      @include width-height-margin(100%, 100%, 5%);
-      // @include margin-padding-border(0 ,10%, 0);
-      flex: 3;
-      @include box-shadow;
-      background-color: $background-color;
-      }
+  @include display($direction: column, $text-align: none);
+  .card{
+    @include width-height-margin(50%, 100%, 2%);
+    @include margin-padding-border(2% ,5%, 0);
+    @include box-shadow;
+    background-color: $background-color;
+    h2 {
+      text-align: center
+    }
+    .nameDiv {
+      @include display($direction: row, $text-align: none);
+
+    }
+    .nameDiv:hover {
+      @include display($direction: column, $text-align: none);
+
     }
   }
-  button {
-    @include button;
-    // @include margin-padding-border(0 0 0 85%, 5px, 0);
-  }
+}
 
-  @media all and (max-width: 800px) {
-    .wrapper {
-
-      // @include display($direction: column, $text-align: none);
-    }
-  }
+button {
+  @include button;
+  @include margin-padding-border(0 , 5px, 0);
+}

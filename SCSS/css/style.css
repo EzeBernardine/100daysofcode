@@ -6,43 +6,53 @@ body {
   background-color: #00091017; }
 
 input {
-  margin: 0;
+  margin: -10px 0 0 0;
   padding: 0;
-  border: 0; }
+  border: 0;
+  background-color: transparent;
+  border-bottom: 1px solid #000910b6;
+  width: 100%;
+  border-radius: 5px; }
 
 .wrapper {
   max-width: 1000px;
-  margin: 10% auto 0;
+  margin: 5% auto 0;
   padding: 5%;
-  border: 1px solid red;
+  border: 0;
   height: 300px;
   color: #000910ce;
   font-size: 91%;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   text-align: none; }
-  .wrapper .intro {
-    flex: 4;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: center; }
-  .wrapper .line {
-    border: 1px solid #000910b6;
-    width: 0;
+  .wrapper .card {
+    width: 50%;
     height: 100%;
-    margin: 5%; }
-  .wrapper .signup .card {
-    width: 100%;
-    height: 100%;
-    margin: 5%;
-    flex: 3;
+    margin: 2%;
+    margin: 2%;
+    padding: 5%;
+    border: 0;
     box-shadow: 5px 5px 8px 1px #00091044;
     background-color: #00091004; }
+    .wrapper .card h2 {
+      text-align: center; }
+    .wrapper .card .nameDiv {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-align: none; }
+    .wrapper .card .nameDiv:hover {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: none; }
 
 button {
   color: #f1f5f8;
   background-color: #c44536;
-  border-radius: 5px; }
+  border-radius: 5px;
+  margin: 0;
+  padding: 5px;
+  border: 0; }

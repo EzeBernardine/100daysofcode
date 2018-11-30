@@ -8,6 +8,10 @@
 @mixin button {
   color: #f1f5f8;
   background-color: $button-color;
+  @include border-radius
+}
+
+@mixin border-radius {
   border-radius: 5px;
 }
 
