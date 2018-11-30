@@ -6,7 +6,9 @@
 }
 
 @mixin button {
-  border: 1px solid $background-color;
+  color: #f1f5f8;
+  background-color: $button-color;
+  border-radius: 5px;
 }
 
 @mixin box-shadow {
@@ -20,7 +22,7 @@
   text-align: $text-align;
 }
 
-@mixin width-height($width, $height, $margin) {
+@mixin width-height-margin($width, $height, $margin) {
   width: $width;
   height: $height;
   margin: $margin;

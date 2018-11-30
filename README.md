@@ -399,3 +399,73 @@ Eg
   }
 }
 ```
+
+## Partials
+They are SCSS file that are not converted to css files, Therefore the preprocessors will not create any css files from them
+1. The name must always start with underscore_ eg _variables.scss
+
+## Importing Partials
+Here is my package.json file.  *_"scss": "node-sass --watch  scss -o css"_* .This line of code watches any changes in your scss and css files. Whaenever your edit or make changes in either your partials or scss file which are both in your scss/ folder,  the effect will be authormatically take effect.
+```json
+{
+  "name": "scss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch  scss -o css"
+  },
+  "author": "Eze Bernardine May",
+  "license": "ISC"
+}
+```
+This here aremy variables inmy partials, and the name of my partial is _variables.scss
+```js
+$text-color: rgb(228, 86, 10);
+$background-color: rgb(114, 118, 90);
+$font-size: 81%;
+```
+This here is how to import your oartials into your main.scss code
+```js
+@import '_variables.scss';
+```
+
+# Mixins
+This allows us to reuse our codes multiple time as we wish.
+*Syntax*
+```scss
+@mixin first {
+  background-color: $header-color;
+  border-color: $header-color;
+}
+```
+*How to use it*
+```scss
+h1 {
+  color: $text-color;
+  @include first;
+    }
+```
+# mixin with arguements
+Mixins can be used along side arguements. For instance
+```scss
+@mixin margin-padding-border($margin, $padding, $border) {
+  margin: $margin;
+  padding: $padding;
+  border: $border;
+}
+```
+ ($margin, $padding, $border) are the arguements  passed when ever this mixin (margin-padding-border) is called.
+ And to use them, you have to make use of the @include keyword followed by the arguement parameters
+
+```scss
+  @include margin-padding-border(0, 0, 0);
+  or
+  @include width-height($width: 0, $height: 100%, $margin: 5%);
+```
+In this case, both will output the same result.
+
+## Importance of mixin
+1. It makes your code short and reuseable
+2. Allows your code look clean and easy to read
