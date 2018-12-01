@@ -9,7 +9,7 @@ body {
   background-color: $body-color;
 }
 input {
-  @include margin-padding-border(-10px 0 0 0, 0, 0);
+  @include margin-padding-border(0px 0 0 0, 0, 0);
   background-color:  transparent;
   border-bottom: 1px solid #000910b6;
   width: 100%;
@@ -35,13 +35,16 @@ input {
     @include box-shadow;
     background-color: $background-color;
     h2 {
-      text-align: center
+      text-align: center;
     }
     .name, .password {
       margin-bottom: -20px;
     }
+    .nameDiv {
+      border: 1px solid red;
+      // height: 100px;
+    }
     .displayName {
-      margin-bottom: 20px;
       animation: displayName .5s linear forwards
     }
   
@@ -57,9 +60,16 @@ button {
 
   @keyframes displayName {
       0% {
-        transform: translateY(20px);
+        transform: translateY(0px);
         opacity: 0;
       }
-      50% {opacity: .5; }
-      100% {opacity: 1;}
+      50% {
+        opacity: .5;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(-20px);
+        color: red;
+      }
     }

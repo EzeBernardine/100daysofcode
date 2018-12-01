@@ -7,7 +7,7 @@ body {
   background-color: #00091017; }
 
 input {
-  margin: -10px 0 0 0;
+  margin: 0px 0 0 0;
   padding: 0;
   border: 0;
   background-color: transparent;
@@ -45,8 +45,9 @@ input {
       text-align: center; }
     .wrapper .card .name, .wrapper .card .password {
       margin-bottom: -20px; }
+    .wrapper .card .nameDiv {
+      border: 1px solid red; }
     .wrapper .card .displayName {
-      margin-bottom: 20px;
       animation: displayName .5s linear forwards; }
 
 button {
@@ -59,9 +60,12 @@ button {
 
 @keyframes displayName {
   0% {
-    transform: translateY(20px);
+    transform: translateY(0px);
     opacity: 0; }
   50% {
-    opacity: .5; }
+    opacity: .5;
+    transform: translateY(-20px); }
   100% {
-    opacity: 1; } }
+    opacity: 1;
+    transform: translateY(-20px);
+    color: red; } }

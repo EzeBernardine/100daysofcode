@@ -11,7 +11,7 @@
 
  function displayName() {
   if (document.querySelector('.name') != null) {
-      const name =document.querySelector('.name', '.password').className = 'displayName';
+    document.querySelector('.name').className = 'displayName';
   }
  }
 
