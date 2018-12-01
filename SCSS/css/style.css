@@ -1,3 +1,4 @@
+@import url(keyframes.css);
 body {
   margin: 0;
   padding: 0;
@@ -12,7 +13,11 @@ input {
   background-color: transparent;
   border-bottom: 1px solid #000910b6;
   width: 100%;
-  border-radius: 5px; }
+  border-radius: 5px;
+  color: black; }
+
+::-moz-placeholder {
+  color: transparent; }
 
 .wrapper {
   max-width: 1000px;
@@ -38,16 +43,11 @@ input {
     background-color: #00091004; }
     .wrapper .card h2 {
       text-align: center; }
-    .wrapper .card .nameDiv {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      text-align: none; }
-    .wrapper .card .nameDiv:hover {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: none; }
+    .wrapper .card .name, .wrapper .card .password {
+      margin-bottom: -20px; }
+    .wrapper .card .displayName {
+      margin-bottom: 20px;
+      animation: displayName .5s linear forwards; }
 
 button {
   color: #f1f5f8;
@@ -56,3 +56,12 @@ button {
   margin: 0;
   padding: 5px;
   border: 0; }
+
+@keyframes displayName {
+  0% {
+    transform: translateY(20px);
+    opacity: 0; }
+  50% {
+    opacity: .5; }
+  100% {
+    opacity: 1; } }

@@ -1,6 +1,7 @@
 
 @import '_variables.scss';
 @import '_mixins.scss';
+@import 'keyframes.css';
 
 body {
   @include margin-padding-border(0, 0, 0);
@@ -13,7 +14,13 @@ input {
   border-bottom: 1px solid #000910b6;
   width: 100%;
   @include border-radius;
+  color: black;
 }
+// input:focus
+::-moz-placeholder {
+  color: transparent;
+}
+
 .wrapper {
   max-width: 1000px;
   @include margin-padding-border(5% auto 0, 5%,0);
@@ -30,14 +37,14 @@ input {
     h2 {
       text-align: center
     }
-    .nameDiv {
-      @include display($direction: row, $text-align: none);
-
+    .name, .password {
+      margin-bottom: -20px;
     }
-    .nameDiv:hover {
-      @include display($direction: column, $text-align: none);
-
+    .displayName {
+      margin-bottom: 20px;
+      animation: displayName .5s linear forwards
     }
+  
   }
 }
 
@@ -45,3 +52,14 @@ button {
   @include button;
   @include margin-padding-border(0 , 5px, 0);
 }
+
+
+
+  @keyframes displayName {
+      0% {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      50% {opacity: .5; }
+      100% {opacity: 1;}
+    }
