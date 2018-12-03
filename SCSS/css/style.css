@@ -1,4 +1,16 @@
-@import url(keyframes.css);
+@import url("https://fonts.googleapis.com/css?family=Tangerine");
+@import url("https://fonts.googleapis.com/css?family=Inconsolata");
+@keyframes displayName {
+  0% {
+    transform: translateY(0px);
+    opacity: 0; }
+  50% {
+    opacity: .5;
+    transform: translateY(-35px); }
+  100% {
+    opacity: 1;
+    transform: translateY(-35px); } }
+
 body {
   margin: 0;
   padding: 0;
@@ -7,8 +19,8 @@ body {
   background-color: #00091017; }
 
 input {
-  margin: 0px 0 0 0;
-  padding: 0;
+  margin: 0px 0 0 0px;
+  padding: 0 0 0 7px;
   border: 0;
   background-color: transparent;
   border-bottom: 1px solid #000910b6;
@@ -27,7 +39,7 @@ input {
   height: 300px;
   color: #000910ce;
   font-size: 91%;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Tangerine", Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,18 +48,21 @@ input {
     width: 50%;
     height: 100%;
     margin: 2%;
-    margin: 2%;
     padding: 5%;
     border: 0;
     box-shadow: 5px 5px 8px 1px #00091044;
     background-color: #00091004; }
     .wrapper .card h2 {
+      font-family: "Inconsolata", "Courier New", Courier, monospace, "Courier New", Courier, monospace;
       text-align: center; }
     .wrapper .card .name, .wrapper .card .password {
-      margin-bottom: -20px; }
-    .wrapper .card .nameDiv {
-      border: 1px solid red; }
-    .wrapper .card .displayName {
+      margin: 0 0 -20px 5px;
+      padding: 0;
+      border: 0;
+      color: #000910ce; }
+    .wrapper .card .nameInput {
+      margin: 10% 0; }
+    .wrapper .card .display {
       animation: displayName .5s linear forwards; }
 
 button {
@@ -57,15 +72,3 @@ button {
   margin: 0;
   padding: 5px;
   border: 0; }
-
-@keyframes displayName {
-  0% {
-    transform: translateY(0px);
-    opacity: 0; }
-  50% {
-    opacity: .5;
-    transform: translateY(-20px); }
-  100% {
-    opacity: 1;
-    transform: translateY(-20px);
-    color: red; } }

@@ -7,11 +7,15 @@
 
 
 
-  document.getElementsByClassName('input')[0].addEventListener('click', displayName)
+  document.getElementsByClassName('inputName')[0].addEventListener('click', displayName);
+  document.getElementsByClassName('inputPassword')[0].addEventListener('click', displayPassword);
 
- function displayName() {
-  if (document.querySelector('.name') != null) {
-    document.querySelector('.name').className = 'displayName';
-  }
+ function displayName()  {
+   const nameDiv = document.querySelector('.nameDiv')
+  if (nameDiv != null) document.querySelector('.nameDiv').className = 'display'; 
+ }
+ function displayPassword() {
+   const passwordDiv = document.querySelector('.passwordDiv') 
+  if (passwordDiv != null) document.querySelector('.passwordDiv').className = 'display'; 
  }
 

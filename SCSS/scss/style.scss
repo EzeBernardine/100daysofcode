@@ -1,7 +1,10 @@
 
-@import '_variables.scss';
-@import '_mixins.scss';
-@import 'keyframes.css';
+@import 'partials/variables';
+@import 'partials/mixins';
+
+
+@include google-font("Tangerine");
+@include google-font("Inconsolata");
 
 body {
   @include margin-padding-border(0, 0, 0);
@@ -9,7 +12,7 @@ body {
   background-color: $body-color;
 }
 input {
-  @include margin-padding-border(0px 0 0 0, 0, 0);
+  @include margin-padding-border(0px 0 0 0px,0 0 0 7px, 0);
   background-color:  transparent;
   border-bottom: 1px solid #000910b6;
   width: 100%;
@@ -30,22 +33,23 @@ input {
   font-family: $text-font-family;
   @include display($direction: column, $text-align: none);
   .card{
-    @include width-height-margin(50%, 100%, 2%);
+    @include width-height(50%, 100%);
     @include margin-padding-border(2% ,5%, 0);
     @include box-shadow;
     background-color: $background-color;
     h2 {
+      font-family: $header-font-family;
       text-align: center;
     }
     .name, .password {
-      margin-bottom: -20px;
+      @include margin-padding-border (0 0 -20px 5px, 0, 0);
+      color: $text-color;
     }
-    .nameDiv {
-      border: 1px solid red;
-      // height: 100px;
+    .nameInput {
+      margin: 10% 0;
     }
-    .displayName {
-      animation: displayName .5s linear forwards
+    .display {
+      animation: displayName .5s linear forwards;
     }
   
   }
@@ -57,19 +61,3 @@ button {
 }
 
 
-
-  @keyframes displayName {
-      0% {
-        transform: translateY(0px);
-        opacity: 0;
-      }
-      50% {
-        opacity: .5;
-        transform: translateY(-20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(-20px);
-        color: red;
-      }
-    }
