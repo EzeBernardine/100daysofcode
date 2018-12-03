@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Tangerine");
-@import url("https://fonts.googleapis.com/css?family=Inconsolata");
+@import url(https://fonts.googleapis.com/css?family=Rancho&effect=Tangerine);
+@import url(https://fonts.googleapis.com/css?family=Rancho&effect=Inconsolata);
+@import url(https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple);
 @keyframes displayName {
   0% {
     transform: translateY(0px);
@@ -33,8 +34,8 @@ input {
 
 .wrapper {
   max-width: 1000px;
-  margin: 5% auto 0;
-  padding: 5%;
+  margin: 10% auto 0;
+  padding: 0%;
   border: 0;
   height: 300px;
   color: #000910ce;
@@ -53,7 +54,7 @@ input {
     box-shadow: 5px 5px 8px 1px #00091044;
     background-color: #00091004; }
     .wrapper .card h2 {
-      font-family: "Inconsolata", "Courier New", Courier, monospace, "Courier New", Courier, monospace;
+      font-family: "shadow-multiple", "3d", "Inconsolata", "Courier New", Courier, monospace, "Courier New", Courier, monospace;
       text-align: center; }
     .wrapper .card .name, .wrapper .card .password {
       margin: 0 0 -20px 5px;

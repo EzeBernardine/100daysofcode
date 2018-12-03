@@ -5,6 +5,9 @@
 
 @include google-font("Tangerine");
 @include google-font("Inconsolata");
+// @include google-font("anaglyph");
+// @include google-font("3d");
+@include google-font("shadow-multiple");
 
 body {
   @include margin-padding-border(0, 0, 0);
@@ -23,10 +26,9 @@ input {
 ::-moz-placeholder {
   color: transparent;
 }
-
 .wrapper {
   max-width: 1000px;
-  @include margin-padding-border(5% auto 0, 5%,0);
+  @include margin-padding-border(10% auto 0, 0%,0);
   height: 300px;
   color: $text-color;
   font-size: $text-font;
@@ -40,7 +42,9 @@ input {
     h2 {
       font-family: $header-font-family;
       text-align: center;
+      // @include margin-padding-border (0 , 0, 0);
     }
+
     .name, .password {
       @include margin-padding-border (0 0 -20px 5px, 0, 0);
       color: $text-color;
