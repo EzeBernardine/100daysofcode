@@ -5,9 +5,9 @@
 
 @include google-font("Tangerine");
 @include google-font("Inconsolata");
-// @include google-font("anaglyph");
-// @include google-font("3d");
-@include google-font("shadow-multiple");
+// // @include google-font("3d");
+@include google-font("anaglyph");
+@include google-font("Rancho&effect=shadow-multiple");
 
 body {
   @include margin-padding-border(0, 0, 0);
@@ -42,7 +42,6 @@ input {
     h2 {
       font-family: $header-font-family;
       text-align: center;
-      // @include margin-padding-border (0 , 0, 0);
     }
 
     .name, .password {
@@ -57,11 +56,18 @@ input {
     }
   
   }
+  .card:hover {
+    @include box-shadow-hover;
+  }
 }
 
 button {
   @include button;
   @include margin-padding-border(0 , 5px, 0);
+  font-family: $text-font-family;
+}
+button:hover {
+  background: $button-color-hover
 }
 
 

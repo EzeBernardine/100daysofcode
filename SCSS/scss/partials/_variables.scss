@@ -5,8 +5,12 @@ $body-color: #00091017;
 $background-color: #00091004;
 $border-color: #00091057;
 $text-color: #000910ce;
-$button-color: #c44536;
-$box-shadow-color: #00091044;
+$button-color: #c44436cb;
+
+
+// =================HOVER COLOR
+$button-color-hover: #c44436;
+$box-shadow-color: #00091027;
 
 
 // ===================FONT-SIZES
@@ -14,6 +18,5 @@ $text-font: 91%;
 $header-font: 120%;
 
 // ===================FONT_FAMILY
-$text-font-family: "Tangerine",Arial, Helvetica, sans-serif;
-$header-font-family: "shadow-multiple","3d","Inconsolata",'Courier New', Courier, monospace,'Courier New', Courier, monospace;
-
+$text-font-family: "Inconsolata","Tangerine","Inconsolata", "anaglyph",Arial, Helvetica, sans-serif;
+$header-font-family: "Rancho&effect=shadow-multiple","3d","Inconsolata",'Courier New', Courier, monospace,'Courier New', Courier, monospace;

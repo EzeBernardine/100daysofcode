@@ -4,8 +4,7 @@
 
 @mixin google-font($font) {
   $font: unquote($font);
-  // @import url(https://fonts.googleapis.com/css?family=#{$font});
-  @import url(https://fonts.googleapis.com/css?family=Rancho&effect=#{$font});
+  @import url(https://fonts.googleapis.com/css?family=#{$font});
 }
 
 
@@ -15,12 +14,16 @@
   @include border-radius
 }
 
+
 @mixin border-radius {
   border-radius: 5px;
 }
 
 @mixin box-shadow {
   box-shadow: 5px 5px 8px 1px $box-shadow-color;
+}
+@mixin box-shadow-hover {
+  box-shadow: 5px 5px 14px 5px $box-shadow-color;
 }
 
 @mixin display($direction, $text-align) {
