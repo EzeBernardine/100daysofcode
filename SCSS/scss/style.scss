@@ -12,53 +12,54 @@
 body {
   @include margin-padding-border(0, 0, 0);
   width: 100%;
+  height: 100vh;;
   background-color: $body-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 input {
   @include margin-padding-border(0px 0 0 0px,0 0 0 7px, 0);
   background-color:  transparent;
   border-bottom: 1px solid #000910b6;
-  width: 100%;
+  width: 95%;
   @include border-radius;
   color: black;
 }
 // input:focus
-::-moz-placeholder {
-  color: transparent;
-}
+::-moz-placeholder {color: transparent;}
 .wrapper {
   max-width: 1000px;
-  @include margin-padding-border(10% auto 0, 0%,0);
-  height: 300px;
   color: $text-color;
   font-size: $text-font;
   font-family: $text-font-family;
   @include display($direction: column, $text-align: none);
+  @include width-height(40%, 50%);
   .card{
-    @include width-height(50%, 100%);
+    @include width-height(100%, 100%);
+    @include display($direction: column, $text-align: none);
     @include margin-padding-border(2% ,5%, 0);
     @include box-shadow;
     background-color: $background-color;
-    h2 {
+    .signUp {
+      flex: 1;
       font-family: $header-font-family;
       text-align: center;
     }
-
+    .data  {
+      width: 100%;
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+    }
     .name, .password {
       @include margin-padding-border (0 0 -20px 5px, 0, 0);
       color: $text-color;
     }
-    .nameInput {
-      margin: 10% 0;
-    }
-    .display {
-      animation: displayName .5s linear forwards;
-    }
-  
+    .nameInput {margin: 10% 0;}
+    .display {animation: displayName .5s linear forwards;}
   }
-  .card:hover {
-    @include box-shadow-hover;
-  }
+  .card:hover {@include box-shadow-hover;}
 }
 
 button {
@@ -69,5 +70,14 @@ button {
 button:hover {
   background: $button-color-hover
 }
-
+@media all and (max-width: 1000px) {
+  .wrapper {@include width-height(70%, 60%);}
+  .data {justify-content: space-evenly; }
+  .card {
+    width: 100%;
+    font-size: 80%;
+    .name, .password {  margin: 0 0 -14px 5px !important;   }
+   input {font-size: 90% }
+  }
+}
 

@@ -18,7 +18,11 @@ body {
   padding: 0;
   border: 0;
   width: 100%;
-  background-color: #00091017; }
+  height: 100vh;
+  background-color: #00091017;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 input {
   margin: 0px 0 0 0px;
@@ -26,7 +30,7 @@ input {
   border: 0;
   background-color: transparent;
   border-bottom: 1px solid #000910b6;
-  width: 100%;
+  width: 95%;
   border-radius: 5px;
   color: black; }
 
@@ -35,28 +39,36 @@ input {
 
 .wrapper {
   max-width: 1000px;
-  margin: 10% auto 0;
-  padding: 0%;
-  border: 0;
-  height: 300px;
   color: #000910ce;
   font-size: 91%;
   font-family: "Inconsolata", "Tangerine", "Inconsolata", "anaglyph", Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: none; }
+  text-align: none;
+  width: 40%;
+  height: 50%; }
   .wrapper .card {
-    width: 50%;
+    width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: none;
     margin: 2%;
     padding: 5%;
     border: 0;
     box-shadow: 5px 5px 8px 1px #00091027;
     background-color: #00091004; }
-    .wrapper .card h2 {
+    .wrapper .card .signUp {
+      flex: 1;
       font-family: "Rancho&effect=shadow-multiple", "3d", "Inconsolata", "Courier New", Courier, monospace, "Courier New", Courier, monospace;
       text-align: center; }
+    .wrapper .card .data {
+      width: 100%;
+      flex: 3;
+      display: flex;
+      flex-direction: column; }
     .wrapper .card .name, .wrapper .card .password {
       margin: 0 0 -20px 5px;
       padding: 0;
@@ -80,3 +92,17 @@ button {
 
 button:hover {
   background: #c44436; }
+
+@media all and (max-width: 1000px) {
+  .wrapper {
+    width: 70%;
+    height: 60%; }
+  .data {
+    justify-content: space-evenly; }
+  .card {
+    width: 100%;
+    font-size: 80%; }
+    .card .name, .card .password {
+      margin: 0 0 -14px 5px !important; }
+    .card input {
+      font-size: 90%; } }
