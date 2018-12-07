@@ -62,7 +62,7 @@ input {
     background-color: #00091004; }
     .wrapper .card .signUp {
       flex: 1;
-      font-family: "Rancho&effect=shadow-multiple", "3d", "Tangerine", "Inconsolata", "Courier New", Courier, monospace, "Courier New", Courier, monospace;
+      font-family: "Rancho&effect=shadow-multiple", "3d", "Inconsolata", "Courier New", Courier, monospace;
       text-align: center; }
     .wrapper .card .data {
       width: 100%;
@@ -87,11 +87,8 @@ button {
   border-radius: 5px;
   margin: 5% 0 0 0;
   padding: 5px;
-  border: 0;
+  border: 2px solid #d3bebe;
   font-family: "Inconsolata", "Tangerine", "Inconsolata", "anaglyph", Arial, Helvetica, sans-serif; }
-
-button:hover {
-  background: #c44436; }
 
 @media all and (max-width: 1000px) {
   .wrapper {

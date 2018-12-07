@@ -63,11 +63,11 @@ input {
 
 button {
   @include button;
-  @include margin-padding-border(5% 0 0 0 , 5px, 0);
+  @include margin-padding-border(5% 0 0 0 , 5px, 2px solid rgb(211, 190, 190));
   font-family: $text-font-family;
-}
-button:hover {
-  background: $button-color-hover
+  &:hover {
+    // background: lighten($button-color, 20%)
+  }
 }
 @media all and (max-width: 1000px) {
   .wrapper {@include width-height(70%, 60%);}
