@@ -19,14 +19,14 @@ body {
   align-items: center;
 }
 input {
-  @include margin-padding-border(0px 0 0 0px,0 0 0 7px, 0);
+  @include margin-padding-border(0px 0 0% 0px,0 0 0 7px, 0);
   background-color:  transparent;
   border-bottom: 1px solid #000910b6;
   width: 95%;
   @include border-radius;
   color: black;
 }
-::-moz-placeholder {color: transparent;}
+
 .wrapper {
   max-width: 1000px;
   color: $text-color;
@@ -52,11 +52,28 @@ input {
       flex-direction: column;
     }
     .name, .password {
-      @include margin-padding-border (0 0 -20px 5px, 0, 0);
+      @include margin-padding-border (0 0 25px 5px , 0, 0);
       color: $text-color;
+      position: absolute;
+      // transition:top 0.3s;
     }
-    .nameInput {margin: 10% 0;}
-    .display {animation: displayName .5s linear forwards;}
+    // input:focus{
+    //   border-bottom: 1px solid yellow;
+    //   outline:none;
+    //   bottom: 30px !important ;
+    // }
+    //      .name {
+    //     top:2.64em;
+    //     transition:top 0.3s;
+    // }
+     input:focus + .name {
+        top:0.88em;
+          border-bottom: 1px solid yellow;
+    }
+
+    .nameInput {
+      margin: 10% 0;
+      position: relative;}
   }
   .card:hover {@include box-shadow-hover;}
 }
@@ -65,9 +82,6 @@ button {
   @include button;
   @include margin-padding-border(5% 0 0 0 , 5px, 2px solid rgb(211, 190, 190));
   font-family: $text-font-family;
-  &:hover {
-    // background: lighten($button-color, 20%)
-  }
 }
 @media all and (max-width: 1000px) {
   .wrapper {@include width-height(70%, 60%);}
