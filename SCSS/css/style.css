@@ -68,10 +68,10 @@ input {
       position: absolute;
       pointer-events: none;
       left: 15px;
-      top: 10px;
+      top: -10px;
       transition: 0.2s ease all; }
     .wrapper .card input:focus ~ .floating-label, .wrapper .card input:not(:focus):valid ~ .floating-label {
-      top: -16px; }
+      top: -36px; }
     .wrapper .card .inputDiv {
       margin: 10% 0;
       position: relative;

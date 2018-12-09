@@ -53,11 +53,11 @@ input {
       position: absolute;
       pointer-events: none;
       left: 15px;
-      top: 10px;
+      top: -10px;
       transition: 0.2s ease all;
     }
     input:focus ~ .floating-label, input:not(:focus):valid ~ .floating-label {
-      top: -16px;
+      top: -36px;
     }
     .inputDiv  {
       margin: 10% 0;
