@@ -25,6 +25,7 @@ input {
   width: 95%;
   @include border-radius;
   color: black;
+
 }
 
 .wrapper {
@@ -46,34 +47,23 @@ input {
       text-align: center;
     }
     .data  {
-      width: 100%;
-      flex: 3;
-      display: flex;
-      flex-direction: column;
-    }
-    .name, .password {
-      @include margin-padding-border (0 0 25px 5px , 0, 0);
+      width: 100%;}
+    .floating-label {
       color: $text-color;
       position: absolute;
-      // transition:top 0.3s;
+      pointer-events: none;
+      left: 15px;
+      top: 10px;
+      transition: 0.2s ease all;
     }
-    // input:focus{
-    //   border-bottom: 1px solid yellow;
-    //   outline:none;
-    //   bottom: 30px !important ;
-    // }
-    //      .name {
-    //     top:2.64em;
-    //     transition:top 0.3s;
-    // }
-     input:focus + .name {
-        top:0.88em;
-          border-bottom: 1px solid yellow;
+    input:focus ~ .floating-label, input:not(:focus):valid ~ .floating-label {
+      top: -16px;
     }
-
-    .nameInput {
+    .inputDiv  {
       margin: 10% 0;
-      position: relative;}
+      position: relative;
+      padding-top: 10px;
+    }
   }
   .card:hover {@include box-shadow-hover;}
 }

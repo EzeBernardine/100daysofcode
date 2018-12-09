@@ -62,22 +62,20 @@ input {
       font-family: "Rancho&effect=shadow-multiple", "3d", "Inconsolata", "Courier New", Courier, monospace;
       text-align: center; }
     .wrapper .card .data {
-      width: 100%;
-      flex: 3;
-      display: flex;
-      flex-direction: column; }
-    .wrapper .card .name, .wrapper .card .password {
-      margin: 0 0 25px 5px;
-      padding: 0;
-      border: 0;
+      width: 100%; }
+    .wrapper .card .floating-label {
       color: #000910ce;
-      position: absolute; }
-    .wrapper .card input:focus + .name {
-      top: 0.88em;
-      border-bottom: 1px solid yellow; }
-    .wrapper .card .nameInput {
+      position: absolute;
+      pointer-events: none;
+      left: 15px;
+      top: 10px;
+      transition: 0.2s ease all; }
+    .wrapper .card input:focus ~ .floating-label, .wrapper .card input:not(:focus):valid ~ .floating-label {
+      top: -16px; }
+    .wrapper .card .inputDiv {
       margin: 10% 0;
-      position: relative; }
+      position: relative;
+      padding-top: 10px; }
   .wrapper .card:hover {
     box-shadow: 5px 5px 14px 5px #00091027; }
 

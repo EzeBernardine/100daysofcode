@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <title>Document</title>
   <style ></style>
   <link rel="stylesheet" href="css/style.css">
@@ -16,13 +16,14 @@
           <h2 class="font-effect-shadow-multiple">SIGN UP</h2>
         </div>
         <div class="data">
-          <div class="nameInput">
-            <h3 class="name">Name</h3>
-            <input type="text"  class="inputName">
+          <div class="inputDiv">
+              <input type="text"  required>
+              <div class="floating-label" >Name</div>
           </div>
-          <div class="passwordInput">
-            <h3 class="password" type="password" >Password</h3>
-            <input type="password"  class="inputPassword">
+
+          <div class="inputDiv">
+              <input type="password"  required>
+              <span class="floating-label" type="password" >Password</span>
           </div>
         </div>
       </section>
