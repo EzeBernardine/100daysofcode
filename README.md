@@ -1,6 +1,6 @@
 
-
----------------*display--------------*
+#=========================================================Flex box====================================
+# Display 
 # Display Values are
 1.  flex
 2.  inline-flex 
@@ -95,8 +95,8 @@ The element behaves like a table.
 1. The key part is that they are rendered as normal block boxes and hence each of them is displayed one below the other (as in, in their own row).
 
 
------------------*fle-direction----------*
-### Flex-direction values
+#fle-direction
+## Flex-direction values
 1. row
 2. row-reverse
 3. column
@@ -104,7 +104,7 @@ The element behaves like a table.
 5. initial
 6. inherit
 
-# Flex-direction: row
+## Flex-direction: row
 This is the default setting. It makes the elements to stack fromleft to right
 
 # flex-direction: roww-reverse
@@ -272,7 +272,7 @@ ___But align-content is for multi line flexible boxes. (*flex-wrap: wrap and wra
 (*To maintain the width of the elements and yet keep them at the say bottom, use fles-wrap: wrap and align-content: flex-end. To keep an element at the bottom without regarding its individual width, use flex-wrap: nowrap and align-items; flex-end*)
 
 
--------------*align-self-------------*
+*align-self*
 The align-self CSS property aligns (*flex items*) of the current flex line overriding the (*align-items*) value
 Note
 If any of the item's cross-axis margin is set to auto, then align-self is ignored. In Grid layout align-self aligns the item inside the grid area.
@@ -284,7 +284,7 @@ If any of the item's cross-axis margin is set to auto, then align-self is ignore
   }
 ```
 
----------------*flex------------------*
+*flex*
 It determines at what proprotion should i scale my selve up or down whaen there is an extra space or not enough space
 One could assign figures like 1 to the flex property
 ```css
@@ -299,7 +299,7 @@ One could assign figures like 1 to the flex property
   }
 ```
 
--------------*flex-grow--------------------*
+*flex-grow*
 IT defines the ability for a flex item to grow if necessary. 
 Syntax
 ```css
@@ -318,7 +318,7 @@ flex-grow: <number>
 From the code above, box 8 and box 5 will share the remaining space left.  While box5 grows at the rate of 1, box 8 grows at the rate of 5
 NOTE: The space is not really  shared into 6 (5 + 1) while box5 takes 1 part, box8  takes up the other part. The boxes  simply grow. That is to say, box8 is not necessarily 5 time box5
 
-----------------*flex-shrink------------------*
+*flex-shrink*
 This  helps determine how an element is shrinked or reduces  as the browser gets smaller
 ```css
 flex-shrink: <number>
@@ -346,12 +346,27 @@ Note: If the element is not a flexible item, the flex-basis property has no effe
 This is a shorthand property that sets flex-grow, flex-shrink, and flex-basis.
 
 
+# POSITIONING
+The position CSS property sets how an element is positioned in a document.
+## Positioning values
+1. relative
+2. sticky
+3. fixed
+4. absolute
+5. static (default)
+ 
+ ### position: relative;
+ The element is positioned according to normal flow of the document
+ 
+ ### position: static;
+ An element with *position: static;* is not positioned in any special way; it is always positioned according to the normal flow of the page:
 
 
 
 
------------*Preprocessor------------------*
-A preprocessor adds an additional step before o<!--  -->ur css code its self. It is usually having  a language on top css such scss or sas. 
+
+# PREPROCESSOR
+A preprocessor adds an additional step before our css code its self. It is usually having  a language on top css such scss or sas. 
 # Reasons for writing scss instead of css
 It has a powerful capability
 1. Variability
@@ -469,3 +484,14 @@ In this case, both will output the same result.
 ## Importance of mixin
 1. It makes your code short and reuseable
 2. Allows your code look clean and easy to read
+
+# functions in sass
+Sass has quite  some functions like 
+1. 
+```css
+color: darken(red, 25%) //This makes the color to darken by 25%
+```
+2. 
+```css
+color: lighten(red, 25%) //This makes the color to lighter by 25%
+```
