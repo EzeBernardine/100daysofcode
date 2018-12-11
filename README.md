@@ -357,9 +357,62 @@ The position CSS property sets how an element is positioned in a document.
 3. fixed
 4. absolute
 5. static (default)
+
  
  ### position: relative;
- The element is positioned according to normal flow of the document
+ The element is positioned according to thenormal flow of the document. 
+
+ The top and bottom properties specify the vertical offset from its normal position; the left and right properties specify the horizontal offset.
+
+ ```html
+  <p>Hello, mr positioner</p>
+  <div class="div1">div 1</div>
+  <div class="div2">div 2</div>
+ ```
+ ```css
+  p {
+      background: olivedrab;
+      margin: 0;
+    }
+    .div1 {
+      height: 50px;
+      width: 50px;
+      background: coral;
+      position: relative;
+      top: 150px
+    }
+    .div2 {
+      height: 50px;
+      width: 50px;
+      background: peru;
+    }
+ ```
+<img src="./img/positin-relative.jpeg" alt="">
+But when 
+
+```css
+   position: relative; /*is commented out*/ 
+
+ p {
+      background: olivedrab;
+      margin: 0;
+    }
+    .div1 {
+      height: 50px;
+      width: 50px;
+      background: coral;
+      /* position: relative; */
+      top: 150px  /*this wil not take effect */
+    }
+    .div2 {
+      height: 50px;
+      width: 50px;
+      background: peru;
+    }
+```
+The result will be
+<img src="./img/position-off-relative.png" alt="">
+ ### *From my own understanding, relative positioning allows the the page elements to stay in its normal position regarding the existence of the element's(with positin relative) defaut position, and also allows the element in qestion to to be repsoitioned from its default position using the top, left, right and bottom properties which will  not affect the the other elements*
  
  ### position: static;
  An element with *position: static;* is not positioned in any special way; it is always positioned according to the normal flow of the page:
