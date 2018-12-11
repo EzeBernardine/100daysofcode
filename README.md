@@ -1,7 +1,7 @@
 
-#=========================================================Flex box====================================
+# FLEX BOX
 # Display 
-# Display Values are
+## Display Values are
 1.  flex
 2.  inline-flex 
 3.  inline 
@@ -34,21 +34,21 @@ This makes the content of your page stack close to ano another ia a horizontal f
 This equally displays the elements stack horizontally,but its difference fron display: flex, is that
 1. it doest not take over the entire row, it takes the exact wdth, whethear, small or big*
 
-#Display: inline
+## Display: inline
 Y=This display the element as an inline element just like  span tag.
 1. Any height and width will be ignored*
 
-# Display: block
+## Display: block
 This display the element as a block element like the p tag.
 1. Each element takes up the whole width on a seperate line
 
-# Display: contents
+## Display: contents
 It makes the containing container disappear
 1. Every property that has to do with the container disappears. Only the children stays*
 2. The color, border, margin, padding of the containing element disappears*
 3. But the color and font does show up*
 
-# Display: grid
+## Display: grid
 This makes the children of a contaning element take up the full width and height of the container equally
 1. if the cotainer  has a width of 
 ```css
@@ -62,40 +62,40 @@ while the children, a width of
 ```
 the chlden will share the remaining 200px in width and 100px in height among them selves equally
 
-#Display: inline-block
+## Display: inline-block
 This considers the margin of the containing element and also the padding.
 1. It wraps the element and removes spaces or extra width of the element execpt there is an implicit width
 2. It treats the element as an inline element and also a block element. 
 3. Extra remaining space is occupied by other elements.
 
-#Display: inline-grid
+## Display: inline-grid
 This is similar to grid. The difference is
 1. its inline. It takes the width of the content. Extra with is letf for other elements to.
 eg. if width of the content is 200px, the container will justcover it up leaving other space around it for other elements
 
-# Display: inline-table
+## Display: inline-table
 1. This ignores the width of the children.
 2. If a width is given to the container, it takes the width only if it covers he children, Else, it ignores the width and wraps the children.
 3. The children arranges itself to be contained in the container, taking the next line if the width is not enough for another child
 
-#Display: run-in
+## Display: run-in
 Displays an element as either block or inline, depending on context 
 
-#Display: list-item
-Let the element behave like a <li> element
+## Display: list-item
+Let the element behave like a li element
 It goes wee with 
 ```css
 list-style-position:
 ```
-#Display: table 
+## Display: table 
 The element behaves like a table.
 1. It waps the element releasing excess space
 
-#Display: table-caption 
+## Display: table-caption 
 1. The key part is that they are rendered as normal block boxes and hence each of them is displayed one below the other (as in, in their own row).
 
 
-#fle-direction
+# flex-direction
 ## Flex-direction values
 1. row
 2. row-reverse
@@ -107,28 +107,28 @@ The element behaves like a table.
 ## Flex-direction: row
 This is the default setting. It makes the elements to stack fromleft to right
 
-# flex-direction: roww-reverse
+## flex-direction: roww-reverse
 This is somehow similar to row. The major difference is 
 1. It arranges itself from right to left
 2. It starts from right side of the page to the left side
 
-# flex-diection: column
+## flex-diection: column
 This arranges the element fro top to bottom
 
-#flex-direction: column-resverse
+## flex-direction: column-resverse
 This is like column. The major difference is
 1. It arranges itselffrom bottom to top
 2. The aarangement starts from the bottom page to the top
 
-#flex-direction: initial
+## flex-direction: initial
 Sets this property to its default value
 
-#flex-direction: inherit
+## flex-direction: inherit
 Inherits this property from its parent element.
 
 
----------------*flex wrap-------------*
-#flex-wrap values
+# flex wrap
+## flex-wrap values
 1. nowrap
 2. wrap
 3. wrap-reverse
@@ -139,26 +139,26 @@ This ensures that the items maintain there width.
 1. They all take up the designated width, moving over to next line if there is no more space left.
 2. They all share the available  height equally
 
-# flex-wrap: wrap-reverse;
+## flex-wrap: wrap-reverse;
 This is similar to wrap. the difference is that it move from bottom to top, still maintainin its from left to fight position. 
 1. They all take up the designated width, moving over to next line if there is no more space left.
 2. They all share the available  height equally
 
-#flex-wrap: nowrap
+## flex-wrap: nowrap
 This is the default value. it simply tells the items not to wrap
 
-#flew-wrap: initial
+## flew-wrap: initial
 This sets the item to a default value.
 
-#flew-wrap: inherit
+## flew-wrap: inherit
 This says inherits the parent property
 
 
----------------*order-----------------*
+# order
 Its sets the order in which an item is layed in a grid or flex container
 1. The item must be displayed flex or grid
 
-#order: value
+## order: value
 The values could be negative and positive integers
 1. negative nomber stay atop
 2. Positive number says below
@@ -168,7 +168,7 @@ order =
 4. Order changes the arrangement of a text if being copied
 
 
--------------*justify-content---------------*
+# justify-content
 1. justify-content: space-around;
 2. justify-content: space-between;
 3. justify-content: space-evenly;
@@ -177,36 +177,38 @@ order =
 6. justify-content: flex-end;
 7. justify-content: flex-start;
 7. justify-content: center;
-# justify-content: space-round;
+## justify-content: space-round;
 The items are evenly distributed along main axis(vertical) with  spaces around them.
 
-# justify-content: space-between;
+## justify-content: space-between;
 The items are evenly distributed along main axis but fist item is on the start line while the last itemis on the end-line.
 
-# justify-content: space-evenly;
+## justify-content: space-evenly;
 The items are evenly distributed along main axis. From the first to last element.
 
-# justify-content: initial
+## justify-content: initial
 This sets the property to its default value
 
-# justify-content: inherit
+## justify-content: inherit
 Inherits this property from its parent element.
 
-# justify-content: flex-end
+## justify-content: flex-end
 The items are parked towards the end of the container
 
-# justify-content: flex-start
+## justify-content: flex-start
 (default): items are packed toward the start line
 
-# justify-content: center
+## justify-content: center
  items are centered along the line
 
 
------------*align-items----------------*
-NOTE. 
- 1. In Flexbox it controls the alignment of items on the Cross Axis(vertical direction)
- 2. In Grid Layout it controls the alignment of items on the Block Axis(horizontal direction) within their grid area.
- 3. Align-item works better along side with display flex or grid
+# align-items
+ <li>Note</li>
+ 
+ *  In Flexbox it controls the alignment of items on the Cross Axis(vertical direction)
+ * In Grid Layout it controls the alignment of items on the Block Axis(horizontal direction) within their grid area.
+ *  Align-item works better along side with display flex or grid
+
  Think of it as the justify-content version for the cross-axis (perpendicular to the main-axis).
 CSS Syntax
 1. stretch(default)
@@ -216,11 +218,11 @@ CSS Syntax
 4. baseline
 5. initial
 6. inherit;
-# align-item: stretch
+## align-item: stretch
 This vertically streches the width of the content of the element to the entire width
 its is the default value
 
-# align-item: center
+## align-item: center
 This centers the element along the vertical axis when using 
 ```css
 display: flex
@@ -230,16 +232,16 @@ But along horizontal axis when using
 display: grid
 ```
 
-# align-item: flex-start
+## align-item: flex-start
 This aligns the content from the top of the page down verticaly
 
-# align-item: flex-end
+## align-item: flex-end
 Unlike flex-start, it starts from the bottom and moves upwards
 
-# align-item: baseline
+## align-item: baseline
 This makes all the write up of the page have the same base margin. ie, the content will be positined at the same baseline  of the cotainer  
 
-------------------*align-content-------------*
+# align-content
 The CSS align-content property sets how the browser distributes space between and around content items along the cross-axis(horizontal) of a flexbox container, and the main-axis of a grid container.
 @!Always be used along side with flex-wrap: wrap!@
 1. flex-start
@@ -248,31 +250,31 @@ The CSS align-content property sets how the browser distributes space between an
 4. space-between: 
 5. space-around:
 6. stretch (default)
-#flex-start: 
+
+## flex-start: 
 lines packed to the start othe container(horizontally)
-#flex-end:
+## flex-end:
  lines packed to the end of thcontainer(horizontally)
-#center:
+## center:
  lines packed to the center of the container (horizontally)
-#space-between:
+## space-between:
  This evenly distributes the first line  at the start of the container while the last one is at the end
-#space-around:
+## space-around:
  This evenly distributes the elements with equal space around each line
-#stretch (default):
+## stretch (default):
  lines stretch to take up the remaining space
 
 
-*difference between justify-content, align-content and align-item*
-___The align-items property of flex-box aligns the items inside a *flex container(using display: flex)* along the *cross axis (vertical ||)* just like 
+# *difference between justify-content, align-content and align-item*
+* The align-items property of flex-box aligns the items inside a <h3 >*flex container(using display: flex)*</h3> along the *cross axis (vertical ||)* just like 
 
-___justify-content does along the *main axis(horizontal ==)*. (For the default flex-direction: row the cross axis corresponds to vertical and the main axis corresponds to horizontal. With flex-direction: column those two are interchanged respectively).
+* justify-content does along the <h3>(*main axis(horizontal ==)*)</h3> . (For the default flex-direction: row the cross axis corresponds to vertical and the main axis corresponds to horizontal. With flex-direction: column those two are interchanged respectively).
 
-___But align-content is for multi line flexible boxes. (*flex-wrap: wrap and wrap-reverse create a multi-line flex container*) It has no effect when items are in a single line (*flex-wrap: nowrap creates a single-line flex container*). It aligns the whole structure according to its value. The CSS align-content property sets how the browser distributes space between and around content items along the cross-axis(horizontal) of a flexbox container, and the main-axis of a grid container.
+* But align-content is for multi line flexible boxes. <h3>(*flex-wrap: wrap and wrap-reverse create a multi-line flex container*)</h3> It has no effect when items are in a single line (*flex-wrap: nowrap creates a single-line flex container*). It aligns the whole structure according to its value. The CSS align-content property sets how the browser distributes space between and around content items along the cross-axis(horizontal) of a flexbox container, and the main-axis of a grid container.
 
-(*To maintain the width of the elements and yet keep them at the say bottom, use fles-wrap: wrap and align-content: flex-end. To keep an element at the bottom without regarding its individual width, use flex-wrap: nowrap and align-items; flex-end*)
+ <h3>(*To maintain the width of the elements and yet keep them at the say bottom, use fles-wrap: wrap and align-content: flex-end. To keep an element at the bottom without regarding its individual width, use flex-wrap: nowrap and align-items; flex-end*)</h3>
 
-
-*align-self*
+#  align-self
 The align-self CSS property aligns (*flex items*) of the current flex line overriding the (*align-items*) value
 Note
 If any of the item's cross-axis margin is set to auto, then align-self is ignored. In Grid layout align-self aligns the item inside the grid area.
@@ -284,7 +286,7 @@ If any of the item's cross-axis margin is set to auto, then align-self is ignore
   }
 ```
 
-*flex*
+## flex
 It determines at what proprotion should i scale my selve up or down whaen there is an extra space or not enough space
 One could assign figures like 1 to the flex property
 ```css
@@ -299,7 +301,7 @@ One could assign figures like 1 to the flex property
   }
 ```
 
-*flex-grow*
+## flex-grow
 IT defines the ability for a flex item to grow if necessary. 
 Syntax
 ```css
@@ -318,7 +320,7 @@ flex-grow: <number>
 From the code above, box 8 and box 5 will share the remaining space left.  While box5 grows at the rate of 1, box 8 grows at the rate of 5
 NOTE: The space is not really  shared into 6 (5 + 1) while box5 takes 1 part, box8  takes up the other part. The boxes  simply grow. That is to say, box8 is not necessarily 5 time box5
 
-*flex-shrink*
+## flex-shrink
 This  helps determine how an element is shrinked or reduces  as the browser gets smaller
 ```css
 flex-shrink: <number>
@@ -337,15 +339,16 @@ From the above code, when the page is reduced or shrinked, box8 reduces or shrin
 NOTE: The higher the value the more it shrinks
 
 
----------------------*flex-basis------------*
+# flex-basis
 The flex-basis CSS property sets the initial main size of a flex item. It sets the size of the content box unless otherwise set with box-sizing.
 Note: If the element is not a flexible item, the flex-basis property has no effect.
 
--------------------*flex shorthand--------*
+# flex shorthand
 *Syntax flex: flex-grow flex shrink flex basis*
+
 This is a shorthand property that sets flex-grow, flex-shrink, and flex-basis.
 
-
+_________________________________________________________________________________________________
 # POSITIONING
 The position CSS property sets how an element is positioned in a document.
 ## Positioning values
@@ -367,7 +370,7 @@ The position CSS property sets how an element is positioned in a document.
 
 # PREPROCESSOR
 A preprocessor adds an additional step before our css code its self. It is usually having  a language on top css such scss or sas. 
-# Reasons for writing scss instead of css
+## Reasons for writing scss instead of css
 It has a powerful capability
 1. Variability
 2. Nexting
@@ -376,7 +379,7 @@ It has a powerful capability
 5. More flexible
 6. Has powerful frameworks and can equally make use of bootstrap right from your scss code
 
-# Differences between Sass and SCSS
+# *Differences between Sass and SCSS*
 ## SASS ______ Syntactically Awesome Stlte-Sheets
 1. Its is the original language that came up with this extral capabilities on top of css to be able to write much moer reuseable code
 2. It also the original syntaxing language
@@ -485,7 +488,7 @@ In this case, both will output the same result.
 1. It makes your code short and reuseable
 2. Allows your code look clean and easy to read
 
-# functions in sass
+## functions in sass
 Sass has quite  some functions like 
 1. 
 ```css
