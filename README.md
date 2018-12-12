@@ -359,7 +359,7 @@ The position CSS property sets how an element is positioned in a document.
 5. static (default)
 
  
- ### position: relative;
+ ## position: relative;
  The element is positioned according to thenormal flow of the document. 
 
  The top and bottom properties specify the vertical offset from its normal position; the left and right properties specify the horizontal offset.
@@ -414,8 +414,19 @@ The result will be
 <img src="./img/position-off-relative.png" alt="">
  ### *From my own understanding, relative positioning allows the the page elements to stay in its normal position regarding the existence of the element's(with positin relative) defaut position, and also allows the element in qestion to to be repsoitioned from its default position using the top, left, right and bottom properties which will  not affect the the other elements*
  
- ### position: static;
+ ## position: static;
  An element with *position: static;* is not positioned in any special way; it is always positioned according to the normal flow of the page:
+ * Note: 
+   Static positioned elements are not affected by the top, bottom, left, and right properties.
+
+## position: fixed
+An element with position: fixed; is positioned relative to the viewport.
+<li>Note:</li> 
+
+* The element is removed from the normal document flow,
+* It always stays in the same place even if the page is scrolled 
+* It can be positioned with the top, bottom, right or left props
+<!-- * no space is created for the element in the page layout -->
 
 
 
