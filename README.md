@@ -426,7 +426,8 @@ An element with position: fixed; is positioned relative to the viewport.
 * The element is removed from the normal document flow,
 * It always stays in the same place even if the page is scrolled 
 * It can be positioned with the top, bottom, right or left props
-<!-- * no space is created for the element in the page layout -->
+* no space is created for the element in the page layout
+* Using the positioning value of fixed works just like that of absolute,
 
 
 
