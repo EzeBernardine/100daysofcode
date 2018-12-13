@@ -425,9 +425,75 @@ An element with position: fixed; is positioned relative to the viewport.
 
 * The element is removed from the normal document flow,
 * It always stays in the same place even if the page is scrolled 
-* It can be positioned with the top, bottom, right or left props
+* It can be repositioned with the top, bottom, right or left props
 * no space is created for the element in the page layout
-* Using the positioning value of fixed works just like that of absolute,
+
+### Effect of top, bottom, left and right on it
+Top, right, left and bottom affects the element in regards to its viewport.
+
+let’s say an element has a top value of 20px, it will be positioned 20px from the top of the viewport
+```css
+    <p>Hello, Mr positioner</p>
+    <p>Hi, Mrs positioner</p>
+    <div class="div1">div 1</div>
+    <div class="div2">div 2</div>
+```
+```css
+  body {
+      padding: 0;
+      margin: 0;
+    }
+    p {
+      background: olivedrab;
+      height: 50px;
+      margin: 0;
+    }
+    div {
+      height: 50px;
+      width: 50px;
+      background: peru;
+    }
+    p:nth-child(2) {
+      background: blue;
+    }
+    .div1 {
+      background: hotpink;
+      position: fixed;
+      top: 20px
+    }
+
+```
+
+   <img src="./img/fixed.png" alt="">
+
+## position: absolute;
+* Well, it is positioned based on its closest ancestor with a position other than static. 
+* If there is not an ancestor that fits the criteria, it is positioned relative to the body element. 
+<li>Note: body can be scrolled unlike viewport</li>
+
+
+
+<!-- 
+Position: fixed
+https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/
+
+https://codetheweb.blog/2017/11/21/css-position-property/
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/position
+
+Node
+https://medium.freecodecamp.org/understanding-the-core-of-nodejs-the-powerful-chrome-v8-engine-79e7eb8af964
+
+https://v8.dev/
+
+https://flaviocopes.com/v8/
+ -->
+
+
+
+
+
+
 
 
 
