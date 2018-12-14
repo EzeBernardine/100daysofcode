@@ -467,6 +467,8 @@ let’s say an element has a top value of 20px, it will be positioned 20px from 
    <img src="./img/fixed.png" alt="">
 
 ## position: absolute;
+* The element is removed from the normal document flow, 
+* no space is created for the element in the page layout.
 * Well, it is positioned based on its closest ancestor with a position other than static. 
 * If there is not an ancestor that fits the criteria, it is positioned relative to the body element. 
 <li>Note: body can be scrolled unlike viewport</li>
