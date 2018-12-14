@@ -360,9 +360,11 @@ The position CSS property sets how an element is positioned in a document.
 
  
  ## position: relative;
- The element is positioned according to thenormal flow of the document. 
+ The element is positioned according to the normal flow of the document.
+ * it introduces the ability to use z-index on that element, which doesn't really work with statically  
+* The top and bottom properties specify the vertical offset from its normal position; the left and right properties specify the horizontal offset.
 
- The top and bottom properties specify the vertical offset from its normal position; the left and right properties specify the horizontal offset.
+read more here https://css-tricks.com/absolute-relative-fixed-positioining-how-do-they-differ/
 
  ```html
   <p>Hello, mr positioner</p>
@@ -473,7 +475,8 @@ let’s say an element has a top value of 20px, it will be positioned 20px from 
 * If there is not an ancestor that fits the criteria, it is positioned relative to the body element. 
 <li>Note: body can be scrolled unlike viewport</li>
 
-
+### Effect of top, bottom, left and right on it
+When position is set to absolute or fixed, the top property specifies the distance between the element's top edge and the top edge of its containing block.
 
 <!-- 
 Position: fixed
