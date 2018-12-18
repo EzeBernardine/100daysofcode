@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>absolute</title>
+  <style>
+    body {
+      margin: 0;
+      height: 1000px;
+      background-color: azure;
+    }
+
+    section {
+      border: 1px solid rgb(225, 255, 0);
+      margin: 100px auto;
+      width: 500px;
+      padding: 10px;
+      background-color: crimson;
+    }
+    section:nth-child(2) {
+      position: relative;
+    }
+    h1 {
+      height: 50px;
+      width: 50px;
+      margin: 2px;
+      background: green;
+      font-size: 40px;
+      color: antiquewhite
+    }
+    div {
+      background-color: chocolate;
+    }
+    section:nth-child(2)  h1:nth-child(2) {
+      background-color: tan;
+      position: absolute;
+      top: 20px;
+      left: 1px;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h1>1</h1>
+    <h1>2</h1>
+    <h1>3</h1>
+  </section>
+
+  <section>
+    <div>
+      <h1>4</h1>
+      <h1>5</h1>
+      <h1>6</h1>
+    </div>
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>sticky</title>
+  <style>
+    body {
+      margin: 0;
+      height: 1000px;
+      background-color: azure;
+    }
+
+    section {
+      border: 1px solid rgb(225, 255, 0);
+      margin: 100px auto;
+      width: 500px;
+    }
+
+    div {
+      height: 50px;
+      width: 50px;
+      margin: 2px;
+      background: green;
+      font-size: 40px;
+      color: antiquewhite
+    }
+
+    section:nth-child(2) div:nth-child(2) {
+      background: red;
+      position: sticky;
+      top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </section>
+
+  <section>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </section>
+</body>
+
+</html>
