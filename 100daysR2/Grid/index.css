@@ -1,0 +1,57 @@
+
+*, *::before, *::after  {
+  margin: 0;
+  /* line-height: 1.6 */
+}
+.sidebar {
+  background-color: #c69963;
+  /* background-color: #B28451; */
+}
+
+.header {
+  background-color: #54483A;
+}
+
+.realtors {
+  background-color: #101d2c;
+}
+
+.features {
+  background-color: #aaa;
+}
+
+.story_picture {
+  background-color: #c69963;
+}
+
+.story_content {
+  background-color: #f9f7f6;
+}
+
+.homes {
+  background-color: #101d2c;
+}
+
+.galary {
+  background-color: #54483A;
+}
+
+.footer {
+  background-color: #101d2c;
+}
+
+/* /////////////////////// */
+
+.container {
+  display: grid;
+  border: 1px solid red;
+  height: 500px;
+  width: 300px
+  /* grid-template-columns: 50px repeat(5, 100px); */
+/* grid-template-columns: 1fr 50px 5fr 1fr; */
+}
+
+div div, section, footer, header {
+  height: 40px;
+  width: 50px
+}

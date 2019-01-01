@@ -210,3 +210,68 @@ section:nth-child(2) {
 
 ## Position: sticky
 
+#  GRID
+## Display: grid
+grid layout enables an author to align elements into columns and rows.
+
+This makes the children of a contaning element take up the full width and height of the container equally
+1. if the cotainer  has a width of 
+```css
+   width: 300px;
+   height: 500px
+```
+while the children, a width of 
+```css
+   width: 100px; (in  total) and 
+   height: 400px
+```
+the chlden will share the remaining 200px in width and 100px in height among them selves equally
+
+## Display: inline-grid
+This is similar to grid. The difference is
+1. its inline. It takes the width of the content. Extra width is letf for other elements to.
+eg. if width of the content is 200px, the container will justcover it up leaving other space around it for other elements
+
+- The vertical line of grid items are called columns.
+- The horizontal line of grid items are called rows.
+- The space between each column/row are called gaps.
+
+## grid-template-columns
+ defines the **number of columns** in your grid layout, and it can define the **width of each column**.
+
+ -  value is a space-separated-list, where each value defines the length of the respective column.
+
+ -  But you can choose to explicitly name the lines. Note the bracket syntax for the line names: 
+
+ - If your definition contains repeating parts, you can use the ```css repeat() ``` notation to streamline things:
+ ```css
+ .container {
+  display: grid;
+  border: 1px solid red;
+  grid-template-columns: repeat(3, 100px)  /* This will create a 5 colums of size 100px */; /* This is equivalent to */grid-template-columns: 100px 100px 100px ;
+
+  grid-template-columns: 50px repeat(5, 100px);  /* This will create a 6 colums with the first 50px and the remainng ones 100px */ /* This is equivalent to */ grid-template-columns: 50px 100px  100px 100px 100px 100px;
+}
+ ```
+
+ **Note, the names couod be anything and can have more than one name.**
+ ```css
+ .container {
+  grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];
+}
+
+.container {
+  grid-template-columns: [row1-start] 25% [row1-end row2-start] 25% [row2-end];
+}
+ ```
+
+ - The ```css fr``` unit allows you to set the size of a track as a fraction of the free space of the grid container. For example, this will set each item to one third the width of the grid container:
+ ```css
+
+.container {
+  display: grid;
+  border: 1px solid red;
+  grid-template-columns: 1fr 5fr 1fr; /* Th *is will create  3columns, where the first and last are the width and the second, times arger*/
+}
+
+ ```
