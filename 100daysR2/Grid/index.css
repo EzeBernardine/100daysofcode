@@ -46,8 +46,8 @@
   display: grid;
   border: 1px solid red;
   height: 500px;
-  width: 300px
-  /* grid-template-columns: 50px repeat(5, 100px); */
+  width: 300px;
+  grid-template-columns: 50px repeat(5, 100px);
 /* grid-template-columns: 1fr 50px 5fr 1fr; */
 }
 
