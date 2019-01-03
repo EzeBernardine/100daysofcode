@@ -4,40 +4,48 @@
   /* line-height: 1.6 */
 }
 .sidebar {
-  background-color: #c69963;
-  /* background-color: #B28451; */
+  background-color: #0e0801;
+   grid-area: header;
 }
 
 .header {
-  background-color: #54483A;
+  background-color: yellow;
+  /* grid-area: header; */
 }
 
 .realtors {
-  background-color: #101d2c;
+  background-color: blue;
+   /* grid-area: header; */
 }
 
 .features {
-  background-color: #aaa;
+  background-color: orange;
+   grid-area: main;
 }
 
 .story_picture {
-  background-color: #c69963;
+  background-color: purple;
+   /* grid-area: main; */
 }
 
 .story_content {
-  background-color: #f9f7f6;
+  background-color: pink;
+   /* grid-area: main; */
 }
 
 .homes {
-  background-color: #101d2c;
+  background-color: indigo;
+  grid-area: footer;
 }
 
 .galary {
-  background-color: #54483A;
+  background-color: green;
+  /* grid-area: footer; */
 }
 
 .footer {
-  background-color: #101d2c;
+  background-color: red;
+   /* grid-area: footer; */
 }
 
 /* /////////////////////// */
@@ -45,13 +53,18 @@
 .container {
   display: grid;
   border: 1px solid red;
-  height: 500px;
-  width: 300px;
-  grid-template-columns: 50px repeat(5, 100px);
-/* grid-template-columns: 1fr 50px 5fr 1fr; */
+  /* height: 500px; */
+  /* width: 300px; */
+  grid-template-columns: 50px auto;
+  grid-template-rows: 100px 50px;
+
+  grid-template-areas: 
+    "head head head"
+    "main . main"
+    ". footer  footer"
 }
 
 div div, section, footer, header {
-  height: 40px;
-  width: 50px
+  /* height: 40px; */
+  /* width: 500px */
 }

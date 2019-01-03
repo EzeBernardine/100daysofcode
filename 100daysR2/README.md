@@ -275,3 +275,62 @@ eg. if width of the content is 200px, the container will justcover it up leaving
 }
 
  ```
+ ## The grid-template-rows Property
+ The grid-template-rows property specifies the number (and the heights) of the rows in a grid layout.
+ - The value is a space-separated-list, where each value defines the the height of the respective row:
+ - The number of rows is determined by the number of values defined in the space-separated list.
+ ```html
+ <body>
+  
+  <div class="container"> 
+
+    <div class="sidebar">
+      sidebar
+    </div>
+
+    <header class="header">
+      header
+    </header>
+
+    <div class="realtors">
+      raltors
+    </div>
+
+    <section class="features">
+      features
+    </section>
+
+    <div class="story_picture">
+      story
+    </div>
+
+    <div class="story_content">
+      story
+    </div>
+
+    <div class="homes">
+      homes
+    </div>
+
+    <div class="galary">
+      galary
+    </div>
+
+    <footer class="footer">
+      footer
+    </footer>
+  </div>
+</body>
+ ```
+
+ ```css
+ .container {
+  display: grid;
+  grid-template-rows: 100px 40px 10px
+}
+
+ ```
+ Only the first three rows will be asigned heights, 100, 40 and 10px.
+
+ ## grid-template-areas
+ 
