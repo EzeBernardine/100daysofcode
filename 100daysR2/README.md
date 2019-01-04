@@ -333,4 +333,16 @@ eg. if width of the content is 200px, the container will justcover it up leaving
  Only the first three rows will be asigned heights, 100, 40 and 10px.
 
  ## grid-template-areas
- 
+ Defines a grid template by referencing the names of the grid areas which are specified with the grid-area property
+ - Repeating the name of a grid area causes the content to span those cells
+ -  A period signifies an empty cell. 
+ - Each row in your declaration needs to have the same number of cells.
+ -  **A period should not have spaces between them, they represent a single cell.**
+
+
+
+
+
+
+
+<a herf="https://css-tricks.com/guide-svg-animations-smil/" style='text-ecoration: underline'> SVG animation </a>

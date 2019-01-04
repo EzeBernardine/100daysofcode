@@ -1,23 +1,53 @@
 
 *, *::before, *::after  {
   margin: 0;
-  /* line-height: 1.6 */
+  line-height: 1.6
 }
 .sidebar {
-  background-color: #0e0801;
-   grid-area: header;
+  background-color: orange;
+   grid-area: side;
 }
 
 .header {
   background-color: yellow;
-  /* grid-area: header; */
+  grid-area: head;
 }
 
 .realtors {
   background-color: blue;
-   /* grid-area: header; */
+   grid-area: realtor;
 }
 
+.container {
+  display: grid;
+  border: 1px solid red;
+  /* height: 500px; */
+  /* width: 300px; */
+  grid-template-columns: repeat(4, auto) ;
+  grid-template-rows: repeat(3, 100px);
+
+  grid-template-areas: 
+    "side side side side"
+    ". head . ."
+    ". realtor realtor ."
+}
+
+div div, section, footer, header {
+  /* height: 40px; */
+  /* width: 500px */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 
 .features {
   background-color: orange;
    grid-area: main;
@@ -25,12 +55,12 @@
 
 .story_picture {
   background-color: purple;
-   /* grid-area: main; */
+   grid-area: main;
 }
 
 .story_content {
   background-color: pink;
-   /* grid-area: main; */
+   grid-area: main;
 }
 
 .homes {
@@ -40,31 +70,14 @@
 
 .galary {
   background-color: green;
-  /* grid-area: footer; */
+  grid-area: footer;
 }
 
 .footer {
   background-color: red;
-   /* grid-area: footer; */
-}
+   grid-area: footer;
+} */
 
 /* /////////////////////// */
 
-.container {
-  display: grid;
-  border: 1px solid red;
-  /* height: 500px; */
-  /* width: 300px; */
-  grid-template-columns: 50px auto;
-  grid-template-rows: 100px 50px;
 
-  grid-template-areas: 
-    "head head head"
-    "main . main"
-    ". footer  footer"
-}
-
-div div, section, footer, header {
-  /* height: 40px; */
-  /* width: 500px */
-}
