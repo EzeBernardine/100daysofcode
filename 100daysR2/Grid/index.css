@@ -21,8 +21,6 @@
 .container {
   display: grid;
   border: 1px solid red;
-  /* height: 500px; */
-  /* width: 300px; */
   grid-template-columns: repeat(4, auto) ;
   grid-template-rows: repeat(3, 100px);
 
@@ -47,36 +45,8 @@ div div, section, footer, header {
 
 
 
-/* 
-.features {
-  background-color: orange;
-   grid-area: main;
-}
 
-.story_picture {
-  background-color: purple;
-   grid-area: main;
-}
 
-.story_content {
-  background-color: pink;
-   grid-area: main;
-}
-
-.homes {
-  background-color: indigo;
-  grid-area: footer;
-}
-
-.galary {
-  background-color: green;
-  grid-area: footer;
-}
-
-.footer {
-  background-color: red;
-   grid-area: footer;
-} */
 
 /* /////////////////////// */
 

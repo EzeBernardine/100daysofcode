@@ -211,6 +211,26 @@ section:nth-child(2) {
 ## Position: sticky
 
 #  GRID
+
+1. grid
+2. grid-area
+3. grid-auto-columns
+4. grid-auto-flow
+5. grid-auto-rows
+6. grid-column
+7. grid-column-end
+8. grid-column-gap
+9. grid-column-start
+10. grid-gap
+11. grid-row
+12. grid-row-end
+13. grid-row-gap
+14. grid-row-start
+15. grid-template
+16. grid-template-areas
+17. grid-template-columns
+18. grid-template-rows
+
 ## Display: grid
 grid layout enables an author to align elements into columns and rows.
 
@@ -338,8 +358,16 @@ eg. if width of the content is 200px, the container will justcover it up leaving
  -  A period signifies an empty cell. 
  - Each row in your declaration needs to have the same number of cells.
  -  **A period should not have spaces between them, they represent a single cell.**
+ - The grid-gap property defines the grid’s gutters and is shorthand for grid-column-gap and grid-row-gap.
+ - This is the fun part. grid-template-areas defines the areas available in the grid. The name given to grid areas are arbitrary but should be sensible. The grid-template-areas also provides a crude visual representation of the page layout.
 
-
+## grid-template
+A shorthand for setting **grid-template-rows**, **grid-template-columns**, and **grid-template-areas** in a single declaration.
+```css
+.container {
+  grid-template: none | grid-template-rows grid-template-columns>;
+}
+```
 
 
 
