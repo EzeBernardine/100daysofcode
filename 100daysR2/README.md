@@ -373,4 +373,13 @@ A shorthand for setting **grid-template-rows**, **grid-template-columns**, and *
 
 
 
+
+# Tips
+
 <a herf="https://css-tricks.com/guide-svg-animations-smil/" style='text-ecoration: underline'> SVG animation </a>
+
+<a href='https://hashnode.com/post/master-npm-in-under-10-minutes-or-get-your-money-back-cjqmak392001i7vs2ufdlvcqb'>Master npm in Under 10 Minutes or Get Your Money Back</a>
+
+
+f7f7f9 --- button
+e8ecf9 -- background
