@@ -497,6 +497,275 @@ is the same as
 }
 ```
 
+## grid-column-gap
+You could say its just like giving some space inbetween a collection of books aligned horizontally
+
+```css
+grid-column-gap: <size of the line>
+```
+This can alsobe writtn as in higher browsers like Chrome 68+, Safari 11.2 Release 50+ and Opera 54+
+```css
+column-gap: <size of the line>
+```
+```html
+  <div class="container"> 
+    <div class="sidebar">
+      sidebar
+    </div>
+    <header class="header">
+      header
+    </header>
+    <div class="realtors">
+      raltors
+    </div>
+    <section class="features">
+      features
+    </section>
+  </div>
+```
+
+```css
+.sidebar {
+  background-color: orange;
+  grid-area: side;
+}
+.header {
+  background-color: green;
+  grid-area: head;
+}
+.realtors {
+  background-color: blue;
+  grid-area: realtor;
+}
+.features {
+  background-color: purple;
+  grid-area: fea ;
+}
+.container {
+  display: grid;
+  border: 1px solid red;
+  grid-template-columns: repeat(4, auto) ;
+  grid-template-rows: repeat(3, 50px);
+  grid-template-areas: 
+    "side head head  fea"
+    "side realtor realtor   fea"
+    "side realtor realtor  fea   ";
+  grid-column-gap: 20px
+}
+
+```
+<img src="./img/grid-column-gap.png" alt="">
+```
+
+## grid-row-gap
+You could say its just like giving some space inbetween a collection of books aligned vertically
+
+```css
+grid-row-gap: <size of the line>
+```
+This can also be writtn as in higher browsers like Chrome 68+, Safari 11.2 Release 50+ and Opera 54+
+```css
+row-gap: <size of the line>
+```
+```html
+  <div class="container"> 
+    <div class="sidebar">
+      sidebar
+    </div>
+    <header class="header">
+      header
+    </header>
+    <div class="realtors">
+      raltors
+    </div>
+    <section class="features">
+      features
+    </section>
+  </div>
+```
+
+```css
+.sidebar {
+  background-color: orange;
+  grid-area: side;
+}
+.header {
+  background-color: green;
+  grid-area: head;
+}
+.realtors {
+  background-color: blue;
+  grid-area: realtor;
+}
+.features {
+  background-color: purple;
+  grid-area: fea ;
+}
+.container {
+  display: grid;
+  border: 1px solid red;
+  grid-template-columns: repeat(4, auto) ;
+  grid-template-rows: repeat(3, 50px);
+  grid-template-areas: 
+    "side head head  fea"
+    "side realtor realtor   fea"
+    "side realtor realtor  fea   ";
+  grid-row-gap: 20px
+}
+
+```
+<img src="./img/grid-row-gap.png" alt="">
+
+
+## grid-gap
+A shorthand for grid-row-gap and grid-column-gap
+```html
+  <div class="container"> 
+    <div class="sidebar">
+      sidebar
+    </div>
+    <header class="header">
+      header
+    </header>
+    <div class="realtors">
+      raltors
+    </div>
+    <section class="features">
+      features
+    </section>
+  </div>
+```
+
+```css
+.sidebar {
+  background-color: orange;
+  grid-area: side;
+}
+.header {
+  background-color: green;
+  grid-area: head;
+}
+.realtors {
+  background-color: blue;
+  grid-area: realtor;
+}
+.features {
+  background-color: purple;
+  grid-area: fea ;
+}
+.container {
+  display: grid;
+  border: 1px solid red;
+  grid-template-columns: repeat(4, auto) ;
+  grid-template-rows: repeat(3, 50px);
+  grid-template-areas: 
+    "side head head  fea"
+    "side realtor realtor   fea"
+    "side realtor realtor  fea   ";
+  grid-gap: 50px 10px;
+}
+```
+
+<img src="./img/grid-gap.png" alt="">
+
+Note
+* If no grid-row-gap is specified, it's set to the same value as grid-column-gap
+```css
+container {
+  display: grid;
+  border: 1px solid red;
+  grid-template-columns: repeat(4, auto) ;
+  grid-template-rows: repeat(3, 50px);
+  grid-template-areas: 
+    "side head head  fea"
+    "side realtor realtor   fea"
+    "side realtor realtor  fea   ";
+  grid-gap: 10px 10px;
+}
+```
+<img src="./img/same-grid-gap.png" alt="">
+
+## justify-items
+When a cntainer is disolayed grid, the contrents span down the vertical direction of the container. For instance
+
+```css
+div {
+  height: 100px;
+  width: 150px
+}
+.sidebar {
+  background-color: orange;
+}
+.header {
+  background-color: green;
+}
+.realtors {
+  background-color: blue;
+}
+.features {
+  background-color: purple;
+}
+.container {
+  display: grid;
+  border: 3px solid red;
+  height: 95vh;
+  width: 1000px;
+}
+```
+```html
+  <div class="container"> 
+    <div class="sidebar">
+      sidebar
+    </div>
+    <div class="header">
+      header
+    </div>
+    <div class="realtors">
+      raltors
+    </div>
+    <div class="features">
+      features
+    </div>
+  </div>
+```
+<img src="./img/display-grid-only.png" alt="">
+
+But with justity-item, the contents a aligned at the center in a horizontal or inline format
+  
+```css
+.container {
+  display: grid;
+  border: 3px solid red;
+  height: 95vh;
+  width: 1000px;
+  justify-items: center
+}
+```
+
+<img src="./img/display-grid.png" alt="">
+The values include
+```css
+.container {
+  justify-items: start | end | center | stretch;
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -509,6 +778,3 @@ is the same as
 
 <a href='https://hashnode.com/post/master-npm-in-under-10-minutes-or-get-your-money-back-cjqmak392001i7vs2ufdlvcqb'>Master npm in Under 10 Minutes or Get Your Money Back</a>
 
-
-f7f7f9 --- button
-e8ecf9 -- background

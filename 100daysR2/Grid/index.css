@@ -3,53 +3,32 @@
   margin: 0;
   line-height: 1.7
 }
+div {
+  height: 100px;
+  width: 150px
+}
 .sidebar {
   background-color: orange;
-   grid-area: side;
 }
 
 .header {
   background-color: green;
-  grid-area: head;
 }
 
 .realtors {
   background-color: blue;
-   grid-area: realtor;
 }
 .features {
   background-color: purple;
-   grid-area: fea ;
 }
 
 .container {
   display: grid;
-  border: 1px solid red;
-  grid-template-columns: repeat(4, auto) ;
-  grid-template-rows: repeat(3, 50px);
-
-  grid-template-areas: 
-    "side head head  head"
-    "side realtor realtor   fea"
-    "side realtor realtor  fea   ";
-
+  border: 3px solid red;
+  height: 95vh;
+  width: 1000px;
+  justify-items: self-end;
 }
-.container2 {
-  display: grid;
-  border: 1px solid rgb(0, 255, 17);
-
-  grid-template: 
-    ' side head head head' 50px /* height grid-template-rows: repeat(3, 50px);*/
-    "side realtor realtor fea" 50px
-    "side realtor realtor fea" 50px
-    / auto auto auto auto   /*grid-template-columns: repeat(4, auto) */
-}
-
-div div, section, footer, header {
-  /* height: 40px; */
-  /* width: 500px */
-}
-
 
 
 
