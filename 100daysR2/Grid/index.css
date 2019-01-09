@@ -32,6 +32,17 @@
     "side head head  head"
     "side realtor realtor   fea"
     "side realtor realtor  fea   ";
+
+}
+.container2 {
+  display: grid;
+  border: 1px solid rgb(0, 255, 17);
+
+  grid-template: 
+    ' side head head head' 50px /* height grid-template-rows: repeat(3, 50px);*/
+    "side realtor realtor fea" 50px
+    "side realtor realtor fea" 50px
+    / auto auto auto auto   /*grid-template-columns: repeat(4, auto) */
 }
 
 div div, section, footer, header {

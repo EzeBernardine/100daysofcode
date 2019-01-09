@@ -376,7 +376,7 @@ grid-template-areas:
     "head realtor head  "/* This will not work */
     "head realtor head  ";/* This will not work */
 ```
-* An area cannot go but horizontal and vertical at a time
+* An area cannot go but horizontal and vertical at a time 
 ```css
  grid-template-areas: 
     "side side side " /* is will not work */
@@ -468,6 +468,35 @@ A shorthand for setting **grid-template-rows**, **grid-template-columns**, and *
   grid-template: none | grid-template-rows grid-template-columns>;
 }
 ```
+For example 
+```css
+.container2 {
+  display: grid;
+  border: 1px solid rgb(0, 255, 17);
+
+grid-template: 
+  ' side head head head' 50px /*grid-template-rows: repeat(3, 50px);*/
+  "side realtor realtor fea" 50px
+  "side realtor realtor fea" 50px
+  / auto auto auto auto   /*grid-template-columns: repeat(4, auto) */
+}
+```
+is the same as
+
+```css
+.container2 {
+  display: grid;
+  border: 1px solid red;
+  grid-template-columns: repeat(4, auto) ;
+  grid-template-rows: repeat(3, 50px);
+
+  grid-template-areas: 
+    "side head head  head"
+    "side realtor realtor   fea"
+    "side realtor realtor  fea   ";
+}
+```
+
 
 
 
