@@ -357,9 +357,109 @@ eg. if width of the content is 200px, the container will justcover it up leaving
  - Repeating the name of a grid area causes the content to span those cells
  -  A period signifies an empty cell. 
  - Each row in your declaration needs to have the same number of cells.
- -  **A period should not have spaces between them, they represent a single cell.**
+ * Adjacent period can mean a single dot. As long as the periods  do not have spaces between them.
  - The grid-gap property defines the grid’s gutters and is shorthand for grid-column-gap and grid-row-gap.
  - This is the fun part. grid-template-areas defines the areas available in the grid. The name given to grid areas are arbitrary but should be sensible. The grid-template-areas also provides a crude visual representation of the page layout.
+
+**Discoveries/Rules:**
+* You cannot seperate a single grid-area with a dot 
+```css
+grid-template-areas: 
+    "side . side " /* This will not work */
+    "head head head "
+    "realtor realtor realtor";
+```
+* You cannot seperate a single grid-area with an area 
+```css
+grid-template-areas: 
+    "side side side "
+    "head realtor head  "/* This will not work */
+    "head realtor head  ";/* This will not work */
+```
+* An area cannot go but horizontal and vertical at a time
+```css
+ grid-template-areas: 
+    "side side side " /* is will not work */
+    "side realtor head  "
+    "side realtor head  ";
+```
+* Ensure the content of a container are all asign a grid area if the container is been given a gr-d-teamplate-area
+This is cool
+```css
+<div class="container"> 
+
+    <div class="sidebar">
+      sidebar
+    </div>
+
+    <header class="header">
+      header
+    </header>
+
+    <div class="realtors">
+      raltors
+    </div>
+</div>
+
+    <section class="features">
+      features 
+    </section>
+```
+But this will be messy
+```css
+<div class="container"> 
+
+    <div class="sidebar">
+      sidebar
+    </div>
+
+    <header class="header">
+      header
+    </header>
+
+    <div class="realtors">
+      raltors
+    </div>
+
+    <section class="features">
+      features /* Because of this */ 
+    </section>
+</div>
+
+```
+
+```css
+.sidebar {
+  background-color: orange;
+   grid-area: side;
+}
+
+.header {
+  background-color: green;
+  grid-area: head;
+}
+
+.realtors {
+  background-color: blue;
+   grid-area: realtor;
+}
+.features {
+  background-color: purple;
+   grid-area: fea ;
+}
+
+.container {
+  display: grid;
+  border: 1px solid red;
+  grid-template-columns: repeat(3, auto) ;
+  grid-template-rows: repeat(3, 50px);
+
+  grid-template-areas: 
+    "side .... .... realtor"
+    "side head head  realtor"
+    "side . . .";
+}
+```
 
 ## grid-template
 A shorthand for setting **grid-template-rows**, **grid-template-columns**, and **grid-template-areas** in a single declaration.

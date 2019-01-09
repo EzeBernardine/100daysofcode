@@ -17,17 +17,21 @@
   background-color: blue;
    grid-area: realtor;
 }
+.features {
+  background-color: purple;
+   grid-area: fea ;
+}
 
 .container {
   display: grid;
   border: 1px solid red;
   grid-template-columns: repeat(4, auto) ;
-  grid-template-rows: repeat(3, 100px);
+  grid-template-rows: repeat(3, 50px);
 
   grid-template-areas: 
-    "side side side side"
-    ". head . ."
-    ". realtor realtor ."
+    "side head head  head"
+    "side realtor realtor   fea"
+    "side realtor realtor  fea   ";
 }
 
 div div, section, footer, header {
