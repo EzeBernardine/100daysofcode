@@ -752,6 +752,90 @@ The values include
 ```
 
 ## Align-content
+
+This is similar tojustify-item. But the difference is that in this case,it is in the vertical,cloumn or block direction
+
+```css
+.container {
+  align-items: start | end | center | stretch | space-around | space-between;
+}
+```
+```html
+ <div class="background"> 
+  
+  <div class="container1 container">
+    <div class="align_item">center</div>
+    <div class="align_item">center</div>
+    <div class="align_item">center</div>
+    <div class="align_item">center</div>
+  </div>
+
+  <div class="container2 container">
+    <div class="align_item">end</div>
+    <div class="align_item">end</div>
+    <div class="align_item">end</div>
+    <div class="align_item">end</div>
+  </div>
+
+  <div class="container3 container">
+    <div class="align_item">stretch</div>
+    <div class="align_item">stretch</div>
+    <div class="align_item">stretch</div>
+    <div class="align_item">stretch</div>
+  </div>
+
+  <div class="container4 container">
+    <div class="align_item">space-between  </div>
+    <div class="align_item">space-between</div>
+    <div class="align_item">space-between</div>
+    <div class="align_item">space-between</div>
+  </div>
+
+  <div class="container5 container">
+    <div class="align_item">start</div>
+    <div class="align_item">start</div>
+    <div class="align_item">start</div>
+    <div class="align_item">start</div>
+  </div>
+
+  <div class="container6 container">
+    <div class="align_item">space-around</div>
+    <div class="align_item">space-around</div>
+    <div class="align_item">space-around</div>
+    <div class="align_item">space-around</div>
+  </div>
+
+  </div>
+```
+
+```css
+.container1 {
+  grid-area: section1;
+  align-content: center
+}
+.container2 {
+  grid-area: section2;
+  align-content: end; 
+}
+.container3 {
+  grid-area: section3;
+  align-content: stretch
+}
+.container4 {
+  grid-area: section4;
+  align-content: space-between;
+}
+.container5 {
+  grid-area: section5;
+  align-content: start;
+}
+.container6 {
+  grid-area: section6;
+  align-content:  space-around;
+}
+```
+<img src="./img/align-content-grid.png" alt="">
+
 <div style='background-color: coral; color :black; display: grid; justify-items: center'>
   <h1>FORMULAR</h1>
   justify-content(flex) <--------> justify-items(grid)
