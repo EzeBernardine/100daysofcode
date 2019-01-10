@@ -744,13 +744,20 @@ But with justity-item, the contents a aligned at the center in a horizontal or i
 
 <img src="./img/display-grid.png" alt="">
 The values include
+
 ```css
 .container {
   justify-items: start | end | center | stretch;
 }
 ```
 
+## Align-content
+<div style='background-color: coral; color :black; display: grid; justify-items: center'>
+  <h1>FORMULAR</h1>
+  justify-content(flex) <--------> justify-items(grid)
 
+  align-content(flex) <--------> align-item(grid)
+</div>
 
 
 

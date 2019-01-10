@@ -3,45 +3,48 @@
   margin: 0;
   line-height: 1.7
 }
-div {
-  height: 100px;
-  width: 150px
+.container1 {
+  grid-area: section1;
+  align-content: center
 }
-.sidebar {
-  background-color: orange;
+.container2 {
+  grid-area: section2;
+  align-content: end; 
+}
+.container3 {
+  grid-area: section3;
+  align-content: stretch
+}
+.container4 {
+  grid-area: section4;
+  align-content: space-between;
+}
+.container5 {
+  grid-area: section5;
+  align-content: start;
+}
+.container6 {
+  grid-area: section6;
+  align-content:  space-around;
 }
 
-.header {
-  background-color: green;
+.background {
+  display: grid;
+  grid-template: 
+   "section1 section2" 33vh
+   "section3 section4" 33vh
+   "section5 section6" 33vh
+   / 433px 433px 433px;
 }
-
-.realtors {
-  background-color: blue;
+.background * {
+  border: 1px solid red;
 }
-.features {
-  background-color: purple;
-}
-
 .container {
   display: grid;
-  border: 3px solid red;
-  height: 95vh;
-  width: 1000px;
-  justify-items: self-end;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* /////////////////////// */
-
-
+.container > div {
+  height: 4vh;
+  width: 150px;
+  background-color: aqua;
+  border: 1px solid green
+}
