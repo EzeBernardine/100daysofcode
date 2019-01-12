@@ -5,39 +5,26 @@
 }
 .container1 {
   grid-area: section1;
-  align-content: center
+  align-items: stretch
 }
 .container2 {
   grid-area: section2;
-  align-content: end; 
+  align-items: start
 }
 .container3 {
   grid-area: section3;
-  align-content: stretch
+  align-items: end
 }
 .container4 {
   grid-area: section4;
-  align-content: space-between;
-}
-.container5 {
-  grid-area: section5;
-  align-content: start;
-}
-.container6 {
-  grid-area: section6;
-  align-content:  space-around;
-}
-.container7 {
-  grid-area: section7;
-  align-content:  space-evenly;
+  align-items: center;
 }
 
 .background {
   display: grid;
   grid-template: 
    "section1 section2 section3" 33vh
-   "section4 section5 section6" 33vh
-   "section7 ........ ........ " 33vh
+   "section4 ........ ......." 33vh
    / 433px 433px 433px ;
 }
 .background * {
@@ -49,6 +36,6 @@
 .container > div {
   height: 4vh;
   width: 150px;
-  background-color: aqua;
+  background-color: rgb(0, 255, 21);
   border: 1px solid green
 }

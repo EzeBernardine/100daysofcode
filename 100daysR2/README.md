@@ -753,11 +753,11 @@ The values include
 
 ## Align-content
 
-This is similar tojustify-item. But the difference is that in this case,it is in the vertical,cloumn or block direction
+This is similar to justify-item. But the difference is that in this case,it is in the vertical,cloumn or block direction
 
 ```css
 .container {
-  align-items: start | end | center | stretch | space-around | space-between;
+  align-content: start | end | center | stretch | space-around | space-between | space-evenly;	
 }
 ```
 ```html
@@ -834,7 +834,7 @@ This is similar tojustify-item. But the difference is that in this case,it is in
   align-content:  space-around;
 }
 ```
-<img src="./img/align-content-grid.png" alt="">
+<img src="./img/align-content-grid.png.png" alt="">
 
 <div style='background-color: coral; color :black; display: grid; justify-items: center'>
   <h1>FORMULAR</h1>
@@ -844,7 +844,7 @@ This is similar tojustify-item. But the difference is that in this case,it is in
 </div>
 
 
-
+# align-items
 
 
 
