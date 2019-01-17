@@ -47,8 +47,8 @@
   display: grid;
 }
 .container > div {
-  height: 4vh;
-  width: 150px;
+  /* height: 4vh;
+  width: 150px; */
   background-color: aqua;
   border: 1px solid green
 }

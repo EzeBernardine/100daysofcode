@@ -1,0 +1,54 @@
+
+*, *::before, *::after  {
+    margin: 0;
+    line-height: 1.7
+  }
+  .container1 {
+    grid-area: section1;
+    justify-content: space-around
+  }
+  .container2 {
+    grid-area: section2;
+    justify-content: end
+  }
+  .container3 {
+    grid-area: section3;
+    justify-content: start
+  }
+  .container4 {
+    grid-area: section4;
+    justify-content: space-around
+  }
+  .container5 {
+    grid-area: section5;
+    justify-content: stretch
+  }
+  .container6 {
+    grid-area: section6;
+    justify-content: space-between;
+  }
+  .container7 {
+    grid-area: section7;
+    justify-content: space-evenly
+  }
+ 
+  
+  .background {
+    display: grid;
+    grid-template: 
+    "section1 section2 section3 " 33vh
+    "section4 section5 section6 " 33vh
+    "section7 ........ ........." 33vh
+    / 433px 433px 433px ;
+  }
+  .background * {
+    border: 1px solid rgb(255, 115, 0);
+  }
+  .container {
+    display: grid;
+  }
+  .container > div {
+    background-color: rgb(25, 0, 255);
+    border: 1px solid rgb(9, 0, 128);
+    color: rgb(238, 248, 147)
+  }

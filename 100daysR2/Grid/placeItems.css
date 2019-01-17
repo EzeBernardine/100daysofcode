@@ -1,0 +1,59 @@
+
+*, *::before, *::after  {
+    margin: 0;
+    line-height: 1.7
+  } 
+  .container > div {
+    background-color: rgb(0, 255, 21);
+    border: 1px solid green
+  }
+  .container1 {
+    grid-area: section1;
+    place-items: center center;
+  }
+  .container2 {
+    grid-area: section2;
+    place-items: center end
+    
+  }
+  .container3 {
+    grid-area: section3;
+    place-items: center stretch
+    
+  }
+  .container4 {
+    grid-area: section4;
+    place-items: stretch center
+  }
+  .container5 {
+    grid-area: section5;
+    place-items: stretch end
+  }
+  .container6 {
+    grid-area: section6;
+    place-items: stretch start
+  }
+  .container7 {
+    grid-area: section7;
+    place-items: start start
+  }
+  .container8 {
+    grid-area: section8;
+    place-items: end center
+  }
+  
+  .background {
+    display: grid;
+    grid-template: 
+     "section1 section2 section3 " 33vh
+     "section4 section5 section6  " 33vh
+     "section7 section8 .........  " 33vh
+     / 433px 433px 433px ;
+  }
+  .background * {
+    border: 1px solid red;
+  }
+  .container {
+    display: grid;
+  }
+ 

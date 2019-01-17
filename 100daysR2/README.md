@@ -230,6 +230,12 @@ section:nth-child(2) {
 16. grid-template-areas
 17. grid-template-columns
 18. grid-template-rows
+19. justify-items 
+20. align-items
+21. place-items
+22. justify-content
+23. align-content 
+24. place-content
 
 ## Display: grid
 grid layout enables an author to align elements into columns and rows.
@@ -686,7 +692,8 @@ container {
 <img src="./img/same-grid-gap.png" alt="">
 
 ## justify-items
-When a cntainer is disolayed grid, the contrents span down the vertical direction of the container. For instance
+
+When a container is displayed grid, the contents span down the vertical direction of the container. For instance
 
 ```css
 div {
@@ -730,7 +737,7 @@ div {
 ```
 <img src="./img/display-grid-only.png" alt="">
 
-But with justity-item, the contents a aligned at the center in a horizontal or inline format
+But with justity-item, the contents are aligned at the center in a horizontal or inline format
   
 ```css
 .container {
@@ -751,9 +758,246 @@ The values include
 }
 ```
 
-## Align-content
 
-This is similar to justify-item. But the difference is that in this case,it is in the vertical,cloumn or block direction
+# align-items
+Aligns grid items along the block (column) axis or vertical axis.
+It is opposite of justify-item
+```css
+.container {
+  align-items: start | end | center | stretch;
+}
+```
+```html
+ 
+  <div class="background"> 
+  
+  <div class="container1 container">
+    <div class="align_item">strech</div>
+    <div class="align_item">strech</div>
+    <div class="align_item">strech</div>
+    <div class="align_item">strech</div>
+  </div>
+
+  <div class="container2 container">
+    <div class="align_item">start</div>
+    <div class="align_item">start</div>
+    <div class="align_item">start</div>
+    <div class="align_item">start</div>
+  </div>
+
+  <div class="container3 container">
+    <div class="align_item">end</div>
+    <div class="align_item">end</div>
+    <div class="align_item">end</div>
+    <div class="align_item">end</div>
+  </div>
+
+  <div class="container4 container">
+    <div class="align_item">center</div>
+    <div class="align_item">center</div>
+    <div class="align_item">center</div>
+    <div class="align_item">center</div>
+  </div>
+
+  </div>
+```
+```css
+.container1 {
+  grid-area: section1;
+  align-items: stretch
+}
+.container2 {
+  grid-area: section2;
+  align-items: start
+}
+.container3 {
+  grid-area: section3;
+  align-items: end
+}
+.container4 {
+  grid-area: section4;
+  align-items: center;
+}
+
+.background {
+  display: grid;
+  grid-template: 
+   "section1 section2 section3" 33vh
+   "section4 ........ ......." 33vh
+   / 433px 433px 433px ;
+}
+.background * {
+  border: 1px solid red;
+}
+.container {
+  display: grid;
+}
+.container > div {
+  height: 4vh;
+  width: 150px;
+  background-color: rgb(0, 255, 21);
+  border: 1px solid green
+}
+```
+<img src="./img/alignItem.png" alt="">
+
+## place-items
+place-items sets both the align-items and justify-items properties in a single declaration.
+The first value is <align-items> , and the second <justify-items>.
+  - If the second value is omitted, the first value is assigned to both properties.
+  
+```html
+ <div class="background"> 
+  
+  <div class="container1 container">
+    <div class="align_item">center center</div>
+    <div class="align_item">center center</div>
+    <div class="align_item">center center</div>
+    <div class="align_item">center center</div>
+  </div>
+
+  <div class="container2 container">
+    <div class="align_item">center end</div>
+    <div class="align_item">center end</div>
+    <div class="align_item">center end</div>
+    <div class="align_item">center end</div>
+  </div>
+
+  <div class="container3 container">
+    <div class="align_item">center stretch</div>
+    <div class="align_item">center stretch</div>
+    <div class="align_item">center stretch</div>
+    <div class="align_item">center stretch</div>
+  </div>
+
+  <div class="container4 container">
+    <div class="align_item">stretch center</div>
+    <div class="align_item">stretch center</div>
+    <div class="align_item">stretch center</div>
+    <div class="align_item">stretch center</div>
+  </div>
+
+  <div class="container5 container">
+    <div class="align_item"> stretch end"</div>
+    <div class="align_item"> stretch end"</div>
+    <div class="align_item"> stretch end"</div>
+    <div class="align_item"> stretch end"</div>
+  </div>
+
+  <div class="container6 container">
+    <div class="align_item">stretch start</div>
+    <div class="align_item">stretch start</div>
+    <div class="align_item">stretch start</div>
+    <div class="align_item">stretch start</div>
+  </div>
+
+  <div class="container7 container">
+    <div class="align_item"> start start</div>
+    <div class="align_item"> start start</div>
+    <div class="align_item"> start start</div>
+    <div class="align_item"> start start</div>
+  </div>
+
+  <div class="container8 container">
+    <div class="align_item">end center</div>
+    <div class="align_item">end center</div>
+    <div class="align_item">end center</div>
+    <div class="align_item">end center</div>
+  </div>
+
+  </div>
+```
+```css
+
+*, *::before, *::after  {
+    margin: 0;
+    line-height: 1.7
+  } 
+  .container > div {
+    background-color: rgb(0, 255, 21);
+    border: 1px solid green
+  }
+  .container1 {
+    grid-area: section1;
+    place-items: center center;
+  }
+  .container2 {
+    grid-area: section2;
+    place-items: center end
+    
+  }
+  .container3 {
+    grid-area: section3;
+    place-items: center stretch
+    
+  }
+  .container4 {
+    grid-area: section4;
+    place-items: stretch center
+  }
+  .container5 {
+    grid-area: section5;
+    place-items: stretch end
+  }
+  .container6 {
+    grid-area: section6;
+    place-items: stretch start
+  }
+  .container7 {
+    grid-area: section7;
+    place-items: start start
+  }
+  .container8 {
+    grid-area: section8;
+    place-items: end center
+  }
+  
+  .background {
+    display: grid;
+    grid-template: 
+     "section1 section2 section3 " 33vh
+     "section4 section5 section6  " 33vh
+     "section7 section8 .........  " 33vh
+     / 433px 433px 433px ;
+  }
+  .background * {
+    border: 1px solid red;
+  }
+  .container {
+    display: grid;
+  }
+ 
+```
+
+<img src="./img/palceItems.png" alt="">
+
+
+## justify-content 
+This property aligns the grid along the inline (row) axis. It is opposite to  ``` align-content ```
+```css
+.container {
+  justify-content: start | end | center | stretch | space-around | space-between | space-evenly;	
+}
+
+```
+<!-- sth missing -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Align-content
+This property aligns the grid along the block (column) axis.
+ie along the vertical direction
 
 ```css
 .container {
@@ -836,15 +1080,155 @@ This is similar to justify-item. But the difference is that in this case,it is i
 ```
 <img src="./img/align-content-grid.png.png" alt="">
 
-<div style='background-color: coral; color :black; display: grid; justify-items: center'>
+
+
+## place-content
+ place-content sets both the align-content and justify-content properties in a single declaration.
+ ```css
+  place-content: <align-content> / <justify-content>
+ ```
+  -  If the second value is omitted, the first value is assigned to both properties.
+
+```html
+    <div class="background"> 
+  
+  <div class="container1 container">
+    <div class="align_item">center center</div>
+    <div class="align_item">center center</div>
+    <div class="align_item">center center</div>
+    <div class="align_item">center center</div>
+  </div>
+
+  <div class="container2 container">
+    <div class="align_item">center end</div>
+    <div class="align_item">center end</div>
+    <div class="align_item">center end</div>
+    <div class="align_item">center end</div>
+  </div>
+
+  <div class="container3 container">
+    <div class="align_item">center stretch</div>
+    <div class="align_item">center stretch</div>
+    <div class="align_item">center stretch</div>
+    <div class="align_item">center stretch</div>
+  </div>
+
+  <div class="container4 container">
+    <div class="align_item">stretch center</div>
+    <div class="align_item">stretch center</div>
+    <div class="align_item">stretch center</div>
+    <div class="align_item">stretch center</div>
+  </div>
+
+  <div class="container5 container">
+    <div class="align_item"> stretch end"</div>
+    <div class="align_item"> stretch end"</div>
+    <div class="align_item"> stretch end"</div>
+    <div class="align_item"> stretch end"</div>
+  </div>
+
+  <div class="container6 container">
+    <div class="align_item">stretch start</div>
+    <div class="align_item">stretch start</div>
+    <div class="align_item">stretch start</div>
+    <div class="align_item">stretch start</div>
+  </div>
+
+  <div class="container7 container">
+    <div class="align_item"> start start</div>
+    <div class="align_item"> start start</div>
+    <div class="align_item"> start start</div>
+    <div class="align_item"> start start</div>
+  </div>
+
+  <div class="container8 container">
+    <div class="align_item">end center</div>
+    <div class="align_item">end center</div>
+    <div class="align_item">end center</div>
+    <div class="align_item">end center</div>
+  </div>
+
+  </div>
+```
+```css
+*, *::before, *::after  {
+    margin: 0;
+    line-height: 1.7
+  } 
+  .container > div {
+    background-color: rgb(0, 255, 21);
+    border: 1px solid green
+  }
+  .container1 {
+    grid-area: section1;
+    place-content: center center;
+  }
+  .container2 {
+    grid-area: section2;
+    place-content: center end
+    
+  }
+  .container3 {
+    grid-area: section3;
+    place-content: center stretch
+    
+  }
+  .container4 {
+    grid-area: section4;
+    place-content: stretch center
+  }
+  .container5 {
+    grid-area: section5;
+    place-content: stretch end
+  }
+  .container6 {
+    grid-area: section6;
+    place-content: stretch start
+  }
+  .container7 {
+    grid-area: section7;
+    place-content: start start
+  }
+  .container8 {
+    grid-area: section8;
+    place-content: end center
+  }
+  
+  .background {
+    display: grid;
+    grid-template: 
+     "section1 section2 section3 " 33vh
+     "section4 section5 section6  " 33vh
+     "section7 section8 .........  " 33vh
+     / 433px 433px 433px ;
+  }
+  .background * {
+    border: 1px solid red;
+  }
+  .container {
+    display: grid;
+  }
+ ```
+<img src="./img/placeContent.png" alt="">
+
+# grid-auto-columns
+
+<!--
+grid-auto-columns
+grid-auto-rows
+grid-auto-flow
+grid
+ -->
+
+
+<!-- <div style='background-color: coral; color :black; display: grid; justify-items: center'>
   <h1>FORMULAR</h1>
-  justify-content(flex) <--------> justify-items(grid)
+  justify-content(flex) <_________________> justify-items(grid)
 
-  align-content(flex) <--------> align-item(grid)
-</div>
+  align-content(flex) <___________________> align-item(grid)
+</div> -->
 
 
-# align-items
 
 
 
