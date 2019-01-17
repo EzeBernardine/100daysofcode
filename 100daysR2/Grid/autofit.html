@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Auto fit</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill , minmax(150px, 1fr));
+            grid-gap: 10px
+        }
+        .item {
+            background-color: crimson;
+            color: aliceblue
+        }
+        .container2 {
+            display: grid;
+            grid-template-columns: repeat(3 , 500px);
+            grid-gap: 10px
+        }
+        .item2 {
+            background-color: rgb(67, 220, 20);
+            color: aliceblue
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item"> repeat(auto-fill , 500px)</div>
+        <div class="item"> repeat(auto-fill , 500px)</div>
+        <div class="item"> repeat(auto-fill , 500px)</div>
+        <div class="item"> repeat(auto-fill , 500px)</div>
+        <div class="item"> repeat(auto-fill , 500px)</div>
+        <div class="item"> repeat(auto-fill , 500px)</div>
+    </div>
+    <div class="container3">
+        <div class="item3">repeat(3 , 500px);</div>
+        <div class="item3">repeat(3 , 500px);</div>
+        <div class="item3">repeat(3 , 500px);</div>
+        <div class="item3">repeat(3 , 500px);</div>
+        <div class="item3">repeat(3 , 500px);</div>
+        <div class="item3">repeat(3 , 500px);</div>
+    </div>
+    <div class="container2">
+        <div class="item2">repeat(3 , 500px);</div>
+        <div class="item2">repeat(3 , 500px);</div>
+        <div class="item2">repeat(3 , 500px);</div>
+        <div class="item2">repeat(3 , 500px);</div>
+        <div class="item2">repeat(3 , 500px);</div>
+        <div class="item2">repeat(3 , 500px);</div>
+    </div>
+</body>
+</html>
