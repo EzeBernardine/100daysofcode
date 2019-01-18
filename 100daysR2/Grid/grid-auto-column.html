@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>grid Auto Column</title>
+    <style>
+      body {
+        margin: 0
+      }
+        .containers {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(5, 150px);
+            overflow: hidden;
+        }
+        .item {
+            color: black;
+            border: 1px solid white;
+            background-color: blueviolet;
+        }
+        .auto {
+            grid-auto-rows: auto;
+        }
+        .length {
+            grid-auto-rows: 10px ;
+        }
+        .percentage{
+            grid-auto-rows: 100% 
+        }
+        .flex{
+            grid-auto-rows: .5fr
+        }
+        .max-content{
+            grid-auto-rows: max-content
+        }
+        .min-content{
+            grid-auto-rows: min-content
+        }
+        .minmax{
+          grid-auto-rows: minmax(20px, 10px) 
+        }
+        
+        .container {
+          display: grid;
+          border: 1px solid red;
+          overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+  <div class="containers">
+    <div class="auto container">
+        <div class="item">auto</div>
+        <div class="item">auto</div>
+        <div class="item">auto</div>
+        <div class="item">auto</div>
+    </div>
+    <div class="length container">
+        <div class="item">length</div>
+        <div class="item">length</div>
+        <div class="item">length</div>
+        <div class="item">length</div>
+    </div>
+    <div class="percentage container">
+        <div class="item">percentage</div>
+        <div class="item">percentage</div>
+        <div class="item">percentage</div>
+        <div class="item">percentage</div>
+    </div>
+    <div class="flex container">
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+    </div>
+    <div class="max-content container">
+        <div class="item">max-content</div>
+        <div class="item">max-content</div>
+        <div class="item">max-content</div>
+        <div class="item">max-content</div>
+    </div>
+    <div class="min-content container">
+        <div class="item">min-content ok</div>
+        <div class="item">min-content ok</div>
+        <div class="item">min-content ok</div>
+        <div class="item">min-content ok</div>
+    </div>
+    <div class="minmax container">
+        <div class="item">minmax()</div>
+        <div class="item">minmax()</div>
+        <div class="item">minmax()</div>
+        <div class="item">minmax()</div>
+    </div>
+  </div>
+    
+</body>
+</html>

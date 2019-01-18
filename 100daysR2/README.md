@@ -980,8 +980,7 @@ This property aligns the grid along the inline (row) axis. It is opposite to  ``
 }
 
 ```
-<!-- sth missing -->
-
+<a href='https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_justify-content_space-between'>justify content</a>
 
 
 
@@ -996,6 +995,8 @@ This property aligns the grid along the inline (row) axis. It is opposite to  ``
 
 
 ## Align-content
+ ('https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_align-content_space-evenly')
+ 
 This property aligns the grid along the block (column) axis.
 ie along the vertical direction
 
@@ -1212,10 +1213,255 @@ ie along the vertical direction
 <img src="./img/placeContent.png" alt="">
 
 # grid-auto-columns
+Before talking abot this, est look at the following
+- explicit grids
+- Auto-filling tracks
+  - auto fill
+  - auto fit
+- implicit grids
+## A. Explicit Grids
+We can define a fixed number of lines and tracks that form a grid by using the properties grid-template-rows, grid-template-columns, and grid-template-areas. This manually defined grid is called the explicit grid.
+
+When we manually define a particular number of lines horizontally and vertically to form a grid, it is known as explicit grid system
+For example
+```css
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px;
+  grid-gap: 20px;
+}
+```
+Here, we are manually saying we want 4 uniform columns and two 100px rows
+## B. Auto-filling tracks
+
+### Auto-fill
+The auto-fill keyword creates as many tracks as fit into the grid container without causing the grid to overflow it.That is to say
+```html
+ <div class="container">
+        <div class="item"> repeat(auto-fill , 500px)</div>
+        <div class="item"> repeat(auto-fill , 500px)</div>
+        <div class="item"> repeat(auto-fill , 500px)</div>
+        <div class="item"> repeat(auto-fill , 500px)</div>
+        <div class="item"> repeat(auto-fill , 500px)</div>
+        <div class="item"> repeat(auto-fill , 500px)</div>
+    </div>
+    <div class="container2">
+        <div class="item2">repeat(3 , 500px);</div>
+        <div class="item2">repeat(3 , 500px);</div>
+        <div class="item2">repeat(3 , 500px);</div>
+        <div class="item2">repeat(3 , 500px);</div>
+        <div class="item2">repeat(3 , 500px);</div>
+        <div class="item2">repeat(3 , 500px);</div>
+    </div>
+```
+```css
+ .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill , 500px);
+            grid-gap: 10px
+        }
+  .item {
+      background-color: crimson;
+      color: aliceblue
+  }
+  .container2 {
+      display: grid;
+      grid-template-columns: repeat(3 , 500px);
+      grid-gap: 10px
+  }
+  .item2 {
+      background-color: rgb(67, 220, 20);
+      color: aliceblue
+  }
+```
+
+<img src="./img/autofill.png" alt=""> 
+From the diagram, the pink divs are auto arranged. Once the first row if filled, it enter the next row. But inthe green divs,because hey are not auto fill, they overflow the grid container n an attempt to maintain its assigned width.
+
+- Note:
+  - that repeat(auto-fill, 1fr); will only create one track because a single track with a width of 1fr already fills the whole grid container.
+
+### Auto-fill
+FITS the CURRENTLY AVAILABLE columns into the space by expanding them so that they take up any available space. The browser does that after FILLING that extra space with extra columns (as with auto-fill ) and then collapsing the empty ones.
+
+### _Difference between auto-fil and auto-fit_
+1.  The auto-fit keyword behaves the same way as auto-fill, except that after grid item placement it will only create as many tracks as needed and any empty repeated track collapses. 
+2.  The difference between auto-fill and auto-fit for sizing columns is only noticeable when the row is wide enough to fit more columns in it.
+```html
+<div class="auto-fill">
+    <div class="item">repeat(auto-fill , minmax(150px, 1fr))</div>
+    <div class="item">repeat(auto-fill , minmax(150px, 1fr))</div>
+    <div class="item">repeat(auto-fill , minmax(150px, 1fr))</div>
+    <div class="item">repeat(auto-fill , minmax(150px, 1fr))</div>
+    <div class="item">repeat(auto-fill , minmax(150px, 1fr))</div>
+    <div class="item">repeat(auto-fill , minmax(150px, 1fr))</div>
+</div>
+<div class="auto-fit">
+    <div class="item2">repeat(auto-fit , minmax(150px, 1fr))</div>
+    <div class="item2">repeat(auto-fit , minmax(150px, 1fr))</div>
+    <div class="item2">repeat(auto-fit , minmax(150px, 1fr))</div>
+    <div class="item2">repeat(auto-fit , minmax(150px, 1fr))</div>
+    <div class="item2">repeat(auto-fit , minmax(150px, 1fr))</div>
+    <div class="item2">repeat(auto-fit , minmax(150px, 1fr))</div>
+</div>
+```
+
+```css
+.auto-fill {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(150px, 1fr));
+    grid-gap: 10px
+}
+.item {
+    background-color: crimson;
+    color: aliceblue;
+    padding: 10px;
+}
+.auto-fit {
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(150px, 1fr));
+    grid-gap: 10px
+}
+.item2 {
+    padding: 10px;
+    background-color: rgb(67, 220, 20);
+    color: aliceblue
+}
+```
+
+<video src="./video/autoFill-autoFit.gif"></video>
+## C. Implicit grid
+If there are more grid items than cells in the grid or when a grid item is placed outside of the explicit grid, the grid container automatically generates grid tracks by adding grid lines to the grid. The explicit grid together with these additional implicit tracks and lines forms the so called implicit grid.
+
+# grid-auto-columns
+- The grid-auto-rows and grid-auto-columns properties give us control over the size of implicit tracks. 
+
+```css
+grid-auto-columns: auto|max-content|min-content|length;
+```
+Values
+### 1.  length
+Could be in px,but not a negative value
+```html
+ <div class="length container">
+  <div class="item">length</div>
+  <div class="item">length</div>
+  <div class="item">length</div>
+  <div class="item">length</div>
+</div>
+```
+```css
+.length {
+      grid-auto-columns: 100px;
+  }
+```
+### 2.  percentage
+Should not be  negative, abd an undefined parent width size has its percentage value as auto
+```html
+ <div class="percentage container">
+  <div class="item">percentage</div>
+  <div class="item">percentage</div>
+  <div class="item">percentage</div>
+  <div class="item">percentage</div>
+</div>
+```
+```css
+ .percentage{
+    grid-auto-columns: 30% 
+}
+```
+### 3.  flex
+fr simplifies the flex factor. Negative values are not allowed
+```html
+ <div class="flex container">
+  <div class="item">flex</div>
+  <div class="item">flex</div>
+  <div class="item">flex</div>
+  <div class="item">flex</div>
+</div>
+```
+```css
+.flex{
+    grid-auto-columns: .8fr
+}
+```
+### 4.  max-content
+This just takes up the size of the element according to its content
+```html
+ <div class="max-content container">
+  <div class="item">max-content</div>
+  <div class="item">max-content</div>
+  <div class="item">max-content</div>
+  <div class="item">max-content</div>
+</div>
+```
+```css
+.max-content{
+    grid-auto-columns: max-content
+}
+```
+### 5.  min-content
+This takes up the size of the element when the content is reduced to its minimum.
+```html
+ <div class="min-content container">
+  <div class="item">min-content ok</div>
+  <div class="item">min-content ok</div>
+  <div class="item">min-content ok</div>
+  <div class="item">min-content ok</div>
+</div>
+```
+```css
+ .min-content{
+      grid-auto-columns: min-content
+  }
+```
+### 6.  minmax(min, max)
+This takes a range of values,min and max. It maintains the highest range down toits lowest
+```html
+ <div class="minmax container">
+  <div class="item">minmax()</div>
+  <div class="item">minmax()</div>
+  <div class="item">minmax()</div>
+  <div class="item">minmax()</div>
+</div>
+```
+```css
+.minmax{
+  grid-auto-columns: minmax(20px, 250px) 
+}
+```
+In this case, the size will be 250px. While shrinking the page, it keeps reducing tillit gets to 20px and stops.
+### 7.  fit-content(argument)
+Represents the formula min(max-content, max(auto, argument)), which is calculated similar to auto (i.e. minmax(auto, max-content)), except that the track size is clamped at argument if it is greater than the auto minimum.
+```css
+ .fit-content{
+  grid-auto-columns: fit-content(400px)
+}
+```
+### 8.  auto
+This takes upthe full width of the element
+```html
+<div class="auto container">
+    <div class="item">auto</div>
+    <div class="item">auto</div>
+    <div class="item">auto</div>
+    <div class="item">auto</div>
+</div>
+```
+```css
+.auto {
+  grid-auto-columns: auto;
+  border: 1px solid black;
+}
+```
+
+<img src="./img/gridAutoColumn.png" alt=""> 
+
+# grid-auto-rows
+The grid-auto-rows CSS property specifies the size of an implicitly-created grid row track.
 
 <!--
-grid-auto-columns
-grid-auto-rows
 grid-auto-flow
 grid
  -->
@@ -1252,4 +1498,60 @@ grid
 <a herf="https://css-tricks.com/guide-svg-animations-smil/" style='text-ecoration: underline'> SVG animation </a>
 
 <a href='https://hashnode.com/post/master-npm-in-under-10-minutes-or-get-your-money-back-cjqmak392001i7vs2ufdlvcqb'>Master npm in Under 10 Minutes or Get Your Money Back</a>
+
+
+
+# TOC
+
+[Chapter 2  GRID](#Chapter_1_GRID)
+- [grid-template-columns](#grid-template-columns)
+- [grid-template-rows](#grid-template-rows)
+- [grid-template-areas](#grid-template-areas)
+- [grid-template](#grid-template)
+- [grid-column-gap](#grid-column-gap)
+- [grid-row-gap](#grid-row-gap)
+- [grid-gap](#grid-gap)
+- [justify-items](#justify-items) 
+- [align-items](#align-items)
+- [place-items](#place-items)
+- [justify-content](#justify-content)
+- [align-content](#align-content)
+- [place-content](#place-content)
+- [grid-auto-columns](#grid-auto-columns)
+  - [explicit grids](#explicit_grids)
+    - [Auto-filling tracks](#Auto-filling_tracks)
+    - [auto fill](#auto_fill)
+    - [auto fit](#auto_fit)
+  - [implicit grids](#implicit_grids)
+- [grid-auto-rows](#grid-auto-rows)
+- [grid-auto-flow](#grid-auto-flow)
+- [grid](#grid)
+- [grid-column-start](#grid-column-start)
+- [grid-column-end](#grid-column-end)
+- [grid-row-start](#grid-row-start)
+- [grid-row-end](#grid-row-end)
+- [grid-column](#grid-column)
+- [grid-row](#grid-row)
+- [grid-area](#grid-area)
+- [justify-self](#justify-self)
+- [align-self](#align-self)
+- [place-self](#place-self)
+
+[chapter 1 Flex Box]
+- [display](#display)
+- [flex-direction](#flex-direction)
+- [flex-wrap](#flex-wrap)
+- [flex-flow](#flex-flow)
+- [justify-content](#justify-content)
+- [align-items](#align-items)
+- [align-content](#align-content)
+- [order](#order)
+- [flex-grow](#flex-grow)
+- [flex-shrink](#flex-shrink)
+- [flex-basis](#flex-basis)
+- [flex](#flex)
+- [align-self](#align-self)
+
+
+
 
