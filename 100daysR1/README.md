@@ -96,6 +96,7 @@ The element behaves like a table.
 
 
 # flex-direction
+The flex-direction CSS property sets how flex items are placed in the flex container defining the main axis and the direction (normal or reversed).
 ## Flex-direction values
 1. row
 2. row-reverse
@@ -216,8 +217,6 @@ CSS Syntax
 3. flex-start
 3. flex-end
 4. baseline
-5. initial
-6. inherit;
 ## align-item: stretch
 This vertically streches the width of the content of the element to the entire width
 its is the default value
@@ -242,7 +241,7 @@ Unlike flex-start, it starts from the bottom and moves upwards
 This makes all the write up of the page have the same base margin. ie, the content will be positined at the same baseline  of the cotainer  
 
 # align-content
-The CSS align-content property sets how the browser distributes space between and around content items along the cross-axis(horizontal) of a flexbox container, and the main-axis of a grid container.
+The CSS align-content property sets how the browser distributes space between and around content items along the cross-axis(vertically) of a flexbox container, and the main-axis of a grid container.
 @!Always be used along side with flex-wrap: wrap!@
 1. flex-start
 2. flex-end:
@@ -252,11 +251,11 @@ The CSS align-content property sets how the browser distributes space between an
 6. stretch (default)
 
 ## flex-start: 
-lines packed to the start othe container(horizontally)
+lines packed to the start othe container(vertically)
 ## flex-end:
- lines packed to the end of thcontainer(horizontally)
+ lines packed to the end of thcontainer(vertically)
 ## center:
- lines packed to the center of the container (horizontally)
+ lines packed to the center of the container (horizoverticallyntally)
 ## space-between:
  This evenly distributes the first line  at the start of the container while the last one is at the end
 ## space-around:

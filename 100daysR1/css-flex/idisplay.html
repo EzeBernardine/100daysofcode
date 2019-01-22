@@ -10,114 +10,100 @@
       margin: 0
     }
     .body {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 100px;
-      grid-gap: 5px
+      flex-direction: column;
+      grid-gap: 10px; 
+      display: flex;
     }
     .container {
-      background-color: rgb(2, 31, 31)
+      display: flex;
+      background-color: rgb(2, 31, 31);
+      height:  200px;
+      flex-wrap: wrap;
     }
-    .flex {
-      display: flex
+    .box1 {
+      align-items: center
+    } 
+    .box2 {
+     align-items:  flex-end
     }
-    .inlineflex {
-      display: inline-flex
+    .box3 {
+      align-items:  flex-start
+    } 
+    .box4 {
+      align-items: stretch
     }
-    .inline {
-      display: inline
+    .box5 {
+      align-items: baseline
+    } 
+    /* .box6 {
+      justify-content: space-evenly
     }
-    .block {
-      display: block
-    }
-    .content {
-      display: contents
-    }
-    .grid {
-      display: grid
-    }
-    .inlineBlock {
-      display: inline-block
-    }
-    .inlineGrid {
-      display: -ms-inline-grid
-    }
+    .box7 {
+      justify-content: initial
+    }  */
     .item {
-      background-color: crimson;
       border: 1px solid black;
+      color: aliceblue;
+      width: 200px;
+      /* height: 50px; */
+      font-size: 20px;
+      text-align: center
+    }
+    .item1 {
+      background-color: rgb(127, 220, 20);
+    }
+    .item2 {
+      background-color: crimson;
+    }
+    .item3 {
+      background-color: rgb(20, 23, 220);
+    }
+    .item4 {
+      background-color: rgb(20, 220, 203);
+    }
+    .item5 {
+      background-color: rgb(220, 20, 30);
+    }
+    .item6 {
+      background-color: rgb(220, 20, 193);
+    }
+    .item7 {
+      background-color: rgb(200, 220, 20);
     }
   </style>
 </head>
 <body >
-  <div class="body">
-
-    <div class="flex container">
-      <div class="item">flex</div>
-      <div class="item">flex</div>
-      <div class="item">flex</div>
-      <div class="item">flex</div>
+<div class="body">
+    <div class="box1 container">
+      <div class="item1 item">center</div>
+      <div class="item1 item">center</div>
+      <div class="item1 item">center center center center</div>
+      <div class="item1 item">center</div>
     </div>
-    <div class="inlineflex container">
-      <div class="item">inlineflex</div>
-      <div class="item">inlineflex</div>
-      <div class="item">inlineflex</div>
-      <div class="item">inlineflex</div>
+    <div class="box2 container">
+      <div class="item2 item">flex-end</div>
+      <div class="item2 item">flex-end  flex-end flex-end</div>
+      <div class="item2 item">flex-end</div>
+      <div class="item2 item">flex-end</div>
     </div>
-    <div class="inline container">
-      <div class="item">inline</div>
-      <div class="item">inline</div>
-      <div class="item">inline</div>
-      <div class="item">inline</div>
+    <div class="box3 container">
+      <div class="item3 item">flex-start flex-start flex-start</div>
+      <div class="item3 item">flex-start</div>
+      <div class="item3 item">flex-start</div>
+      <div class="item3 item">flex-start</div>
     </div>
-    <div class="block container">
-      <div class="item">block</div>
-      <div class="item">block</div>
-      <div class="item">block</div>
-      <div class="item">block</div>
+    <div class="box4 container">
+      <div class="item4 item">stretch</div>
+      <div class="item4 item">stretch</div>
+      <div class="item4 item">stretch stretch stretch</div>
+      <div class="item4 item">stretch</div>
     </div>
-    <div class="content container">
-      <div class="item">contents</div>
-      <div class="item">contents</div>
-      <div class="item">contents</div>
-      <div class="item">contents</div>
+    <div class="box5 container">
+      <div class="item5 item">baseline baseline baseline</div>
+      <div class="item5 item">baseline</div>
+      <div class="item5 item">baseline baseline baseline  baseline	</div>
+      <div class="item5 item">baseline</div>
     </div>
-    <div class="grid container">
-      <div class="item">grid</div>
-      <div class="item">grid</div>
-      <div class="item">grid</div>
-      <div class="item">grid</div>
-    </div>
-    <div class="inlineBlock container">
-      <div class="item">inlineBlock</div>
-      <div class="item">inlineBlock</div>
-      <div class="item">inlineBlock</div>
-      <div class="item">inlineBlock</div>
-    </div>
-    <div class="inlineGrid container">
-      <div class="item">inlineGrid</div>
-      <div class="item">inlineGrid</div>
-      <div class="item">inlineGrid</div>
-      <div class="item">inlineGrid</div>
-    </div>
-    <div class="inlineTable container">
-      <div class="item">inlineTable</div>
-      <div class="item">inlineTable</div>
-      <div class="item">inlineTable</div>
-      <div class="item">inlineTable</div>
-    </div>
-    <div class="listItem container">
-      <div class="item">listItem</div>
-      <div class="item">listItem</div>
-      <div class="item">listItem</div>
-      <div class="item">listItem</div>
-    </div>
-    <div class="runIn container">
-      <div class="item">runIn</div>
-      <div class="item">runIn</div>
-      <div class="item">runIn</div>
-      <div class="item">runIn</div>
-    </div>
-
   </div>
 </body>
 </html>
