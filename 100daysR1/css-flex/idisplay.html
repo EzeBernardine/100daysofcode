@@ -11,99 +11,60 @@
     }
     .body {
       flex-direction: column;
-      grid-gap: 10px; 
+      grid-gap: 5px; 
       display: flex;
     }
     .container {
       display: flex;
       background-color: rgb(2, 31, 31);
-      height:  200px;
+      height:  300px;
       flex-wrap: wrap;
+      align-content: center
     }
-    .box1 {
-      align-items: center
-    } 
-    .box2 {
-     align-items:  flex-end
-    }
-    .box3 {
-      align-items:  flex-start
-    } 
-    .box4 {
-      align-items: stretch
-    }
-    .box5 {
-      align-items: baseline
-    } 
-    /* .box6 {
-      justify-content: space-evenly
-    }
-    .box7 {
-      justify-content: initial
-    }  */
     .item {
       border: 1px solid black;
-      color: aliceblue;
-      width: 200px;
-      /* height: 50px; */
+      color: rgb(245, 248, 250);
+      height: 50px;
       font-size: 20px;
-      text-align: center
+      background-color: blue
     }
-    .item1 {
-      background-color: rgb(127, 220, 20);
+    .box5 {
+      flex-shrink: 1;
+      flex-basis: 1
     }
-    .item2 {
-      background-color: crimson;
+    /* .box6 {
+      flex-grow: 2
     }
-    .item3 {
-      background-color: rgb(20, 23, 220);
+    .box7 {
+      flex-grow: 3
+    } */
+    .box8 {
+      flex-shrink: 5;
+      flex-basis: 5
     }
-    .item4 {
-      background-color: rgb(20, 220, 203);
-    }
-    .item5 {
-      background-color: rgb(220, 20, 30);
-    }
-    .item6 {
-      background-color: rgb(220, 20, 193);
-    }
-    .item7 {
-      background-color: rgb(200, 220, 20);
-    }
+    
   </style>
 </head>
 <body >
 <div class="body">
     <div class="box1 container">
-      <div class="item1 item">center</div>
-      <div class="item1 item">center</div>
-      <div class="item1 item">center center center center</div>
-      <div class="item1 item">center</div>
+      <div class="box5 item">grow: 1</div>
+      <!-- <div class="box6 item">grow: 2</div>
+      <div class="box7 item">grow: 3</div> -->
+      <div class="box8 item">grow: 5</div>
     </div>
-    <div class="box2 container">
-      <div class="item2 item">flex-end</div>
-      <div class="item2 item">flex-end  flex-end flex-end</div>
-      <div class="item2 item">flex-end</div>
-      <div class="item2 item">flex-end</div>
+    <!-- <div class="box2 container">
+      <div class="item2 item">align-items: center </div>
+      <div class="item2 item">align-items: center</div>
+      <div class="item22 item2 item">align-self: normal</div>
+      <div class="item2 item">align-items: center</div>
     </div>
     <div class="box3 container">
-      <div class="item3 item">flex-start flex-start flex-start</div>
-      <div class="item3 item">flex-start</div>
-      <div class="item3 item">flex-start</div>
-      <div class="item3 item">flex-start</div>
-    </div>
-    <div class="box4 container">
-      <div class="item4 item">stretch</div>
-      <div class="item4 item">stretch</div>
-      <div class="item4 item">stretch stretch stretch</div>
-      <div class="item4 item">stretch</div>
-    </div>
-    <div class="box5 container">
-      <div class="item5 item">baseline baseline baseline</div>
-      <div class="item5 item">baseline</div>
-      <div class="item5 item">baseline baseline baseline  baseline	</div>
-      <div class="item5 item">baseline</div>
-    </div>
+      <div class="item3 item">align-items: center </div>
+      <div class="item3 item">align-items: center</div>
+      <div class="item3 item">align-items: center</div>
+      <div class="item33 item3 item">align-self: normal</div>
+    </div> -->
   </div>
 </body>
 </html>

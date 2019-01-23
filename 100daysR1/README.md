@@ -265,9 +265,9 @@ lines packed to the start othe container(vertically)
 
 
 # *difference between justify-content, align-content and align-item*
-* The align-items property of flex-box aligns the items inside a <h3 >*flex container(using display: flex)*</h3> along the *cross axis (vertical ||)* just like 
+* The align-items property of flex-box aligns the items inside a <h3 >*flex container(using display: flex)*</h3> along the *cross axis (vertical ||)* 
 
-* justify-content does along the <h3>(*main axis(horizontal ==)*)</h3> . (For the default flex-direction: row the cross axis corresponds to vertical and the main axis corresponds to horizontal. With flex-direction: column those two are interchanged respectively).
+* justify-content aligns the content along the <h3>(*main axis(horizontal ==)*)</h3> . (For the default ```flex-direction: row.``` The cross axis corresponds to vertical and the main axis corresponds to horizontal. With ```flex-direction: column``` those two are interchanged respectively).
 
 * But align-content is for multi line flexible boxes. <h3>(*flex-wrap: wrap and wrap-reverse create a multi-line flex container*)</h3> It has no effect when items are in a single line (*flex-wrap: nowrap creates a single-line flex container*). It aligns the whole structure according to its value. The CSS align-content property sets how the browser distributes space between and around content items along the cross-axis(horizontal) of a flexbox container, and the main-axis of a grid container.
 
