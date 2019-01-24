@@ -10,16 +10,14 @@
       margin: 0
     }
     .body {
-      flex-direction: column;
+      /* flex-direction: column;
       grid-gap: 5px; 
-      display: flex;
+      display: flex; */
     }
     .container {
       display: flex;
-      background-color: rgb(2, 31, 31);
+      background-color: darkgreen;
       height:  300px;
-      flex-wrap: wrap;
-      align-content: center
     }
     .item {
       border: 1px solid black;
@@ -29,8 +27,7 @@
       background-color: blue
     }
     .box5 {
-      flex-shrink: 1;
-      flex-basis: 1
+      flex-basis: 300px
     }
     /* .box6 {
       flex-grow: 2
@@ -39,8 +36,7 @@
       flex-grow: 3
     } */
     .box8 {
-      flex-shrink: 5;
-      flex-basis: 5
+      flex-basis: 100px
     }
     
   </style>
@@ -48,10 +44,10 @@
 <body >
 <div class="body">
     <div class="box1 container">
-      <div class="box5 item">grow: 1</div>
+      <div class="box5 item">flex-basis: 300px</div>
       <!-- <div class="box6 item">grow: 2</div>
       <div class="box7 item">grow: 3</div> -->
-      <div class="box8 item">grow: 5</div>
+      <div class="box8 item">flex-basis: 100px</div>
     </div>
     <!-- <div class="box2 container">
       <div class="item2 item">align-items: center </div>
