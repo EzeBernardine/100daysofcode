@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0
+    }
+    .item {
+      border: 1px solid black;
+      background-color: rgb(226, 33, 33);
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 2fr 2fr;
+      grid-template-rows: 50vh 50vh
+    }
+    .box1 {
+      background-color: #ff3300;
+      justify-content:  center;
+    }
+    .box2 {
+      background-color: rgb(119, 0, 255);
+      justify-content: start start
+    }
+    .box3{
+      background-color: aqua;
+     justify-content: end
+    }
+    .box4 {
+      background-color: rgb(38, 255, 0);
+     justify-content: stretch
+    }
+    .box1, .box2, .box3, .box4 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container"> 
+    <div class="box1 box">
+      <div class="item1 item">center</div>
+      <div class="item1 item">center</div>
+      <div class="item1 item">center </div>
+      <div class="item1 item">center </div>
+      <div class="item1 item">center</div>
+      <div class="item1 item">center</div>
+      <div class="item1 item">center </div>
+      <div class="item1 item">center </div>
+    </div>
+    <div class="box2 box">
+      <div class="item2 item ">start</div>
+      <div class="item2 item ">start</div>
+      <div class="item2 item ">start </div>
+      <div class="item2 item ">start </div>
+      <div class="item2 item ">start</div>
+      <div class="item2 item ">start</div>
+      <div class="item2 item ">start </div>
+      <div class="item2 item ">start </div>
+    </div>
+    <div class="box3 box">
+      <div class="item3 item ">end</div>
+      <div class="item3 item ">end</div>
+      <div class="item3 item ">end </div>
+      <div class="item3 item ">end </div>
+      <div class="item3 item ">end</div>
+      <div class="item3 item ">end</div>
+      <div class="item3 item ">end </div>
+      <div class="item3 item ">end </div>
+    </div>
+    <div class="box4 box">
+      <div class="item4 item">stretch</div>
+      <div class="item4 item">stretch</div>
+      <div class="item4 item">stretch </div>
+      <div class="item4 item">stretch </div>
+      <div class="item4 item">stretch</div>
+      <div class="item4 item">stretch</div>
+      <div class="item4 item">stretch </div>
+      <div class="item4 item">stretch </div>
+    </div>
+  </div>
+</body>
+</html>
