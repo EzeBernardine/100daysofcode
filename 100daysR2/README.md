@@ -1282,7 +1282,7 @@ From the diagram, the pink divs are auto arranged. Once the first row if filled,
 - Note:
   - that repeat(auto-fill, 1fr); will only create one track because a single track with a width of 1fr already fills the whole grid container.
 
-### Auto-fill
+### Auto-fit
 FITS the CURRENTLY AVAILABLE columns into the space by expanding them so that they take up any available space. The browser does that after FILLING that extra space with extra columns (as with auto-fill ) and then collapsing the empty ones.
 
 ### _Difference between auto-fil and auto-fit_
@@ -1440,7 +1440,7 @@ Represents the formula min(max-content, max(auto, argument)), which is calculate
 }
 ```
 ### 8.  auto
-This takes upthe full width of the element
+This takes up the full width of the element
 ```html
 <div class="auto container">
     <div class="item">auto</div>
@@ -1460,6 +1460,59 @@ This takes upthe full width of the element
 
 # grid-auto-rows
 The grid-auto-rows CSS property specifies the size of an implicitly-created grid row track.
+
+# grid-auto-flow
+If you have grid items that you don't explicitly place on the grid, the auto-placement algorithm kicks in to automatically place the items. This property controls how the auto-placement algorithm works.
+
+What I mean is that when you have a grid item that you don't directly place in a grid container, grid-auto-flow allows auto-placement to place the item.
+## Values
+- grid-auto-flow: row;
+- grid-auto-flow: column;
+- grid-auto-flow: dense;
+- grid-auto-flow: row dense;
+- grid-auto-flow: column dense;
+
+## row
+This tells the auto-placement algorithm to place the items, by filling each row in turn, adding new rows as necessary.
+## columns
+This tells the auto-placement algorithm to place the items, by filling each column in turn, adding new rows as necessary.
+
+## dense
+This uses a “dense” packing algorithm,  if it is omitted, a “sparse” algorithm is used, 
+<img src='../../internship-lecture-materials-2019/ CSS (FLEXBOX, GRID)/assets/auto-flow.png'>
+
+# grid
+A shorthand for setting all of the following properties in a single declaration: `grid-template-rows`, `grid-template-columns`, `grid-template-areas`, `grid-auto-rows`, `grid-auto-columns`, and `grid-auto-flow `.
+
+Code | Equivalent code
+---------- | ------------
+`.container {grid: 100px 300px / 3fr 1fr; }` | `.container {     grid-template-rows: 100px 300px; grid-template-columns: 3fr 1fr;}`
+`.container { grid: auto-flow / 200px 1fr; }` |  `.container {    grid-auto-flow: row; grid-template-columns: 200px 1fr; }`
+ Read up [more](https://css-tricks.com/snippets/css/complete-guide-grid/)
+
+# Properties for the Children (Grid Items)
+# grid-column-start _ grid-column-end _ grid-row-start _ grid-row-end
+>**Note:**   float, display: inline-block, display: table-cell, vertical-align and column-* properties have no effect on a grid item. 
+These properties of the grid-items determine where a grid-item will be positioned based on specific gridlines
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!--
 grid-auto-flow

@@ -7,82 +7,129 @@
   <title>Document</title>
   <style>
     body {
+      margin: 0;
+      background-color: rgba(30, 46, 61, 0.103);
+      font-family: Arial, Helvetica, sans-serif
+    }
+    .btn {
+      margin: 0 10px;
+      background-color: rgb(118, 119, 182);
+      padding: 5px  10px;
+      border-radius: 2px;
+      opacity: .7;
+    }
+    .btn:hover {
+      opacity: 1;
+    }
+
+/* All about the menu */
+    .menus {
+      grid-area: menus;
+      display: flex;
+      align-items:  center;
+      justify-content:  center;
+      color: white;
+      background-color: rgb(30, 31, 61)
+    }
+    .menuLi {
+      display: inline-flex;
+    }
+    .intern {
+      flex: 2;
+      text-align: center;
       margin: 0
     }
-    .item {
-  border: 1px solid black;
-  background-color: rgb(226, 33, 33);
-}
-.container {
-  display: grid;
-  grid-template-columns: 2fr 2fr;
-  grid-template-rows: 50vh 50vh
-}
-.box1 {
-  background-color: #ff3300;
-  place-content:  center;
-}
-.box2 {
-  background-color: rgb(119, 0, 255);
-  place-content: start
-}
-.box3{
-  background-color: aqua;
-  place-content: end
-}
-.box4 {
-  background-color: rgb(38, 255, 0);
-  place-content: stretch
-}
-.box1, .box2, .box3, .box4 {
-  display: grid;
-  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
-}
+    .list {
+      flex: 1
+    }
+
+/* All aou the article */
+    .article {
+      grid-area: article;
+      line-height: 25px;
+      background-color: white
+    }
+    .aboutLearn {
+      width: 250px;
+      height: auto;
+      float: left;
+    }
+
+
+    .aside {
+      grid-area: aside;
+
+    }
+    .FAQ {
+      font-size:  20px;
+      text-align: center;
+      text-decoration: underline
+    }
+    .FAQ_Ul li a{
+      color: black;
+      text-decoration: none
+    }
+
+
+    .show {
+      grid-area: display;
+    }
+    .footer {
+      grid-area: footer
+    }
+
+    .aside, .show, .footer, .article {
+      margin: 20px 20px 0 20px;
+      background-color: white;
+      padding: 10px
+    }
+    .container {
+      display: grid;
+      grid-template: 
+      'menus menus menus'
+      'article article aside' 
+      'display display display' 400px
+      'footer footer footer' 60px
+      / 1fr 1fr .5fr;
+    }
+
   </style>
 </head>
 <body>
-  
-  <div class="container"> 
-    <div class="box1 box">
-      <div class="item1 item">center</div>
-      <div class="item1 item">center</div>
-      <div class="item1 item">center </div>
-      <div class="item1 item">center </div>
-      <div class="item1 item">center</div>
-      <div class="item1 item">center</div>
-      <div class="item1 item">center </div>
-      <div class="item1 item">center </div>
+  <div class="container">
+    <div class="menus">
+      <h1 class="intern">D-INTERNSHIP</h1>
+      <ul class="list">
+        <li class="btn menuLi">Home</li>
+        <li class="btn menuLi">Instructors</li>
+        <li class="btn menuLi">Staffs</li>
+        <li class="btn menuLi">FAQ</li>
+      </ul>
     </div>
-    <div class="box2 box">
-      <div class="item2 item ">start</div>
-      <div class="item2 item ">start</div>
-      <div class="item2 item ">start </div>
-      <div class="item2 item ">start </div>
-      <div class="item2 item ">start</div>
-      <div class="item2 item ">start</div>
-      <div class="item2 item ">start </div>
-      <div class="item2 item ">start </div>
+
+    <div class="article">
+      <p class="aboutPara"> <img  src="../img/Techpoint-Tour-2017-Day-04-34-of-362.jpg" class="aboutLearn"> We are a technology and innovation centre for aspiring tech entrepreneurs, enthusiasts and creative people to meet, learn, showcase their ideas and work together towards solving social and business needs using homegrown technology and solutions. Here, budding tech startups are empowered with the skills and tools to thrive and grow in a proper entrepreneurial ecosystem.</P>
+      <p> LearnFactory has also got a couple of works to show for locally; a website development project for the Abia state house of assembly, an e-registration platform currently in use by a chartered institute in Lagos, to mention but a few. </p>
+      <p>Perhaps the most interesting part of what LearnFactory is doing is the deployment of homegrown, young developers to these tasks. “We’ve been able to show that even though we are in Aba, our employees are still world class,” Chibueze explains. Developers at LearnFactory begin their journey by undergoing a free (not free initially) 3-month intensive bootcamp. </p>
     </div>
-    <div class="box3 box">
-      <div class="item3 item ">end</div>
-      <div class="item3 item ">end</div>
-      <div class="item3 item ">end </div>
-      <div class="item3 item ">end </div>
-      <div class="item3 item ">end</div>
-      <div class="item3 item ">end</div>
-      <div class="item3 item ">end </div>
-      <div class="item3 item ">end </div>
+
+    <div class="aside">
+      <h2 class="FAQ">FAQ About D-Internship</h2>
+      <ul class="FAQ_Ul">
+        <li><a href='#'>Where will it hold</a></li>
+        <li><a href='#'>What is it all about</a></li>
+        <li><a href='#'>Who is hosting it</a></li>
+        <li><a href='#'>How long will it last</a></li>
+        <li><a href='#'>Is it for free</a></li>
+      </ul>
     </div>
-    <div class="box4 box">
-      <div class="item4 item">stretch</div>
-      <div class="item4 item">stretch</div>
-      <div class="item4 item">stretch </div>
-      <div class="item4 item">stretch </div>
-      <div class="item4 item">stretch</div>
-      <div class="item4 item">stretch</div>
-      <div class="item4 item">stretch </div>
-      <div class="item4 item">stretch </div>
+
+    <div class="show">
+      <div class="prfoile">
+        <img src="../img/" alt="">
+      </div>
     </div>
+    <div class="footer">footer</div>
   </div>
 </body>
 </html>
