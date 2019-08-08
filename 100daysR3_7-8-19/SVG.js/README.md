@@ -9,6 +9,8 @@ The viewport is the visible area of the SVG image. An SVG image can logically be
  It creates a “port” through which you can “view” a section of an SVG.
 >>  **The SVG viewport is like a porthole window whose size determines what you can see through it but it doesn’t define the size of whatever might be visible through that viewport. What’s on the other side could theoretically be any size at all.**
 
+The viewport is set by adding `width` and `height` to the svg tag.
+
 
 ### **The ViewBox**
 
