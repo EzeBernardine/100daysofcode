@@ -3,12 +3,24 @@
 
 ## **The Anatomy of an SVG**
 
+
+### The Viewport
+The viewport is the visible area of the SVG image. An SVG image can logically be as wide and high as you want, but only a certain part of the image can be visible at a time. The area that is visible is called the viewport. 
+ It creates a “port” through which you can “view” a section of an SVG.
+>>  **The SVG viewport is like a porthole window whose size determines what you can see through it but it doesn’t define the size of whatever might be visible through that viewport. What’s on the other side could theoretically be any size at all.**
+
+
 ### **The ViewBox**
+
 The viewBox attribute defines the position and dimension, in user space, of an SVG viewport.
 
-Viewbox allows you to tell the parser to zoom in on that third. It eliminates the extra white space. Think of viewbox as a virtual approach to **crop an image**. Without it, your graphic will appear a third of its actual size.
+>> if the viewport is like a window, the viewBox is like a telescope.
+
+Viewbox allows you to tell the parser to zoom in on that third. Think of viewbox as a virtual approach to **crop an image**. Without it, your graphic will appear a third of its actual size.
 
 The value of the viewBox attribute is a list of four numbers min-x, min-y, width and height, separated by whitespace and/or a comma, which specify a rectangle in user space which is mapped to the bounds of the viewport established for the associated element.
+
+Whenever you use the viewBox attribute, remember to set your viewport dimensions too. If you don’t, they’ll default to 100% and you’ll likely have an oversized graphic:
 
 `viewBox="0 0 450 100"`  
 `viewBox="minX minY width height"`
@@ -62,7 +74,7 @@ Example
 ![viewPort](img/svgViewPort.png)
 
 
-Fromt he first image, it is seen that the content has been zoomedd. This is due to the fact that the viewport was reduced `viewBox="50 -10 100 50"` while the second image has viewport `viewBox="0 0 500 200"`.
+From the first image, it is seen that the content has been zoomed. This is due to the fact that the viewport was reduced `viewBox="50 -10 100 50"` while the second image has viewport `viewBox="0 0 500 200"`.
 
 ###  Why Set a Viewbox? 
 SVG does much more than just draw a shape. SVG can be used in web design. It can create one figure on top of another for a shadow effect. It can transform a shape so that it tilts in one direction. For the advanced filters, you will need to understand and use the viewbox attribute.
@@ -108,8 +120,6 @@ preserveAspectRatio="xMinYMin slice"
 
 
 
-### The Viewport
-The viewport is the visible area of the SVG image. An SVG image can logically be as wide and high as you want, but only a certain part of the image can be visible at a time. The area that is visible is called the viewport. 
 
 ### Coordinate System Units
 If you do not specify any units inside the width and height attributes, the units are assumed to be pixels. That is, a width 500 means 500 pixels.
