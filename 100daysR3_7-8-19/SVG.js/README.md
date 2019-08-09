@@ -10,9 +10,24 @@ The viewport is the visible area of the SVG image. An SVG image can logically be
 >>  **The SVG viewport is like a porthole window whose size determines what you can see through it but it doesn’t define the size of whatever might be visible through that viewport. What’s on the other side could theoretically be any size at all.**
 
 The viewport is set by adding `width` and `height` to the svg tag.
+#### For example
+```html
+<svg width="150px" height="150px">
+  <rect x='0' y='0' width='200px' height='100px' fill="red"></rect>
+  <circle cx='50px' cy='120px' r='50px'></circle>
+</svg>
+```
+```css
+svg {
+    background: yellow;
+  }
+ ```
 
+![viewport](img/viewport.png)
 
-### **The ViewBox**
+ From the image above, the the viewport is set to 150 by 150px.Therefore that will be the viscible part of the svg. What ever is contained inside remains the same but only the part that is contained within the 150 by 150 becomes viscible.
+
+### The ViewBox
 
 The viewBox attribute defines the position and dimension, in user space, of an SVG viewport.
 
@@ -313,3 +328,55 @@ Example using C for curved line
 ## Bézier curves
 They are used to model smooth curves that can be scaled indefinitely.
 >> A Bézier curve with one control point is called a quadratic Bézier curve and the kind with two control points is called cubic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+inventary app
+
+# User types
+* manufacturers
+* distributor
+* retailers
+* consumers
+* service providers
+
+service providers --- retailers
