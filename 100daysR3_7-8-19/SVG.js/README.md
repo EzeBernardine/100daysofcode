@@ -28,19 +28,30 @@ svg {
  From the image above, the the viewport is set to 150 by 150px.Therefore that will be the viscible part of the svg. What ever is contained inside remains the same but only the part that is contained within the 150 by 150 becomes viscible.
 
 ### The ViewBox
+Its is represented by a `viewbox` attribute with four numbers separeted with a pace and/or comma.
+```html
+ <svg width="150px" height="150px" viewbox='0 0 0 0'>
+ </svg>
+ ```
+ `viewBox = <min-x> <min-y> <width> <height>`
 
 The viewBox attribute defines the position and dimension, in user space, of an SVG viewport.
+Taking it one after another, let me talk about whati mean by position 
+1. Position: 
+This is determined from the first two numbers. It is sometimes seen as panning. From the code snippet above, the `viewbox` is et to `0 0 0 0`. 
 
->> if the viewport is like a window, the viewBox is like a telescope.
 
-Viewbox allows you to tell the parser to zoom in on that third. Think of viewbox as a virtual approach to **crop an image**. Without it, your graphic will appear a third of its actual size.
+ Think of viewbox as a virtual approach to **crop an image**.
 
 The value of the viewBox attribute is a list of four numbers min-x, min-y, width and height, separated by whitespace and/or a comma, which specify a rectangle in user space which is mapped to the bounds of the viewport established for the associated element.
 
 Whenever you use the viewBox attribute, remember to set your viewport dimensions too. If you don’t, they’ll default to 100% and you’ll likely have an oversized graphic:
 
+>> if the viewport is like a window, the viewBox is like a telescope.
+
 `viewBox="0 0 450 100"`  
 `viewBox="minX minY width height"`
+
 * **minx**:  _the beginning x coordinate_
 * **miny**: _the beginning y coordinate_
 * **width**: _width of the viewbox_
@@ -330,53 +341,3 @@ They are used to model smooth curves that can be scaled indefinitely.
 >> A Bézier curve with one control point is called a quadratic Bézier curve and the kind with two control points is called cubic
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-inventary app
-
-# User types
-* manufacturers
-* distributor
-* retailers
-* consumers
-* service providers
-
-service providers --- retailers
