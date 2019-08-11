@@ -40,7 +40,8 @@ Taking it one after another, let me talk about what it means by position
 1. **Position**:       
 This is determined from the first two numbers. It is sometimes seen as panning. From the code snippet above, the `viewbox` is et to `0 0 0 0`. The first two numbers which is `0 0` determines the position. Lets look at these examples
 ![viewbox](img/viewbox2.png)
-![viewbox](img/viewbox3.png). While the height and width are maintained at 300 by 300, x and y are varied. Hope it is quite clear.
+![viewbox](img/viewbox3.png)
+ While the height and width are maintained at 300 by 300, x and y are varied. Hope it is quite clear.
 
 2. **Dimension**:   
 dasd
