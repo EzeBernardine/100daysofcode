@@ -10,11 +10,9 @@
       svg {
         background: yellow;
       }
-
-      .emptyDiv {
-        height: 200px;
-        width: 200px;
-        background-color: blue;
+      
+      .svg2{
+        margin-left: 850px
       }
     </style>
   </head>
@@ -23,12 +21,26 @@
 
 
     <h1>SVG</h1>
-    <!-- <div class="emptyDiv"> -->
-      <svg width="150px" height="150px" viewbox='0 0 300 300'>
+    
+      <svg width="150px" height="150px" viewbox='0 0 300 300' style='margin-left: 100px'>
         <rect x='0' y='0' width='200px' height='100px' fill="red"></rect>
         <circle cx='50px' cy='100px' r='50px'></circle>
       </svg>
-    <!-- </div> -->
+
+      <svg width="150px" height="150px" viewbox='0 -40 300 300' style=' margin-left: 650px'>
+        <rect x='0' y='0' width='200px' height='100px' fill="red"></rect>
+        <circle cx='50px' cy='100px' r='50px'></circle>
+      </svg>
+
+      <svg width="150px" height="150px" viewbox='-40 0 300 300' style='margin-top: 150px; display: block; margin-left: 100px'>
+        <rect x='0' y='0' width='200px' height='100px' fill="red"></rect>
+        <circle cx='50px' cy='100px' r='50px'></circle>
+      </svg>
+
+      <svg width="150px" height="150px" viewbox='-40 -40 300 300' style='margin-top: -170px; margin-left: 900px'>
+        <rect x='0' y='0' width='200px' height='100px' fill="red"></rect>
+        <circle cx='50px' cy='100px' r='50px'></circle>
+      </svg>
   </body>
 
 </html>
