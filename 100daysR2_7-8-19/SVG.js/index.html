@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SVG</title>
+    <style>
+      svg {
+        background: yellow;
+      }
+
+      body {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 500px 500px;
+        grid-template-rows: 1fr 1fr;
+        margin-top: 100px;
+        grid-gap: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+
+    <!-- <h1>SVG</h1> -->
+
+    <svg width="200px" height="200px" viewbox='0 0 200 200'>
+      <rect x='0' y='0' width='200px' height='100px' fill="red"></rect>
+      <circle cx='50px' cy='100px' r='50px'></circle>
+    </svg>
+
+    <svg width="200px" height="200px" viewbox='0 0 400 50'>
+      <rect x='0' y='0' width='200px' height='100px' fill="red"></rect>
+      <circle cx='50px' cy='100px' r='50px'></circle>
+    </svg>
+
+    <svg width="200px" height="200px" viewbox='0 0 200 400'>
+      <rect x='0' y='0' width='200px' height='100px' fill="red"></rect>
+      <circle cx='50px' cy='100px' r='50px'></circle>
+    </svg>
+
+    <svg width="200px" height="200px" viewbox='0 0 400 400'>
+      <rect x='0' y='0' width='200px' height='100px' fill="red"></rect>
+      <circle cx='50px' cy='100px' r='50px'></circle>
+    </svg>
+  </body>
+
+</html>
