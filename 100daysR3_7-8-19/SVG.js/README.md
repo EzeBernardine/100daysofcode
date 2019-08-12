@@ -28,7 +28,7 @@ svg {
  From the image above, the the viewport is set to 150 by 150px.Therefore that will be the viscible part of the svg. What ever is contained inside remains the same but only the part that is contained within the 150 by 150 becomes viscible.
 
 ### The ViewBox
-Its is represented by a `viewbox` attribute with four numbers separeted with a pace and/or comma.
+Its is represented by a `viewbox` attribute with four numbers separated with a space and/or comma.
 ```html
  <svg width="150px" height="150px" viewbox='0 0 0 0'>
  </svg>
