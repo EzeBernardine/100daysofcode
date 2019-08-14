@@ -44,7 +44,7 @@ This is determined from the first two numbers. It is sometimes seen as panning. 
  While the height and width are maintained at 300 by 300, x and y are varied. Hope it is quite clear.
 
 2. **Dimension**:   
-This is determined by the last two numbers, ie the `width` nd `height` parameters. If for instance we have
+This is determined by the last two numbers, ie the `width` and `height` parameters. If for instance we have
 ![viewbox dimension](img/viewbox-dimension.png)
 
 ![viewbox](img/viewbox.png)
