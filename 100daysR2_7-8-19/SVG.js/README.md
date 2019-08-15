@@ -23,66 +23,16 @@ svg {
   }
  ```
 
-![viewport](img/viewport.png)
+![viewport](img/viewport.png) 
 
  From the image above, the the viewport is set to 150 by 150px.Therefore that will be the viscible part of the svg. What ever is contained inside remains the same but only the part that is contained within the 150 by 150 becomes viscible.
-
-### The ViewBox
-Its is represented by a `viewbox` attribute with four numbers separated with a space and/or comma.
-```html
- <svg width="150px" height="150px" viewbox='0 0 0 0'>
- </svg>
- ```
- `viewBox = <min-x> <min-y> <width> <height>`
-
-The viewBox attribute defines the position and dimension, in user space, of an SVG viewport.
-Taking it one after another, let me talk about what I mean by ... 
-1. **Position**:       
-This is determined from the first two numbers. It is sometimes seen as panning. From the code snippet above, the `viewbox` is et to `0 0 0 0`. The first two numbers which is `0 0` determines the position. Lets look at these examples
-![viewbox](img/viewbox2.png)
-![viewbox](img/viewbox3.png)
- While the height and width are maintained at 300 by 300, x and y are varied. Hope it is quite clear.
-
-2. **Dimension**:   
-This is determined by the last two numbers, ie the `width` and `height` parameters. If for instance we have
-![viewbox dimension](img/viewbox-dimension.png)
-
-![viewbox](img/viewbox.png)
-
- Think of viewbox as a virtual approach to **crop an image**.
-
-The value of the viewBox attribute is a list of four numbers min-x, min-y, width and height, separated by whitespace and/or a comma, which specify a rectangle in user space which is mapped to the bounds of the viewport established for the associated element.
-
-Whenever you use the viewBox attribute, remember to set your viewport dimensions too. If you don’t, they’ll default to 100% and you’ll likely have an oversized graphic:
-
->> if the viewport is like a window, the viewBox is like a telescope.
-
-`viewBox="0 0 450 100"`  
-`viewBox="minX minY width height"`
-
-* **minx**:  _the beginning x coordinate_
-* **miny**: _the beginning y coordinate_
-* **width**: _width of the viewbox_
-* **height**: _height of the viewbox_
-
-Example
+#### Example 2
 ```html
   <style>
-      svg { 
-        background: green
-      }
-
-      rect {
-        fill: blue
-      }
-
-      circle {
-        fill: red
-      }
-
-      polygon {
-        fill: yellow
-      }
+      svg { background: green }
+      rect { fill: blue   }
+      circle {   fill: red }
+      polygon {  fill: yellow  }
     </style>
   </head>
 
@@ -110,12 +60,53 @@ Example
 ![viewPort](img/svgViewPort.png)
 
 
-From the first image, it is seen that the content has been zoomed. This is due to the fact that the viewport was reduced `viewBox="50 -10 100 50"` while the second image has viewport `viewBox="0 0 500 200"`.
+### The ViewBox
+Its is represented by a `viewbox` attribute with four numbers separated with a space and/or comma.
+```html
+ <svg width="150px" height="150px" viewbox='0 0 0 0'>
+ </svg>
+ ```
+ `viewBox = <min-x> <min-y> <width> <height>`
 
-###  Why Set a Viewbox? 
-SVG does much more than just draw a shape. SVG can be used in web design. It can create one figure on top of another for a shadow effect. It can transform a shape so that it tilts in one direction. For the advanced filters, you will need to understand and use the viewbox attribute.
+The viewBox attribute defines the position and dimension, in user space, of an SVG viewport.
+Taking it one after another, let me talk about what I mean by ... 
+1. **Position**:       
+This is determined from the first two numbers. It is sometimes seen as panning. From the code snippet above, the `viewbox` is et to `0 0 0 0`. The first two numbers which is `0 0` determines the position. Lets look at these examples
+![viewbox](img/viewbox2.png)
+![viewbox](img/viewbox3.png)
+ While the height and width are maintained at 300 by 300, x and y are varied. Hope it is quite clear.
 
+2. **Dimension**:   
+
+This is determined by the last two numbers, ie the `width` and `height` parameters. If for instance, with `preserveAspectRatio` set to none, 
+![viewbox](img/viewbox.png)
+![viewbox dimension](img/viewboxMain.png)
+From the images above, in the second image section 2, the `viewbox='0 0 800 400' ` is while the `viewport` is `width="200px" height="200px"`. 
+
+When, the `width` which is `800` is made equivalent to the `viewport width` which is `200px`. That means it is in the ration of `800 : 200px` == ` 4:1 `. Each inch of the `viewport` is equivalent to `4inch` of the `viewbox`. The same applies to the height dimension.
+
+
+Think of viewbox as a virtual approach to **crop an image**.
+
+
+Whenever you use the viewBox attribute, remember to set your viewport dimensions and preserveAspectRatio too. If you don’t,  you’ll likely have an oversized graphic:
+
+>> if the viewport is like a window, the viewBox is like a telescope.
+
+
+
+
+<!-- 
 ### Preserving Aspect Ratio
+
+`viewBox="minX minY width height"`
+
+* **minx**:  _the beginning x coordinate_
+* **miny**: _the beginning y coordinate_
+* **width**: _width of the viewbox_
+* **height**: _height of the viewbox_
+
+
 It helps you  specify how the SVG viewer (e.g. the browser) is to display the SVG image. 
 
 The preserveAspectRatio attribute takes two values separated by a space. 
@@ -348,4 +339,4 @@ Example using C for curved line
 They are used to model smooth curves that can be scaled indefinitely.
 >> A Bézier curve with one control point is called a quadratic Bézier curve and the kind with two control points is called cubic
 
-
+ -->
