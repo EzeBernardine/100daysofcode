@@ -95,7 +95,10 @@ Whenever you use the viewBox attribute, remember to set your viewport dimensions
 
 
 
-
+### Preserving Aspect Ratio
+First of all,  when we talk   about aspect ratio, you  must know that it is the ratio of the width and height of the viewbox and  viewport
+![Preserving Aspect Ratio img](img/PAR.png)
+![Preserving Aspect Ratio img](img/PAS_slice.png)
 <!-- 
 ### Preserving Aspect Ratio
 
