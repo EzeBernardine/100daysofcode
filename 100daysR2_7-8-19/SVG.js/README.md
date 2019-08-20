@@ -99,9 +99,22 @@ Whenever you use the viewBox attribute, remember to set your viewport dimensions
 First of all,  when we talk   about aspect ratio, you  must know that it is the ratio of the width and height of the viewbox and  viewport
 ![Preserving Aspect Ratio img](img/PAR.png)
 ![Preserving Aspect Ratio img](img/PAS_slice.png)
+
+This topic is giving me headach, ma continue width  later. Moving on,
+
+
+### Coordinate System
+This is a bit different from the normal mathematical cordinates. By cordinate system, I mean the method of representing points in a space of given dimensions. For
+#### Maethematicl cordinate system
+Along the horizontal axis, `x` increases while moving towards the right, and decreases whike moving towards the left. Then along the `vertical axis`, `y` increases while moving towards the top and decreases while moving downwards. 
+#### SVG cordinate system
+Along the `horizontal axis`, `x` increases while moving towards the right, and decreases whike moving towards the left. Then along the `vertical axis`, `y` decreases while moving towards the top and increases while moving downwards. 
+
+### 
+Coordinate System Units
 <!-- 
 ### Preserving Aspect Ratio
-
+[code pen](https://codepen.io/tigt/post/why-and-how-preserveaspectratio)
 `viewBox="minX minY width height"`
 
 * **minx**:  _the beginning x coordinate_
