@@ -14,33 +14,32 @@
       body {
         display: grid;
         justify-content: center;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        /* grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr; */
         margin-top: 100px;
         grid-gap: 100px;
       }
-      .group {
-        transform: rotate(12deg)
-      }
+      .group {transform: rotate(20deg) }
+      .content { transform: rotate(-45deg) }
     </style>
   </head>
 
   <body>
 
     <svg width="200px" height="200px" viewbox='0 0 200 200' preserveAspectRatio ="none">
-      <svg class="group">
-        <rect x='0' y='0' width='200px' height='100px' fill="red"></rect>
-        <circle cx='50px' cy='150px' r='50px'></circle>
-        <circle cx='150px' cy='150px' r='50px'></circle>
-      </svg>
-
-    </svg>
-    <svg width="200px" height="200px" viewbox='0 0 200 200' preserveAspectRatio="none">
-      <g  class="group">
-        <rect x='0' y='0' width='200px' height='100px' fill="red"></rect>
-        <circle cx='50px' cy='150px' r='50px'></circle>
-        <circle cx='150px' cy='150px' r='50px'></circle>
+      <g class=" group ">
+        <rect x='0' y='0'  class='content' width='200px' height='100px' fill="red"></rect>
+        <circle cx='50px'  class='content'  cy='150px' r='50px'></circle>
+        <circle cx='150px' class='content'   cy='150px' r='50px'></circle>
       </g>
+    </svg>
+
+    <svg width="200px" height="200px" viewbox='0 0 200 200' preserveAspectRatio ="none">
+      <svg class=" group ">
+        <rect x='0' y='0'  class='content' width='200px' height='100px' fill="red"></rect>
+        <circle cx='50px'  class='content'  cy='150px' r='50px'></circle>
+        <circle cx='150px' class='content'   cy='150px' r='50px'></circle>
+      </svg>
     </svg>
 
   </body>
