@@ -110,59 +110,6 @@ Along the horizontal axis, `x` increases while moving towards the right, and dec
 #### SVG cordinate system
 Along the `horizontal axis`, `x` increases while moving towards the right, and decreases whike moving towards the left. Then along the `vertical axis`, `y` decreases while moving towards the top and increases while moving downwards. 
 
-### 
-Coordinate System Units
-<!-- 
-### Preserving Aspect Ratio
-[code pen](https://codepen.io/tigt/post/why-and-how-preserveaspectratio)
-`viewBox="minX minY width height"`
-
-* **minx**:  _the beginning x coordinate_
-* **miny**: _the beginning y coordinate_
-* **width**: _width of the viewbox_
-* **height**: _height of the viewbox_
-
-
-It helps you  specify how the SVG viewer (e.g. the browser) is to display the SVG image. 
-
-The preserveAspectRatio attribute takes two values separated by a space. 
-* The first value tells how the view box is aligned within the viewport.
-* The second value tells how the aspect ratio is to be preserved (if at all). 
-[tutorials.jenkov.com](http://tutorials.jenkov.com/svg/svg-viewport-view-box.html)
-
-
-1. The first value specifying the alignment consists of two parts. The first part specifies the x-alignment and the second part specifies the y-alignment. Here is a list of the values for x- and y-alignment:   
-
-Value |	Description
-------|----------
-xMin |	Align minimum x of view box with the left edge of the viewport.
-xMid |	Align midpoint on the x-axis of view box with the center of the viewport on the x-axis.
-xMax |	Align maximum x of view box with the right edge of the viewport.
-YMin |	Align minimum y of view box with the top edge of the viewport.
-YMid |	Align midpoint on the y-axis of view box with the center point of the viewport on the y-axis.
-YMax |	Align maximum y of view box with the bottom edge of the viewport.
-
-2.  The second part of the preserveAspectRatio attribute value can take three different values:
-
-Value |	Description
-------|----------
-meet |	Preserves aspect ratio and scales view box to fit within viewport.
-slice |	Preserves aspect ratio and slices off any part of the image that does not fit inside the viewport.
-none |	Does not preserve aspect ratio. Scales image to fit view box fully into viewport. Proportions will be distorted.
-
- The second part of the preserveAspectRatio attribute value is appended to the first part, separated by a space. Here are two examples:
-```html
-preserveAspectRatio="xMidYMid meet"
-
-preserveAspectRatio="xMinYMin slice"
-```
-#### The work of viewbox
-* It defines the aspect ratio of the image.
-* It defines how all the lengths and coordinates used inside the SVG should be scaled to fit the total space available.
-* It defines the origin of the SVG coordinate system, the point where x=0 and y=0.
-
-
-
 
 ### Coordinate System Units
 If you do not specify any units inside the width and height attributes, the units are assumed to be pixels. That is, a width 500 means 500 pixels.
@@ -179,6 +126,43 @@ pc |	Picas (1 / 6 of an inch)
 cm |	Centimeters
 mm |	Millimeters
 in |	Inches
+
+
+### SVG g element
+The SVG <g> element is used to group SVG shapes together. Once grouped you can style the whole group of shapes as if it was a single shape. 
+
+For example
+```html
+ <svg width="200px" height="200px" viewbox='0 0 200 200' preserveAspectRatio ="none">
+  <g>
+    <rect x='0' y='0' width='200px' height='100px' fill="red"></rect>
+    <circle cx='50px'  cy='150px' r='50px'></circle>
+    <circle cx='150px'  cy='150px' r='50px'></circle>
+  </g>
+</svg>
+```
+![(g Styles)](./img/plain_svg.png)
+
+#### The Styling of g Elements 
+When you style an `svg` element, the styles affects the children as a single element. Let style the example above and see the effect
+![(g Styles)](./img/gStyles.png)
+
+#### Difference between styling a `g` element and a nested `svg` tag.
+I have detailly designed an image that goes a long way to explaning the differences (well, i hope it does).
+![(g element verses svg)](./img/g-VS-svg.png)
+
+In section 1 from the above image, the contents are in a nested `svg` tags. The ` .group {transform: rotate(20deg) }` styles the `svg` tag directly housing the contents; `<rect></rect> <circle></circle> <circle></circle>`, while the cotents  are given a style of `.content { transform: rotate(-45deg) }`. 
+
+Therefore, while the `svg` directly housing the contents  rotates `20deg` tilts towards the right, the contents.
+Lets look at this 
+![more-g.png](./img/more-g.png)
+
+<!-- 
+
+
+
+
+
 
 >**The units you set on the `<svg>` element only affects the size of the `<svg>` element (the viewport). The size of the SVG shapes displayed in the SVG image are determined by the units you set on each shape. If no units are specified, the units will default to pixels.**
 
