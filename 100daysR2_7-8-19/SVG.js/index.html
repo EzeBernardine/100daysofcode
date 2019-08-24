@@ -10,14 +10,14 @@
       svg {
         background: yellow;
       }
-
       body {
-        display: grid;
+        display: flex;
         justify-content: center;
-        /* grid-template-columns: 1fr 1fr ;
-        grid-template-rows: 1fr 1fr 1fr; */
-        margin-top: 100px;
-        grid-gap: 100px;
+        margin-top: 50px
+      }
+      path {
+        stroke: red;
+        stroke-width: 5px
       }
     </style>
   </head>
@@ -27,7 +27,7 @@
 
     <g>
       <svg width="200px" height="200px" viewbox='0 0 200 200' preserveAspectRatio ="none">
-        <line x1="200" x2="150" y1="50" y2="150" stroke='pink'/>
+        <path  d='M50 50  A30 50 0 0 1 100 100'/>
       </svg>
     </g>
   </body>

@@ -97,21 +97,23 @@ Whenever you use the viewBox attribute, remember to set your viewport dimensions
 
 ### Preserving Aspect Ratio
 First of all,  when we talk   about aspect ratio, you  must know that it is the ratio of the width and height of the viewbox and  viewport
+
 ![Preserving Aspect Ratio img](img/PAR.png)
+
 ![Preserving Aspect Ratio img](img/PAS_slice.png)
 
 This topic is giving me headach, ma continue width  later. Moving on,
 
 
-### Coordinate System
+## Coordinate System
 This is a bit different from the normal mathematical cordinates. By cordinate system, I mean the method of representing points in a space of given dimensions. For
-#### Maethematicl cordinate system
+#### Mathematical cordinate system
 Along the horizontal axis, `x` increases while moving towards the right, and decreases whike moving towards the left. Then along the `vertical axis`, `y` increases while moving towards the top and decreases while moving downwards. 
 #### SVG cordinate system
 Along the `horizontal axis`, `x` increases while moving towards the right, and decreases whike moving towards the left. Then along the `vertical axis`, `y` decreases while moving towards the top and increases while moving downwards. 
 
 
-### Coordinate System Units
+## Coordinate System Units
 If you do not specify any units inside the width and height attributes, the units are assumed to be pixels. That is, a width 500 means 500 pixels.
 
 If you prefer to use different units than pixels, you can. Here is a list of the units you can use with the `<svg>` element: 
@@ -128,7 +130,7 @@ mm |	Millimeters
 in |	Inches
 
 
-### SVG g element
+## SVG g element
 The SVG <g> element is used to group SVG shapes together. Once grouped you can style the whole group of shapes as if it was a single shape. 
 
 For example
@@ -140,35 +142,38 @@ For example
     <circle cx='150px'  cy='150px' r='50px'></circle>
   </g>
 </svg>
+
 ```
+
+
+
 ![(g Styles)](./img/plain_svg.png)
 
-#### The Styling of g Elements 
+### The Styling of g Elements 
 When you style an `svg` element, the styles affects the children as a single element. Let style the example above and see the effect
+
 ![(g Styles)](./img/gStyles.png)
 
-#### Difference between styling a `g` element and a nested `svg` tag.
+### Difference between styling a `g` element and a nested `svg` tag.
 I have detailly designed an image that goes a long way to explaning the differences (well, i hope it does).
+
 ![(g element verses svg)](./img/g-VS-svg.png)
 
 In section 1 from the above image, the contents are in a nested `svg` tags. The ` .group {transform: rotate(20deg) }` styles the `svg` tag directly housing the contents; `<rect></rect> <circle></circle> <circle></circle>`, while the cotents  are given a style of `.content { transform: rotate(-45deg) }`. 
 
-Therefore, while the `svg` directly housing the contents  rotates `20deg` tilts towards the right, the contents.
-Lets look at this 
-![more-g.png](./img/more-g.png)
+Therefore, while the `svg` directly housing the contents   `rotates  20deg`; tilts downwards, the content from that position tilts upwards for `-45deg`.
 
-<!-- 
+The major difference between section 1 and 2 is that in section 1,  the contents are inclosed in an `svg` tag. This resulted to part of the contents not been visible since any content outside both  the inner and outer `svg` tag will not be seen . While in section 2, they are enclosed in a `g` tag, and will be visible.
+Lets look at this image for btter clarification
 
+![more-g element](./img/more-g.png)
 
+For section 3 to section 6, it is either the contents or the parent container that is atyled.
 
-
-
-
->**The units you set on the `<svg>` element only affects the size of the `<svg>` element (the viewport). The size of the SVG shapes displayed in the SVG image are determined by the units you set on each shape. If no units are specified, the units will default to pixels.**
 
 ## **Drawing Shapes**
 
-### Rectangles
+## Svg `rect`  element
 This is done with the `rect` keyword. There are really only 6 basic attributes that control the position and shape of the rectangle on screen here
 
 ```html
@@ -185,7 +190,7 @@ height | The height of the rectangle
 rx  |   The x radius of the corners of the rectangle
 ry |    The y radius of the corners of the rectangle 
 
-### Circle
+## Svg circle element
 This tag is used to create a circle, and it has only three attributes.
 ```html
 <circle cx="25" cy="75" r="20"/>
@@ -203,7 +208,7 @@ cy |  The y position of the center of the circle.
 
 ![circle](./img/circle.png)
 
-## Ellipse
+## Svg ellipse 
 This more of the general form of a circle. Here you can size or determine the x-radius and the y-radius callled the semi major and minor axis.
 ```html
 <ellipse cx="75" cy="75" rx="20" ry="5"/>
@@ -216,10 +221,10 @@ ry  |   The y radius of the ellipse.
 cx  |   The x position of the center of the ellipse.
 cy  |   The y position of the center of the ellipse. 
 
-## Line
+## Svg Line element
 As the name applies, it is used to draw lines.
 ```html
- <line x1="10" x2="50" y1="110" y2="10" stroke='pink'/>
+<line x1="200" x2="150" y1="50" y2="150" stroke='pink'/>
 ```
 ![line](img/line.png)
 
@@ -231,11 +236,11 @@ x2 |    The x position of point 2.
 y2 |   The y position of point 2. 
 
 ## Polyline
-This is used to create a group of connected lines. It has on attribute; the `path` which is a list of all the points seperated with a coma
+This is used to create a group of connected lines. It has on attribute; the `points` which is a list of all the points seperated with a coma
 
 attribute | meaning
 --------|---------------
-path | Its a list of points, seperated by a comma. Each point must contain two numbers, an x coordinate and a y coordinate. So the list (0,0), (1,1) and (2,2) could be written: "0 0, 1 1, 2 2".
+points | Its a list of points, seperated by a comma. Each point must contain two numbers, an x coordinate and a y coordinate. So the list (0,0), (1,1) and (2,2) could be written: "0 0, 1 1, 2 2".
 
 ```html
   <stye>
@@ -254,10 +259,10 @@ path | Its a list of points, seperated by a comma. Each point must contain two n
   ```
 attribute | meaning
 --------|---------------
-  path | It is a list of points sepereated with commas. Each point must contain two numbers, an x coordinate and a y coordinate. So the list (0,0), (1,1) and (2,2) could be written: "0 0, 1 1, 2 2". The drawing then closes the path, so a final straight line would be drawn from (2,2) to (0,0).
+  points | It is a list of points sepereated with commas. Each point must contain two numbers, an x coordinate and a y coordinate. So the list (0,0), (1,1) and (2,2) could be written: "0 0, 1 1, 2 2". The drawing then closes the path, so a final straight line would be drawn from (2,2) to (0,0).
  ![polygon](img/polygon.png)
 
-The path automatically returns to the first point for you at the end, creating a closed shape. 
+>>**The path automatically returns to the first point for you at the end, creating a closed shape**. 
 
 For example
 ```html
@@ -265,78 +270,6 @@ For example
  ```
  ![joinedPolygon](img/joinPolygon.png)
 
+
  ## Path
-It is used to create lines, curves, arcs and more. Path SVG can be executed by using the path tag.The `<path> `element in SVG is the ultimate drawing element. It can draw anything! The path element takes a single attribute to describe what it draws: the ` ` attribute.
-M x,y |	Move to the absolute coordinates x,y
-
-no | attribute | meaning
--|--------|---------------
- straight lines.||
-| _________|________________ |________________________________________________________________________
-1. | M (x,y) |	Move to the absolute coordinates x,y
-2. |m (x,y) |	Move to the right x and down y (or left and up if negative values) (The "Move To" command appears at the beginning of paths to specify where the drawing should start)
-| _________|________________ |________________________________________________________________________
-32. |L (x,y) |	Draw a straight line to the absolute coordinates x,y
-4. |l (x,y ) |	Draw a straight line to a point that is relatively right x and down y (or left and up if negative values)
-| _________|________________ |________________________________________________________________________
-5. |H (x) |	Draw a line horizontally to the exact coordinate x
-6. |h (x) |	Draw a line horizontally relatively to the right x (or to the left if a negative value)
-| _________|________________ |________________________________________________________________________
-7. |V( y) |	Draw a line vertically to the exact coordinate y
-8. |v( y) |	Draw a line vertically relatively down y (or up if a negative value)
- | | |
-9. |Z (or z) |	Draw a straight line back to the start of the path
-curve lines||
-| _________|________________ |________________________________________________________________________
-10. |C  ( cX1,cY1 cX2,cY2 eX,eY) |	Draw a bezier curve based on two bezier control points and end at specified coordinates
-11. |c | 	Same with all relative values
-| _________|________________ |________________________________________________________________________
-12. | S (cX2,cY2 eX,eY) |	Basically a C command that assumes the first bezier control point is a reflection of the last bezier point used in the previous S or C command
-13. |s |	Same with all relative values
-| _________|________________ |________________________________________________________________________
-14. |Q (cX,cY eX,eY) |	Draw a bezier curve based a single bezier control point and end at specified coordinates
-15. |q |	Same with all relative values
-| _________|________________ |________________________________________________________________________
-16. |T (eX,eY) |	Basically a Q command that assumes the first bezier control point is a reflection of the last bezier point used in the previous Q or T command
-17. |t |	Same with all relative values
-| _________|________________ |________________________________________________________________________
-18. | A (rX,rY rotation, arc, sweep, eX,eY) |	Draw an arc that is based on the curve an oval makes. First define the width and height of the oval. Then the rotation of the oval. Along with the end point, this makes two possible ovals. So the arc and sweep are either 0 or 1 and determine which oval and which path it will take.
-19. | a |	Same with relative values for eX,eY
-
->**Uppercase letters mean the position will absolutely positioned while lowercase letters mean relative positioning.**
-
-For instance
-
-
-     M 100,100 means "Pick up the pen and move it to the exact coordinates 100,100" ( this is absolute positioning)
-
-     m 100,100 means "Move the Pen 100 down and 100 right from wherever you currently are." (this is relative positioning)
-
-# Straight lines
-Lets see an example
-```html
-<path d="M 100 20 v 50 h -25 v 25 h 25 v 50 h 25 v -50 h 25 v -25 h -25 v -50 z" />
-<path d = "M 300 20  l 0 50 l -25 0 l 0 25 l 25 0 l 0 50 l 25 0 l 0 -50 l 25 0 l 0 -25 l -25 0 l 0 -50 Z"/>
-```
-![cross](img/cross.png)
-
-The above same figures was created using different commands to illustrate the  work of each command. 
-
-Example using C for curved line
-```html
-<path d='M 50 50 C 100 100 200 100, 200 50' fill="white" stroke="blue" stroke-width="5"/>
-```
-![curved line](img/c-curve.png)
-
-# Curve lines
-
-![cubic](img/cubic.png)
-
-![cubic](img/cubic1.png)
-
-
-## Bézier curves
-They are used to model smooth curves that can be scaled indefinitely.
->> A Bézier curve with one control point is called a quadratic Bézier curve and the kind with two control points is called cubic
-
- -->
+ 
