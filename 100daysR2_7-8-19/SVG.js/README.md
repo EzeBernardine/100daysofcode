@@ -314,11 +314,11 @@ Serial number | attribute | meaning
 For instance
 
 
-     M 100,100 means "Pick up the pen and move it to the exact coordinates 100,100" ( this is absolute positioning)
+    M 100,100 means "Pick up the pen and move it to the exact coordinates 100,100" ( this is absolute positioning)
 
-     m 100,100 means "Move the Pen 100 down and 100 right from wherever you currently are." (this is relative positioning)
+    m 100,100 means "Move the Pen 100 down and 100 right from wherever you currently are." (this is relative positioning)
 
-# Straight lines
+## Straight lines
 Lets see an example
 ```html
 <path d="M 100 20 v 50 h -25 v 25 h 25 v 50 h 25 v -50 h 25 v -25 h -25 v -50 z" />
@@ -328,16 +328,13 @@ Lets see an example
 
 The above same figures was created using different commands to illustrate the  work of each command. 
 
-Example using C for curved line
-```html
-<path d='M 50 50 C 100 100 200 100, 200 50' fill="white" stroke="blue" stroke-width="5"/>
-```
 ![curved line](img/c-curve.png)
 
-# Curve lines
+## Curve lines
 
 ![cubic](img/cubic.png)
 ![cubic](img/cubic1.png)
 
- 
+We will be taking this part on after another for easy clarification
+
   
