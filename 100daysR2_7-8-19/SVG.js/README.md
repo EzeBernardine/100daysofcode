@@ -271,7 +271,7 @@ For example
  ![joinedPolygon](img/joinPolygon.png)
 
 
- ## Path
+ # Path
 It is used to create lines, curves, arcs and more. Path SVG can be executed by using the path tag.The `<path> `element in SVG is the ultimate drawing element. It can draw anything! The path element takes a single attribute to describe what it draws: the ` ` attribute.
 M x,y |	Move to the absolute coordinates x,y
 
@@ -336,5 +336,65 @@ The above same figures was created using different commands to illustrate the  w
 ![cubic](img/cubic1.png)
 
 We will be taking this part on after another for easy clarification
+
+The first one is
+
+### Cubic bezier curve
+
+
+Cubic bezier curve syntax starts with `c` or `C` character inside the `path` attribute; 
+
+` <path d='M150 50  C250 100, 50 200, 150 250' />`,
+
+ or
+
+ `<path d='M150 50  c100 50, -100 150, 0 200' />`. 
+
+ The major difference between them is in the `c` character. One is in small case and the other, big case.  But, both will produce the same result. 
+
+* Relative path
+
+    The `c` character means relative path. `c100 50, -100 150, 0 200`. Here,
+    * the first two numbers which are `100 50` is the `x1y1` value and the first control point.
+    * The next two numbers `-100 150` is the `x2y2` value and the second control point.
+    * While the last two numbers `0 200` is the end of the bezier curve.
+
+    **How it works**  
+    * The curve starts at `M150 50`, then the first control point sets in. The curve moves `100px ` in the `x` direction and `50px` in the `y` direction. from the starting point
+
+    * Next, the  curve moves `-100px` in the `x` direction which is to the left, and `150px` in the `y` direction  also from the starting point.
+
+    * Finally. the curve ends at `0px` from the starting point and `200px` in the `y` direction from the starting point too.
+
+* Absolute path
+
+    The `C` character means relative path. `C250 100, 50 200, 150 250`. Here,
+    * the first two numbers which are `250 100` is the `x1y1` value and the first control point.
+    * The next two numbers ` 50 200` is the `x2y2` value and the second control point.
+    * While the last two numbers `150 250` is the end of the bezier curve.
+
+    **How it works**  
+    * The curve starts at `M150 50`, then the first control point sets in. The curve moves  to point `250px ` on the `x` axis and `50px` in the `y` axis. 
+
+    * Next, the  curve moves to point`50px` on the `x` axis , and `200px` in the `y` axis  .
+
+    * Finally. the curve ends at point `150px` on the `x`  axis and `250px` on the `y` axis.
+
+### **Note**   
+You can move the control points to increase or decrease the curve. It is not the exact point the control points stops at that the curve edge will stop.
+
+Here is an example
+
+```html
+<g>
+  <svg width="400px" height="400px" viewbox='0 0 400 400' preserveAspectRatio="none">
+    <path d='M150 50  C250 100, 50 200, 150 250' />
+  </svg>
+  <svg width="400px" height="400px" viewbox='0 0 400 400' preserveAspectRatio="none">
+    <path d='M150 50  c100 50, -100 150, 0 200' />
+  </svg>
+</g>
+```
+![cubic](img/cubi-biezer-curve.png)
 
   
