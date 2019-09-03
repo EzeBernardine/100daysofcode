@@ -355,14 +355,14 @@ Cubic bezier curve syntax starts with `c` or `C` character inside the `path` att
 * Relative path
 
     The `c` character means relative path. `c100 50, -100 150, 0 200`. Here,
-    * the first two numbers which are `100 50` is the `x1y1` value and the first control point.
+    * The first two numbers which are `100 50` is the `x1y1` value and the first control point.
     * The next two numbers `-100 150` is the `x2y2` value and the second control point.
     * While the last two numbers `0 200` is the end of the bezier curve.
 
     **How it works**  
-    * The curve starts at `M150 50`, then the first control point sets in. The curve moves `100px ` in the `x` direction and `50px` in the `y` direction. from the starting point
+    * The curve starts at `M150 50`, then the first control point sets in. The curve moves `100px ` in the `x` direction and `50px` in the `y` direction from the starting point; `M150 50`.
 
-    * Next, the  curve moves `-100px` in the `x` direction which is to the left, and `150px` in the `y` direction  also from the starting point.
+    * Next, the  curve moves `-100px` in the `x` direction which is to the left, and `150px` in the `y` direction  all from the starting point.
 
     * Finally. the curve ends at `0px` from the starting point and `200px` in the `y` direction from the starting point too.
 
@@ -397,4 +397,6 @@ Here is an example
 ```
 ![cubic](img/cubi-biezer-curve.png)
 
-  
+
+### Smooth Cubic bezier curve
+![cubic](img/smooth_cubic_bezier.png)
