@@ -399,4 +399,71 @@ Here is an example
 
 
 ### Smooth Cubic bezier curve
+
+
 ![cubic](img/smooth_cubic_bezier.png)
+
+This is creates a more smoother curve than  `cubic bezier`. It works width the `c` or `C`  command just like the `cubic bezier`,  but together with another  command; the `S` or `s`  command.
+
+The **`s` or `S`**  command comes after the **`c` or `C`**  command. While the **`c` or `C`**  command has two control points, the **`s` or `S`**  command, has one. The second control point from the **`c` or `C`**  command, extends to form a control point for the **`s` or `S`**  command. This together with the control point from the **`s`s or `S`**  command, gives the **`s` or `S`**  command two control points in total. One from the **`c` or `C`**, and the other from its self.
+
+For example
+
+Lets look at Smooth Cubic bezier curve for relative path.
+```html
+
+      <svg width="700px" height="700px" viewbox='0 0 400 400' 
+        preserveAspectRatio="none">
+        <path d='M100 50  c100 50, 100 100,  0 150 s -100 100 , 0 150' />
+      </svg>
+```
+#### Relative path
+  * About Relative path     
+    The `c` character means relative path. `c100 50, 100 100,  0 150 s -100 100 , 0 150`. Here,
+    * The first two numbers which are `100 50` is the `x1y1` value and the first control point.
+    * The next two numbers `100 100` is the `x2y2` value and the second control point.
+    * The last two numbers before the `s`; ` 0 150` is the end of the first half of the  bezier curve.
+    
+    **Then the `s` sets in.**
+    * The first two numbers after the `s`; ` -100 100` is the second control point for the `s`  command. 
+
+    **Note**  
+    * The first control point for the `s`  command is the end point of the second control point of the `c`  command which is point **E**.
+    * While the second control point of the `s`  command is point **F** `-100 100 `.
+   
+    **How it works**  
+    * The curve starts at `'M100 50 `, then moves towards the first control point which is at  `100px ` in the `x` direction and `50px` in the `y` direction. All measurement taken  relative to  the starting point; `M`.
+    * Next, the  curve moves towards the second control point which is at `100px` in the `x` direction, and `100px` in the `y` direction . All measurement taken  relative to the starting point `M `.
+    * Next. the curve ends at `0px` in the `x` direction and `150px` in the `y` direction temporarily .All measurement taken  relative to the starting point `M `.
+    * Next, the curve automatically moves towards point **F** which as I said earlier,  the first control point for the `s`  command. **Note**: In this case, measurement is taken  relative to the end point for `c`  command; which is at point **D** (`0 150`).
+    * Next, the curve moves towards the second control point of the `s`  command which is point **F**, ` -100px` in the `x` direction and `100px` in the `y` direction. **Note**: In this case, measurement is taken  relative to the end point of `c`  command; which is point **D** ( ` 0 150`).
+    * Finally, the curve end at point **G** `0px` in the `x` direction and `150px` in the `y` direction.  **Note**: In this case also, measurement is taken  relative to end point of curve `c`  command; which is  at point **D** (` 0 150`).
+
+    **In General,**  
+    * All point in-between `c` and `s` which are  **B**, **C** and **D** (`c 100 50, 100 100,  0 150 s ...`) are all taken relative to point **M** (`100 50 `).
+    * While all points after `s` which are **E**, **F** and **G** (`...s -100 100 , 0 150`) are taken relative to the last point of the `c`  command which is **D** (` 0 150`).
+
+
+ Smooth Cubic bezier curve for absolute path.
+####  Absolute path
+```html
+  <svg width="700px" height="700px" viewbox='0 0 400 400' 
+    preserveAspectRatio="none">
+    <path d='M100 50  C200 100, 200 150, 100 200 S 0 300, 100 350' />
+  </svg>
+
+```
+
+  * About Absolute path   
+    The `C` character means absolute path. `C200 100, 200 150, 100 200 S 0 300, 100 350'`. Here,
+       * The first two numbers which are `200 100` is the `x1y1` value and the first control point.
+      * The next two numbers `200 150` is the `x2y2` value and the second control point.
+      * The last two numbers before the `s`; `100 200`  is the end of the first half of the  bezier curve.
+
+      **How it works**  
+      * The curve starts at `'M100 50 `, then moves towards the first control point which is at point **B** `200px ` in the `x` direction and `150px` in the `y` direction. All measurement are taken from the origin ; point `0 0` (absolute).
+      * Next, the  curve moves towards the second control point which is at point **C** `200px` in the `x` direction, and `150px` in the `y` direction .  All measurement are taken from the origin; point `0 0` (absolute).
+      * Next. the curve ends at point  **D** `100px` in the `x` direction and `200px` in the `y` direction temporarily .  All measurement are taken from the origin; point `0 0` (absolute).
+      * Next, the curve automatically moves towards point F which as I said earlier,  the first control point for the `s`  command.  All measurement are taken from the origin ; point `0 0` (absolute).
+      * Next, the curve moves towards the second control point of the `s` command which is point **F**, ` 0px` in the `x` direction and `300px` in the `y` direction. All measurement are taken from the origin ; point `0 0` (absolute).
+      * Finally, the curve end at point **G** `100px` in the `x` direction and `350px` in the `y` direction.  All measurement are taken from the origin ; point `0 0` (absolute).
