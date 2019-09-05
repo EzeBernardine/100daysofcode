@@ -20,7 +20,7 @@
       path {
         stroke: red;
         stroke-width: 5px;
-        fill: transparent
+        fill: pink
       }
     </style>
   </head>
@@ -30,10 +30,12 @@
 
     <g>
       <svg width="700px" height="700px" viewbox='0 0 400 400' preserveAspectRatio="none">
-        <path d='M100 50  C200 100, 200 150, 100 200 S0 300, 100 350' />
+        <path d='M100 50 Q 200 100, 100 150'  />
+        <path d='M250 50 q 100 50,  0 100 t 0 100  q 100 50,  0 100 t 0 100 ' />
       </svg>
       <svg width="700px" height="700px" viewbox='0 0 400 400' preserveAspectRatio="none">
-        <path d='M100 50  c100 50, 100 100,  0 150 s -100 100 , 0 150' />
+        <path d='M250 50 q 100 50,  0 100  q 100 50,  0 100 ' />
+        <path d='M100 50 Q 200 100, 100 150  T 100 250 ' />
       </svg>
 
     </g>
