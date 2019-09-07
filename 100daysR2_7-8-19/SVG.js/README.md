@@ -467,3 +467,51 @@ Lets look at Smooth Cubic bezier curve for relative path.
       * Next, the curve automatically moves towards point F which as I said earlier,  the first control point for the `s`  command.  All measurement are taken from the origin ; point `0 0` (absolute).
       * Next, the curve moves towards the second control point of the `s` command which is point **F**, ` 0px` in the `x` direction and `300px` in the `y` direction. All measurement are taken from the origin ; point `0 0` (absolute).
       * Finally, the curve end at point **G** `100px` in the `x` direction and `350px` in the `y` direction.  All measurement are taken from the origin ; point `0 0` (absolute).
+
+### Quadratic Bézier Curve Commands
+This creates a quadratic curve. It uses the `q` or `Q` command. Unlike the  `cubic bezier curve`, `Quadratic Bézier Curve ` hava just a single cntrol point. Let takes a look at this image
+
+![Quadratic Bézier Curve](./img/Quadratic_Bézier_Curve2.png)
+
+There are four images there. In this section, I will be taking about the first and the last images. These two images are created using the `Q` and `q` commands. Starting with the first one.
+
+####  Absolute path
+```html
+  <svg width="700px" height="700px" viewbox='0 0 400 400' preserveAspectRatio="none">
+    <path d='M100 50 Q 200 100, 100 150'  />
+  </svg>
+
+```
+
+  * About Absolute path   
+    The `Q` character represents absolute path. `Q 200 100, 100 150'`. Here,
+       * The first two numbers which are `200 100` is the `x1  y1` value and the only control point.
+      * The last two numbers `100 150` are the `dx dy` values and the end of the curve.
+
+      **How it works**  
+      * The curve starts at point **A** `'M100 50 `, then moves towards the control point which is at point **B** `200px ` in the `x` direction and `100px` in the `y` direction. All measurement are taken from the origin ; point `0 0` (absolute).
+      * Finally, the curve ends at point **C** `100px` in the `x` direction and `150px` in the `y` direction.  All measurement are taken from the origin ; point `0 0` (absolute).
+
+For relative path, we have
+```html
+  <svg width="700px" height="700px" viewbox='0 0 400 400' 
+    preserveAspectRatio="none">
+    <path d='M250 50 q 100 50,  0 100   ' />
+  </svg>
+```
+#### Relative path
+  * About Relative path     
+    The `q` character means relative path. `q 100 50,  0 100  `. Here,
+    * The first two numbers which are `100 50` is the `x1 y1` value and the only control point.
+    * The next two numbers `100 100` is the `x2 y2` value and end of the curve.
+    
+    
+    **How it works**  
+      * The curve starts at point **A** `'M100 50 `, then moves towards the  control point which is at point **B** `100px` in the `x` direction and `50px` in the `y` direction. **Note**: In this case , measurement is taken  relative to  point  **A** which is  at  (` 100 50`).
+      * Finally, the curve ends at point **C** `0px` in the `x` direction and `100px` in the `y` direction. **Note**: In this case also, measurement is taken  relative to end point of curve `c`  command; which is  at point **D** (`100 50`).
+
+
+
+Adding some lines accross them for more explanation, we have
+
+![Quadratic Bézier Curve](./img/Quadratic_Bézier_Curve.png)
