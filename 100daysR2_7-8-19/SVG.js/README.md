@@ -277,9 +277,9 @@ M x,y |	Move to the absolute coordinates x,y
 
 Serial number | attribute | meaning
 -|--------|---------------
-**straight lines**||
+**straight lines**|.|.
 ________________|________________ |____________________________________________________________________________
-1. | M (x,y) |	Move to the absolute coordinates x,y
+. | M (x,y) |	Move to the absolute coordinates x,y
 2. |m (x,y) |	Move to the right x and down y (or left and up if negative values) (The "Move To" command appears at the beginning of paths to specify where the drawing should start)
 ________________|________________ |____________________________________________________________________________
 32. |L (x,y) |	Draw a straight line to the absolute coordinates x,y
