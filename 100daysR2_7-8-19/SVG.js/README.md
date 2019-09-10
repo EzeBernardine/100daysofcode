@@ -277,37 +277,37 @@ M x,y |	Move to the absolute coordinates x,y
 
 Serial number | attribute | meaning
 -|--------|---------------
-**straight lines**|.|.
+**straight lines**||
 ________________|________________ |____________________________________________________________________________
-. | M (x,y) |	Move to the absolute coordinates x,y
-2. |m (x,y) |	Move to the right x and down y (or left and up if negative values) (The "Move To" command appears at the beginning of paths to specify where the drawing should start)
+1 | M (x,y) |	Move to the absolute coordinates x,y
+2 |m (x,y) |	Move to the right x and down y (or left and up if negative values) (The "Move To" command appears at the beginning of paths to specify where the drawing should start)
 ________________|________________ |____________________________________________________________________________
-32. |L (x,y) |	Draw a straight line to the absolute coordinates x,y
-4. |l (x,y ) |	Draw a straight line to a point that is relatively right x and down y (or left and up if negative values)
+3 |L (x,y) |	Draw a straight line to the absolute coordinates x,y
+4 |l (x,y ) |	Draw a straight line to a point that is relatively right x and down y (or left and up if negative values)
  ________________|________________ |____________________________________________________________________________
-5. |H (x) |	Draw a line horizontally to the exact coordinate x
-6. |h (x) |	Draw a line horizontally relatively to the right x (or to the left if a negative value)
+5 |H (x) |	Draw a line horizontally to the exact coordinate x
+6 |h (x) |	Draw a line horizontally relatively to the right x (or to the left if a negative value)
  ________________|________________ |____________________________________________________________________________
-7. |V( y) |	Draw a line vertically to the exact coordinate y
-8. |v( y) |	Draw a line vertically relatively down y (or up if a negative value)
+7 |V( y) |	Draw a line vertically to the exact coordinate y
+8 |v( y) |	Draw a line vertically relatively down y (or up if a negative value)
  | | |
-9. |Z (or z) |	Draw a straight line back to the start of the path
+9 |Z (or z) |	Draw a straight line back to the start of the path
 **curve lines**||
 ________________|________________ |____________________________________________________________________________
-10. |C  ( cX1,cY1 cX2,cY2 eX,eY) |	Draw a bezier curve based on two bezier control points and end at specified coordinates
-11. |c | 	Same with all relative values
+10 |C  ( cX1,cY1 cX2,cY2 eX,eY) |	Draw a bezier curve based on two bezier control points and end at specified coordinates
+11 |c | 	Same with all relative values
 ________________|________________ |____________________________________________________________________________
-12. | S (cX2,cY2 eX,eY) |	Basically a C command that assumes the first bezier control point is a reflection of the last bezier point used in the previous S or C command
-13. |s |	Same with all relative values
+12 | S (cX2,cY2 eX,eY) |	Basically a C command that assumes the first bezier control point is a reflection of the last bezier point used in the previous S or C command
+13 |s |	Same with all relative values
 ________________|________________ |____________________________________________________________________________
-14. |Q (cX,cY eX,eY) |	Draw a bezier curve based a single bezier control point and end at specified coordinates
-15. |q |	Same with all relative values
+14 |Q (cX,cY eX,eY) |	Draw a bezier curve based a single bezier control point and end at specified coordinates
+15 |q |	Same with all relative values
 ________________|________________ |____________________________________________________________________________
-16. |T (eX,eY) |	Basically a Q command that assumes the first bezier control point is a reflection of the last bezier point used in the previous Q or T command
-17. |t |	Same with all relative values
+16 |T (eX,eY) |	Basically a Q command that assumes the first bezier control point is a reflection of the last bezier point used in the previous Q or T command
+17 |t |	Same with all relative values
 ________________|________________ |____________________________________________________________________________
-18. | A (rX,rY rotation, arc, sweep, eX,eY) |	Draw an arc that is based on the curve an oval makes. First define the width and height of the oval. Then the rotation of the oval. Along with the end point, this makes two possible ovals. So the arc and sweep are either 0 or 1 and determine which oval and which path it will take.
-19. | a |	Same with relative values for eX,eY
+18 | A (rX,rY rotation, arc, sweep, eX,eY) |	Draw an arc that is based on the curve an oval makes. First define the width and height of the oval. Then the rotation of the oval. Along with the end point, this makes two possible ovals. So the arc and sweep are either 0 or 1 and determine which oval and which path it will take.
+19 | a |	Same with relative values for eX,eY
 
 >**Uppercase letters mean the position will absolutely positioned while lowercase letters mean relative positioning.**
 
