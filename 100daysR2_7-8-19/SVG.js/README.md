@@ -5,7 +5,7 @@
 
 
 ### The Viewport
-The viewport is the visible area of the SVG image. An SVG image can logically be as wide and high as you want, but only a certain part of the image can be visible at a time. The area that is visible is called the viewport. 
+The viewport is the visible area of an SVG image. An SVG image can logically be as wide and high as you want, but only a certain part of the image can be visible at a time. The area that is visible is called the viewport. 
  It creates a “port” through which you can “view” a section of an SVG.
 >>  **The SVG viewport is like a porthole window whose size determines what you can see through it but it doesn’t define the size of whatever might be visible through that viewport. What’s on the other side could theoretically be any size at all.**
 
@@ -511,8 +511,9 @@ For relative path, we have
       * Finally, the curve ends at point **C** `0px` in the `x` direction and `100px` in the `y` direction. **Note**: In this case also, measurement is taken  relative to point **A** (`100 50`).
 
 ### Smoother Quadratic Bézier Curve Commands
-This makes the` quadratic bezier curve` smoother just like 
-Adding some lines accross them for more explanation, we have `Smooth Cubic bezier curve` makes `Cubic bezier curve` smoother.
+This makes the` quadratic bezier curve` smoother just like  we have `Smooth Cubic bezier curve` makes `Cubic bezier curve` smoother.
+
+Adding some lines accross them for more explanation,
 
 ![Quadratic Bézier Curve](./img/Quadratic_Bézier_Curve.png)
 
