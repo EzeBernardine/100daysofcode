@@ -518,4 +518,69 @@ Adding some lines accross them for more explanation,
 ![Quadratic Bézier Curve](./img/Quadratic_Bézier_Curve.png)
 
 ### Arcs
-  
+  Will have grt back to this concept later.
+
+## Fills and Strokes
+
+1. **fill**
+    * sets the color inside the object and 
+2. **stroke-dasharray**
+    * It takes a series of comma-separated numbers as its argument. 
+3. **stroke-dashoffset**
+    * specifies where to start a dasharray on a line.
+4. **stroke-linecap**
+    * values   
+      * butt
+      * square
+      * round 
+5. **stroke-width**
+6. **fill-opacity**  
+    * The fill-opacity specifies the opacity of  the fill
+7. **stroke-opacity**
+    * stroke-opacity attributes, specifies the opacity of the  stroke 
+8. **stroke-linejoin**
+    * values
+       * miter
+       * round
+       * bevel
+9. **fill-rule**
+    * specifies how to color in shapes that overlap themselves
+10. **stroke-miterlimit**
+    * determines if a stroke should draw miters
+
+
+### `fill` and `stroke`
+`fill` sets the color inside the object and `stroke` sets the color of the line drawn around the object. 
+
+![Svg_fill_and_stroke](./img/Svg_fill_and_stroke.png)
+```html
+<style>
+  svg {
+    background: yellow;
+  }
+
+  circle {
+    fill: red;
+    stroke: blue
+  }
+</style>
+
+ <svg width="700px" height="700px" viewbox='0 0 350 350' preserveAspectRatio="none">
+   <circle cx='200' cy='200' r='100px'>
+     </svg>
+```
+### `fill-opacity`
+![Svg_fill_opacity](./img/fill_opacity.png)
+
+```hhtl
+<g>
+  <svg width="700px" height="700px" viewbox='0 0 350 350' preserveAspectRatio="none">
+    <circle cx='200' cy='200' r='100px' fill-opacity=.5 fill: red>
+  </svg>
+</g>
+<g>
+  <svg width="700px" height="700px" viewbox='0 0 350 350' preserveAspectRatio="none">
+    <circle cx='200' cy='200' r='100px' fill-opacity=1 fill: red>
+  </svg>
+</g>
+```

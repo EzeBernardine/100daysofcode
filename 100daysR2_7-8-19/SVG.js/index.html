@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SVG</title>
-    <style>
-      svg {
-        background: yellow;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG</title>
+  <style>
+    svg {
+      background: yellow;
+    }
 
-      body {
-        display: flex;
-        justify-content: center;
-        margin-top: 50px
-      }
-      circle {
-        fill: red;
-        stroke: blue
-      }
-    </style>
-  </head>
+    body {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px
+    }
 
-  <body>
+    circle {
+      fill: red;
+      stroke: blue
+    }
+  </style>
+</head>
 
-
-    <g>
-      <svg width="700px" height="700px" viewbox='0 0 350 350' preserveAspectRatio="none">
-
-      <circle cx='200' cy='200' r='100px'>
-      </svg>
+<body>
 
 
-    </g>
-  </body>
+  <g>
+    <svg width="700px" height="700px" viewbox='0 0 350 350' preserveAspectRatio="none">
+      <circle cx='200' cy='200' r='100px' fill-opacity=0>
+    </svg>
+  </g>
+  <g>
+    <svg width="700px" height="700px" viewbox='0 0 350 350' preserveAspectRatio="none">
+      <circle cx='200' cy='200' r='100px' fill-opacity=1>
+    </svg>
+  </g>
+</body>
 
 </html>
