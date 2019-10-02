@@ -570,17 +570,73 @@ Adding some lines accross them for more explanation,
      </svg>
 ```
 ### `fill-opacity`
-![Svg_fill_opacity](./img/fill_opacity.png)
+This reduces the opaque nature of an svg. `i` sets it to perfect opaque, while `0` sets it to completely transparent. . `.5` makes it a little opaque and a little transparent.
+
+For example, 
+
+![Svg_fill_opacity](./img/fill_opacity.png).
 
 ```hhtl
 <g>
   <svg width="700px" height="700px" viewbox='0 0 350 350' preserveAspectRatio="none">
-    <circle cx='200' cy='200' r='100px' fill-opacity=.5 fill: red>
+    <circle cx='200' cy='200' r='100px' fill-opacity=.5 fill: 'red'>
   </svg>
 </g>
 <g>
   <svg width="700px" height="700px" viewbox='0 0 350 350' preserveAspectRatio="none">
-    <circle cx='200' cy='200' r='100px' fill-opacity=1 fill: red>
+    <circle cx='200' cy='200' r='100px' fill-opacity=1 fill: 'red'>
   </svg>
 </g>
 ```
+
+### **`stroke-dasharray`**
+This has effect on on ` <altGlyph>, <circle>, <ellipse>, <path>, <line>, <polygon>, <polyline>, <rect>, <text>, <textPath>, <tref>,` and `<tspan>`
+```html
+<style>
+  circle {
+      stroke: blue;
+      stroke-width: 5px;
+    }
+    .first {
+      fill: red;
+      stroke-dasharray: 20%
+    }
+    .sec {
+      stroke-dasharray: 50px 20 5 30;
+      fill: purple
+    }
+    .third {
+      fill: pink;
+      stroke-dasharray: 20 1 5
+    } 
+    .fourth {
+      fill: orange;
+      stroke-dasharray: 200px 
+    } 
+  </style>
+<body>
+  <g>
+    <svg width="400px" height="400px" viewbox='0 0 350 350' preserveAspectRatio="none">
+      <circle cx='200' cy='200' r='100px' class="first">
+    </svg>
+  </g>
+  <g>
+    <svg width="400px" height="400px" viewbox='0 0 350 350' preserveAspectRatio="none">
+      <circle cx='200' cy='200' r='100px'class="sec">
+    </svg>
+  </g>
+  <g>
+    <svg width="400px" height="400px" viewbox='0 0 350 350' preserveAspectRatio="none">
+      <circle cx='200' cy='200' r='100px'class="third">
+    </svg>
+  </g>
+  <g>
+    <svg width="400px" height="400px" viewbox='0 0 350 350' preserveAspectRatio="none">
+      <circle cx='200' cy='200' r='100px'class="fourth">
+    </svg>
+  </g>
+</body>
+```
+
+The `stroke-dasharray` property in CSS is for creating dashes in the stroke of SVG shapes. The higher the number, the more space in between dashes in the stroke. tHe svg image must have a stroke attribute for it to work.
+![SVG-stroke-dasharray](./img/SVG-stroke-dasharray.png).

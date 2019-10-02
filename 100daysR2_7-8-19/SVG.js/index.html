@@ -14,13 +14,29 @@
     body {
       display: flex;
       justify-content: center;
-      margin-top: 50px
-    }
-
+      margin-top: 50px;
+      flex-wrap: wrap;
+  }
     circle {
-      fill: red;
-      stroke: blue
+      stroke: blue;
+      stroke-width: 5px;
     }
+    .first {
+      fill: red;
+      stroke-dasharray: 20%
+    }
+    .sec {
+      stroke-dasharray: 50px 20 5 30;
+      fill: purple
+    }
+    .third {
+      fill: pink;
+      stroke-dasharray: 20 1 5
+    } 
+    .fourth {
+      fill: orange;
+      stroke-dasharray: 200px 
+    } 
   </style>
 </head>
 
@@ -28,13 +44,23 @@
 
 
   <g>
-    <svg width="700px" height="700px" viewbox='0 0 350 350' preserveAspectRatio="none">
-      <circle cx='200' cy='200' r='100px' fill-opacity=0>
+    <svg width="400px" height="400px" viewbox='0 0 350 350' preserveAspectRatio="none">
+      <circle cx='200' cy='200' r='100px' class="first">
     </svg>
   </g>
   <g>
-    <svg width="700px" height="700px" viewbox='0 0 350 350' preserveAspectRatio="none">
-      <circle cx='200' cy='200' r='100px' fill-opacity=1>
+    <svg width="400px" height="400px" viewbox='0 0 350 350' preserveAspectRatio="none">
+      <circle cx='200' cy='200' r='100px'class="sec">
+    </svg>
+  </g>
+  <g>
+    <svg width="400px" height="400px" viewbox='0 0 350 350' preserveAspectRatio="none">
+      <circle cx='200' cy='200' r='100px'class="third">
+    </svg>
+  </g>
+  <g>
+    <svg width="400px" height="400px" viewbox='0 0 350 350' preserveAspectRatio="none">
+      <circle cx='200' cy='200' r='100px'class="fourth">
     </svg>
   </g>
 </body>
