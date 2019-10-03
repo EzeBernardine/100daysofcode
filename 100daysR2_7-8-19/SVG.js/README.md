@@ -528,6 +528,8 @@ Adding some lines accross them for more explanation,
     * It takes a series of comma-separated numbers as its argument. 
 3. **stroke-dashoffset**
     * specifies where to start a dasharray on a line.
+      * Vales: numeric value or percentage (em or px is not required) Percentage is relative to the percent of the current viewport.
+
 4. **stroke-linecap**
     * values   
       * butt
@@ -640,3 +642,8 @@ This has effect on on ` <altGlyph>, <circle>, <ellipse>, <path>, <line>, <polygo
 
 The `stroke-dasharray` property in CSS is for creating dashes in the stroke of SVG shapes. The higher the number, the more space in between dashes in the stroke. tHe svg image must have a stroke attribute for it to work.
 ![SVG-stroke-dasharray](./img/SVG-stroke-dasharray.png).
+
+###  **`stroke-dashoffset`**'
+ The stroke-dashoffset is used to set how far into dash pattern to start the pattern. That way you can start the dashing from e.g. halfway into the pattern, and then repeat the pattern from there [jenkov.com](http://tutorials.jenkov.com/svg/stroke.html#stroke-dasharray-stroke-dashoffset)
+
+![SVG-DASHOFFSET.png](./img/SVG-DASHOFFSET.png).
