@@ -16,35 +16,73 @@
       justify-content: center;
       margin-top: 50px;
       flex-wrap: wrap;
-  }
+    }
+
     circle {
       stroke: blue;
       stroke-width: 5px;
     }
+
     .first {
       fill: red;
-      stroke-dasharray: 200px;
+      stroke-dasharray: 0;
+      animation: dashes 5s linear infinite;
     }
+
     .sec {
       stroke-dasharray: 200px;
       fill: purple;
-       stroke-dashoffset: 50px;
+      /* stroke-dashoffset: 50px; */
+      animation: sec 5s linear infinite;
     }
+
     .third {
       fill: pink;
       stroke-dasharray: 200px;
-       stroke-dashoffset: 100px;
-       } 
+      /* stroke-dashoffset: 100px; */
+      animation: dashes 5s linear infinite;
+    }
+
     .fourth {
       fill: orange;
-      stroke-dasharray: 200px;
-       stroke-dashoffset: 150px;
-      } 
+      animation: dashes 5s linear infinite;
+      stroke-dasharray: 105px;
+      /* stroke-dashoffset: 150px; */
+    }
+
+    @keyframes sec {
+      from {
+        stroke-dashoffset: 0
+      }
+
+      to {
+        stroke-dashoffset: 1000
+      }
+    }
+
+    @keyframes dashes {
+      from {
+        stroke-dashoffset: 0
+      }
+
+      to {
+        stroke-dashoffset: 100
+      }
+    }
+
+    .empyty {
+      border: 1px solid WHITE;
+      position: fixed;
+      top: 41vh;
+      width: 100vw
+
+    }
   </style>
 </head>
 
 <body>
 
+  <div class="empyty"></div>
 
   <g>
     <svg width="400px" height="400px" viewbox='0 0 350 350' preserveAspectRatio="none">
@@ -53,19 +91,19 @@
   </g>
   <g>
     <svg width="400px" height="400px" viewbox='0 0 350 350' preserveAspectRatio="none">
-      <circle cx='200' cy='200' r='100px'class="sec">
+      <circle cx='200' cy='200' r='100px' class="sec">
     </svg>
   </g>
   <g>
     <svg width="400px" height="400px" viewbox='0 0 350 350' preserveAspectRatio="none">
-      <circle cx='200' cy='200' r='100px'class="third">
+      <circle cx='200' cy='200' r='100px' class="third">
     </svg>
   </g>
-  <g>
+  <!-- <g>
     <svg width="400px" height="400px" viewbox='0 0 350 350' preserveAspectRatio="none">
-      <circle cx='200' cy='200' r='100px'class="fourth">
+      <circle cx='200' cy='200' r='100px' class="fourth">
     </svg>
-  </g>
+  </g> -->
 </body>
 
 </html>

@@ -647,3 +647,65 @@ The `stroke-dasharray` property in CSS is for creating dashes in the stroke of S
  The stroke-dashoffset is used to set how far into dash pattern to start the pattern. That way you can start the dashing from e.g. halfway into the pattern, and then repeat the pattern from there [jenkov.com](http://tutorials.jenkov.com/svg/stroke.html#stroke-dasharray-stroke-dashoffset)
 
 ![SVG-DASHOFFSET.png](./img/SVG-DASHOFFSET.png).
+
+Adding a bit of animation to the code above, we have
+```html
+<style>
+
+    .first {
+      fill: red;
+      stroke-dasharray: 0;
+      animation: dashes 5s linear infinite;
+    }
+
+    .sec {
+      stroke-dasharray: 200px;
+      fill: purple;
+      animation: sec 5s linear infinite;
+    }
+
+    .third {
+      fill: pink;
+      stroke-dasharray: 200px;
+      animation: dashes 5s linear infinite;
+    }
+    @keyframes sec {
+      from {
+        stroke-dashoffset: 0
+      }
+
+      to {
+        stroke-dashoffset: 1000
+      }
+    }
+
+    @keyframes dashes {
+      from {
+        stroke-dashoffset: 0
+      }
+
+      to {
+        stroke-dashoffset: 100
+      }
+    }
+</style>
+
+  <g>
+    <svg width="400px" height="400px" viewbox='0 0 350 350' preserveAspectRatio="none">
+      <circle cx='200' cy='200' r='100px' class="first">
+    </svg>
+  </g>
+  <g>
+    <svg width="400px" height="400px" viewbox='0 0 350 350' preserveAspectRatio="none">
+      <circle cx='200' cy='200' r='100px' class="sec">
+    </svg>
+  </g>
+  <g>
+    <svg width="400px" height="400px" viewbox='0 0 350 350' preserveAspectRatio="none">
+      <circle cx='200' cy='200' r='100px' class="third">
+    </svg>
+  </g>
+```
+
+![SVG-DASHOFFSET.png](./img/SVG-STROKE-DASHARRAY-STROKE-DASHOFFSET.gif).
+The white accross the screen shows the center of the circles. It helps show when the animation starts and ends.
