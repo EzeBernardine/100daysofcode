@@ -19,64 +19,24 @@
     }
 
     circle {
+      stroke-width: 10px;
       stroke: blue;
-      stroke-width: 5px;
+      stroke-dasharray: 70;
+      fill: transparent;
+      stroke-dashoffset: 20;
     }
 
     .first {
-      fill: red;
-      stroke-dasharray: 0;
-      animation: dashes 5s linear infinite;
+      stroke-linecap: round
     }
-
     .sec {
-      stroke-dasharray: 200px;
-      fill: purple;
-      /* stroke-dashoffset: 50px; */
-      animation: sec 5s linear infinite;
+      stroke-linecap: square
     }
-
     .third {
-      fill: pink;
-      stroke-dasharray: 200px;
-      /* stroke-dashoffset: 100px; */
-      animation: dashes 5s linear infinite;
+      stroke-linecap: butt
     }
 
-    .fourth {
-      fill: orange;
-      animation: dashes 5s linear infinite;
-      stroke-dasharray: 105px;
-      /* stroke-dashoffset: 150px; */
-    }
-
-    @keyframes sec {
-      from {
-        stroke-dashoffset: 0
-      }
-
-      to {
-        stroke-dashoffset: 1000
-      }
-    }
-
-    @keyframes dashes {
-      from {
-        stroke-dashoffset: 0
-      }
-
-      to {
-        stroke-dashoffset: 100
-      }
-    }
-
-    .empyty {
-      border: 1px solid WHITE;
-      position: fixed;
-      top: 41vh;
-      width: 100vw
-
-    }
+ }
   </style>
 </head>
 
@@ -89,21 +49,24 @@
       <circle cx='200' cy='200' r='100px' class="first">
     </svg>
   </g>
+
   <g>
     <svg width="400px" height="400px" viewbox='0 0 350 350' preserveAspectRatio="none">
       <circle cx='200' cy='200' r='100px' class="sec">
     </svg>
   </g>
+
   <g>
     <svg width="400px" height="400px" viewbox='0 0 350 350' preserveAspectRatio="none">
       <circle cx='200' cy='200' r='100px' class="third">
     </svg>
   </g>
-  <!-- <g>
+
+  <g>
     <svg width="400px" height="400px" viewbox='0 0 350 350' preserveAspectRatio="none">
-      <circle cx='200' cy='200' r='100px' class="fourth">
+      <circle cx='200' cy='200' r='100px'>
     </svg>
-  </g> -->
+  </g>
 </body>
 
 </html>

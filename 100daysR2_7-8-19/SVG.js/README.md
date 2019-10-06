@@ -707,5 +707,15 @@ Adding a bit of animation to the code above, we have
   </g>
 ```
 
-![SVG-DASHOFFSET.png](./img/SVG-STROKE-DASHARRAY-STROKE-DASHOFFSET.gif).
+![SVG-DASHOFFSET animation](./img/SVG-STROKE-DASHARRAY-STROKE-DASHOFFSET.gif).
+
 The white accross the screen shows the center of the circles. It helps show when the animation starts and ends.
+
+### **`stroke-linecap`**
+stroke-linecap determines how an svg line will look like. If you  add stroke-width, how will the edges of the stroke width look like.
+
+It has three values, `butt`, `square`, and `round`. Both `round` and `square` adds a little lenght to the line, while `butt` does not.
+
+The edges of `butt` and `square` are the same; 90deg edges, while `round` has rounded edges.
+
+![SVG- stroke-linecap](./img/SVG-stroke-linecap.png).
