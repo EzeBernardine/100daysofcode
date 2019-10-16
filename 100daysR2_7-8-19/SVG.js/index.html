@@ -27,46 +27,31 @@
     }
 
     .first {
-      stroke-linecap: round
+      stroke-linejoin: bevel;
     }
-    .sec {
-      stroke-linecap: square
-    }
-    .third {
-      stroke-linecap: butt
-    }
-
- }
   </style>
 </head>
 
 <body>
+  <img src="svg-icon.svg" style="height:32px">
 
   <div class="empyty"></div>
 
-  <g>
-    <svg width="400px" height="400px" viewbox='0 0 350 350' preserveAspectRatio="none">
-      <circle cx='200' cy='200' r='100px' class="first">
-    </svg>
-  </g>
+  <svg width="400px" height="400px" viewbox='0 0 350 350' preserveAspectRatio="none">
+    <g>
+      <path d="M50,20 l40,40 l-40,40 l-40,-40 l40,-40
+        M50,40 l20,20 l-20,20 l-20,-20 l20,-20" style="stroke: #000000;
+        fill: red;
+        fill-rule: nonzero;
+     " />
+      <path d="M150,20 l40,40 l-40,40 l-40,-40 l40,-40
+        M150,40 l-20,20 l20,20 l20,-20 l-20,-20" style="stroke: #000000;
+        fill: #6666ff;
+        fill-rule: nonzero;" />
+    </g>
+  </svg>
 
-  <g>
-    <svg width="400px" height="400px" viewbox='0 0 350 350' preserveAspectRatio="none">
-      <circle cx='200' cy='200' r='100px' class="sec">
-    </svg>
-  </g>
 
-  <g>
-    <svg width="400px" height="400px" viewbox='0 0 350 350' preserveAspectRatio="none">
-      <circle cx='200' cy='200' r='100px' class="third">
-    </svg>
-  </g>
-
-  <g>
-    <svg width="400px" height="400px" viewbox='0 0 350 350' preserveAspectRatio="none">
-      <circle cx='200' cy='200' r='100px'>
-    </svg>
-  </g>
 </body>
 
 </html>

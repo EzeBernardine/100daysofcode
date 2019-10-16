@@ -545,6 +545,8 @@ Adding some lines accross them for more explanation,
        * miter
        * round
        * bevel
+       *  crop 
+       * arcs
 9. **fill-rule**
     * specifies how to color in shapes that overlap themselves
 10. **stroke-miterlimit**
@@ -719,3 +721,6 @@ It has three values, `butt`, `square`, and `round`. Both `round` and `square` ad
 The edges of `butt` and `square` are the same; 90deg edges, while `round` has rounded edges.
 
 ![SVG- stroke-linecap](./img/SVG-stroke-linecap.png).
+
+### **stroke-linejoin**
+The stroke-linejoin CSS property defines how the join between two lines in a shape is rendered
