@@ -1,18 +1,32 @@
 
 # TOC
-* SVG Coordinate System  ☑️
-* SVG svg element ☑️
-* SVG g element ☑️
-* SVG rect element ☑️
-* SVG circle element ☑️
-* SVG ellipse element☑️ 
-* SVG line element ☑️
-* SVG polyline element ☑️
-* SVG polygon element ☑️
-* SVG path element ☑️
-* SVG Stroke ☑️
-* SVG Fill ☑️ 
-* SVG Viewport and View Box ☑️
+*  ☑️  SVG Viewport and View Box
+*  ☑️  SVG Coordinate System  
+*  ☑️  SVG g element 
+*  ☑️  SVG svg element 
+*  ☑️  SVG rect element 
+*  ☑️  SVG circle element 
+*  ☑️  SVG ellipse element
+*  ☑️  SVG line element 
+*  ☑️  SVG polyline element 
+*  ☑️  SVG polygon element 
+*  ☑️  SVG path element 
+    *  SVG Quadratic Bézier Curve Commands
+    *  SVG Smooth Cubic bezier curve
+    *  SVG  Cubic bezier curve
+    *  SVG  Smoother Quadratic Bézier Curve Commands
+*  ☑️  SVG Stroke 
+*  ☑️  SVG Fill 
+   * fill
+   * stroke-dasharray
+   * stroke-dashoffset
+   * stroke-linecap
+   * stroke-width
+   * fill-opacity  
+   * stroke-opacity
+   * stroke-linejoin
+   * fill-rule
+   * stroke-miterlimit
 * SVG marker element
 * SVG text element
 * SVG tspan element

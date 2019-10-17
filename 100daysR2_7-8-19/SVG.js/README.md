@@ -549,6 +549,9 @@ Adding some lines accross them for more explanation,
        * arcs
 9. **fill-rule**
     * specifies how to color in shapes that overlap themselves
+    * Value 
+        * nonzero
+        * evenodd
 10. **stroke-miterlimit**
     * determines if a stroke should draw miters
 
@@ -724,3 +727,16 @@ The edges of `butt` and `square` are the same; 90deg edges, while `round` has ro
 
 ### **stroke-linejoin**
 The stroke-linejoin CSS property defines how the join between two lines in a shape is rendered
+
+### **stroke-miterlimit**
+
+The stroke-miterlimit CSS propety is used together with the stroke-linejoin CSS property. If stroke-linejoin is set to miter, then the stroke-miterlimit can be used to limit how far between the point where the two lines meet, that the line join (corner) extends. 
+
+Read ore here on [jenkov](http://tutorials.jenkov.com/svg/stroke.html#stroke-linecap)
+
+### **fill-rule**
+  WILL GET BACK TO THIS
+
+## **SVG marker element**
+SVG markers are used to mark the **start**, **mid** and **end** of a line or path.
+Markers are created using the `marker` element.
