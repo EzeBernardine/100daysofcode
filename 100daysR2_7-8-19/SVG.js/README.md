@@ -740,3 +740,18 @@ Read ore here on [jenkov](http://tutorials.jenkov.com/svg/stroke.html#stroke-lin
 ## **SVG marker element**
 SVG markers are used to mark the **start**, **mid** and **end** of a line or path.
 Markers are created using the `marker` element.
+```html
+  <marker id="markerArrow" markerWidth="13" markerHeight="13" refX="2" refY="6" orient="auto">
+    <path d="M2,2 L2,11 L10,6 L2,2" style="fill: red;" />
+  </marker>
+```
+I will pick each attribute here on after another. First being the id attribute.
+* marker id:   
+This is used to reference the marker to be referenced. 
+* markerWidth:   
+This is the width of the marker viewport. In the case above, it is set to 13.
+* markerHeight:   
+This is the height of the marker viewport
+* orient:    
+This is my favourite attribute. This places the marker in the desired direction specified by the shape it is marking.
+* refX: 
