@@ -732,7 +732,7 @@ The stroke-linejoin CSS property defines how the join between two lines in a sha
 
 The stroke-miterlimit CSS propety is used together with the stroke-linejoin CSS property. If stroke-linejoin is set to miter, then the stroke-miterlimit can be used to limit how far between the point where the two lines meet, that the line join (corner) extends. 
 
-Read ore here on [jenkov](http://tutorials.jenkov.com/svg/stroke.html#stroke-linecap)
+Read this one here on [jenkov](http://tutorials.jenkov.com/svg/stroke.html#stroke-linecap)
 
 ### **fill-rule**
   WILL GET BACK TO THIS
@@ -747,7 +747,7 @@ Markers are created using the `marker` element.
 ```
 I will pick each attribute here on after another. First being the id attribute.
 * marker id:   
-This is used to reference the marker to be referenced. 
+This is used to reference the marker to be used. 
 * markerWidth:   
 This is the width of the marker viewport. In the case above, it is set to 13.
 * markerHeight:   
@@ -755,3 +755,6 @@ This is the height of the marker viewport
 * orient:    
 This is my favourite attribute. This places the marker in the desired direction specified by the shape it is marking.
 * refX: 
+When you ommit it, it sia by default setted to **0**. This attribute determines which point on the marker element will be set as the reference point in the **X** direction.
+* refY: 
+When you ommit it, it sia by default setted to **0**. This attribute determines which point on the marker element will be set as the reference point in the **Y** direction.
