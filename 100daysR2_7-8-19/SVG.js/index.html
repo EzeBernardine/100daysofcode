@@ -46,21 +46,24 @@
 
 
     <defs>
-      <marker id="markerCircle" markerWidth="20" markerHeight="200" refX="10" refY="10" orient='auto'  >
-        <circle cx="20" cy="10" r="5" style="stroke: red; fill:transparent;" />
+      <marker id="markerFstSqr" markerWidth="20" markerHeight="20" refX="0" refY="0" orient='auto'  >
+        <rect style="stroke: red; fill: transparent" y='0' x='0' width='20px' height='20px'></rect>
+      </marker>
+      
+      <marker id="markerSecSqr" markerWidth="20" markerHeight="20" refX="10" refY="10" orient='auto'  >
+        <rect style="stroke: red; fill: transparent" y='0' x='0' width='20px' height='20px'></rect>
       </marker>
     </defs>
+    
 
-    <path d="M100,10 L150,10 L150,60" style="
+    <path d="M100,40 L150,40 L150,100" style="
     stroke: #6666ff; 
     stroke-width: 1px; 
     fill: none;
-    marker-start: url(#markerCircle);
-    marker-end: url(#markerArrow);" />
+    marker-start: url(#markerFstSqr);
+    marker-end: url(#markerSecSqr);" />
 
-    <marker id="markerArrow" markerWidth="13" markerHeight="13" refX="6" refY="6" orient="auto">
-      <path d="M2,2 L2,11 L10,6 L2,2" style="fill: red;" />
-    </marker>
+
 
   </svg>
 

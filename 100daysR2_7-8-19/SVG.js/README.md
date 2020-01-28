@@ -754,7 +754,10 @@ This is the width of the marker viewport. In the case above, it is set to 13.
 This is the height of the marker viewport
 * orient:    
 This is my favourite attribute. This places the marker in the desired direction specified by the shape it is marking.
-* refX: 
-When you ommit it, it sia by default setted to **0**. This attribute determines which point on the marker element will be set as the reference point in the **X** direction.
-* refY: 
+* refX:    
+When you ommit it, it is set by default setted to **0**. This attribute determines which point on the marker element will be set as the reference point in the **X** direction.
+* refY:    
 When you ommit it, it sia by default setted to **0**. This attribute determines which point on the marker element will be set as the reference point in the **Y** direction.
+
+
+![marker](./img/marker.png).
