@@ -1,73 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SVG</title>
+    <style>
+      svg {
+        background: yellow;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>SVG</title>
-  <style>
-    svg {
-      background: yellow;
-    }
+      body {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        flex-wrap: wrap;
+      }
 
-    body {
-      display: flex;
-      justify-content: center;
-      margin-top: 50px;
-      flex-wrap: wrap;
-    }
+      circle {
+        stroke-width: 1px;
+        stroke: blue;
+        stroke-dasharray: 70;
+        fill: transparent;
+        stroke-dashoffset: 20;
+      }
 
-    circle {
-      stroke-width: 1px;
-      stroke: blue;
-      stroke-dasharray: 70;
-      fill: transparent;
-      stroke-dashoffset: 20;
-    }
+      text {
+        background: red
+      }
 
-    .first {
-      stroke-linejoin: bevel;
-    }
+      marker {
+        fill: green;
+      }
+    </style>
+  </head>
 
-    ;
+  <body>
+    <div class="empyty"></div>
 
-    marker {
-      fill: green;
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="empyty"></div>
-
-  <svg width="400px" height="400px" viewbox='0 0 350 350' preserveAspectRatio="none">
-
-
-    <defs>
-      <marker id="markerFstSqr" markerWidth="20" markerHeight="20" refX="0" refY="0" orient='auto'  >
-        <rect style="stroke: red; fill: transparent" y='0' x='0' width='20px' height='20px'></rect>
-      </marker>
-      
-      <marker id="markerSecSqr" markerWidth="20" markerHeight="20" refX="10" refY="10" orient='auto'  >
-        <rect style="stroke: red; fill: transparent" y='0' x='0' width='20px' height='20px'></rect>
-      </marker>
-    </defs>
-    
-
-    <path d="M100,40 L150,40 L150,100" style="
-    stroke: #6666ff; 
-    stroke-width: 1px; 
-    fill: none;
-    marker-start: url(#markerFstSqr);
-    marker-end: url(#markerSecSqr);" />
-
-
-
-  </svg>
-
-
-</body>
-
+    <svg
+      width="400px"
+      height="400px"
+      viewbox="0 0 350 350"
+      preserveAspectRatio="none"
+    >
+      <text x="20" y="40">Example SVG text 1</text>
+    </svg>
+  </body>
 </html>
