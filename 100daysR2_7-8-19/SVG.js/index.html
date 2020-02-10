@@ -26,11 +26,14 @@
       }
 
       text {
-        background: red
+        background: red;
+        /* text-anchor: middle; */
+        kerning: 20px;
       }
 
-      marker {
-        fill: green;
+      rect {
+        stroke: green;
+        fill: transparent;
       }
     </style>
   </head>
@@ -43,8 +46,35 @@
       height="400px"
       viewbox="0 0 350 350"
       preserveAspectRatio="none"
+      unicode-bidi:
+      bidi-override;
     >
-      <text x="20" y="40">Example SVG text 1</text>
+      <text x="20" y="20"> Axample SVG text 1</text>
+      <text x="20" y="60" textLength="300">Axample SVG text 1</text>
+      <text x="20" y="100" textLength="300" lengthAdjust="spacing">
+        Axample SVG text 1
+      </text>
+      <text x="20" y="140" textLength="300" lengthAdjust="spacingAndGlyphs">
+        Axample SVG text 1
+      </text>
+    </svg>
+
+    <svg
+      width="400px"
+      height="400px"
+      viewbox="0 0 350 350"
+      preserveAspectRatio="none"
+      unicode-bidi:
+      bidi-override;
+    >
+      <text x="20" y="20"> Axample SVG text 1</text>
+      <text x="20" y="60" textLength="110">Axample SVG text 1</text>
+      <text x="20" y="100" textLength="110" lengthAdjust="spacing">
+        Axample SVG text 1
+      </text>
+      <text x="20" y="140" textLength="110" lengthAdjust="spacingAndGlyphs">
+        Axample SVG text 1
+      </text>
     </svg>
   </body>
 </html>

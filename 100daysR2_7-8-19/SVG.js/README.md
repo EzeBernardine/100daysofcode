@@ -1,110 +1,5 @@
 # **Drawing Shapes**
 
-## Svg Line element
-
-As the name applies, it is used to draw lines.
-
-```html
-<line x1="200" x2="150" y1="50" y2="150" stroke="pink" />
-```
-
-![line](img/line.png)
-
-| attribute | meaning                    |
-| --------- | -------------------------- |
-| x1        | The x position of point 1. |
-| y1        | The y position of point 1. |
-| x2        | The x position of point 2. |
-| y2        | The y position of point 2. |
-
-## Polyline
-
-This is used to create a group of connected lines. It has on attribute; the `points` which is a list of all the points seperated with a coma
-
-| attribute | meaning                                                                                                                                                                                    |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| points    | Its a list of points, seperated by a comma. Each point must contain two numbers, an x coordinate and a y coordinate. So the list (0,0), (1,1) and (2,2) could be written: "0 0, 1 1, 2 2". |
-
-```html
-<stye>
-  polygon { fill: black }
-</stye>
-<polyline points="60 150, 150 150, 200 50, 130 30, 50 50" />
-```
-
-![polyline](img/polyline.png)
-
-## Polygon
-
-Polygons are a lot like polylines in that they're composed of straight line segments connecting a list of points.
-
-```html
-<polygon points="50 60, 100 100, 50 140, 50 60, 150 140, 150 60, 100 100" />
-```
-
-| attribute | meaning                                                                                                                                                                                                                                                                                      |
-| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| points    | It is a list of points sepereated with commas. Each point must contain two numbers, an x coordinate and a y coordinate. So the list (0,0), (1,1) and (2,2) could be written: "0 0, 1 1, 2 2". The drawing then closes the path, so a final straight line would be drawn from (2,2) to (0,0). |
-
-![polygon](img/polygon.png)
-
-> > **The path automatically returns to the first point for you at the end, creating a closed shape**.
-
-For example
-
-```html
-<polygon points="50 60, 100 100, 50 140, 50 60, 150 140, 150 60" />
-```
-
-![joinedPolygon](img/joinPolygon.png)
-
-# Path
-
-It is used to create lines, curves, arcs and more. Path SVG can be executed by using the path tag.The `<path>`element in SVG is the ultimate drawing element. It can draw anything! The path element takes a single attribute to describe what it draws: the `` attribute.
-M x,y | Move to the absolute coordinates x,y
-
-| Serial number        | attribute                             | meaning                                                                                                                                                                                                                                                                                   |
-| -------------------- | ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **straight lines**   |                                       |
-| ******\_\_\_\_****** | ******\_\_\_\_******                  | ************************************\_\_\_\_************************************                                                                                                                                                                                                          |
-| 1                    | M (x,y)                               | Move to the absolute coordinates x,y                                                                                                                                                                                                                                                      |
-| 2                    | m (x,y)                               | Move to the right x and down y (or left and up if negative values) (The "Move To" command appears at the beginning of paths to specify where the drawing should start)                                                                                                                    |
-| ******\_\_\_\_****** | ******\_\_\_\_******                  | ************************************\_\_\_\_************************************                                                                                                                                                                                                          |
-| 3                    | L (x,y)                               | Draw a straight line to the absolute coordinates x,y                                                                                                                                                                                                                                      |
-| 4                    | l (x,y )                              | Draw a straight line to a point that is relatively right x and down y (or left and up if negative values)                                                                                                                                                                                 |
-| ******\_\_\_\_****** | ******\_\_\_\_******                  | ************************************\_\_\_\_************************************                                                                                                                                                                                                          |
-| 5                    | H (x)                                 | Draw a line horizontally to the exact coordinate x                                                                                                                                                                                                                                        |
-| 6                    | h (x)                                 | Draw a line horizontally relatively to the right x (or to the left if a negative value)                                                                                                                                                                                                   |
-| ******\_\_\_\_****** | ******\_\_\_\_******                  | ************************************\_\_\_\_************************************                                                                                                                                                                                                          |
-| 7                    | V( y)                                 | Draw a line vertically to the exact coordinate y                                                                                                                                                                                                                                          |
-| 8                    | v( y)                                 | Draw a line vertically relatively down y (or up if a negative value)                                                                                                                                                                                                                      |
-|                      |                                       |
-| 9                    | Z (or z)                              | Draw a straight line back to the start of the path                                                                                                                                                                                                                                        |
-| **curve lines**      |                                       |
-| ******\_\_\_\_****** | ******\_\_\_\_******                  | ************************************\_\_\_\_************************************                                                                                                                                                                                                          |
-| 10                   | C ( cX1,cY1 cX2,cY2 eX,eY)            | Draw a bezier curve based on two bezier control points and end at specified coordinates                                                                                                                                                                                                   |
-| 11                   | c                                     | Same with all relative values                                                                                                                                                                                                                                                             |
-| ******\_\_\_\_****** | ******\_\_\_\_******                  | ************************************\_\_\_\_************************************                                                                                                                                                                                                          |
-| 12                   | S (cX2,cY2 eX,eY)                     | Basically a C command that assumes the first bezier control point is a reflection of the last bezier point used in the previous S or C command                                                                                                                                            |
-| 13                   | s                                     | Same with all relative values                                                                                                                                                                                                                                                             |
-| ******\_\_\_\_****** | ******\_\_\_\_******                  | ************************************\_\_\_\_************************************                                                                                                                                                                                                          |
-| 14                   | Q (cX,cY eX,eY)                       | Draw a bezier curve based a single bezier control point and end at specified coordinates                                                                                                                                                                                                  |
-| 15                   | q                                     | Same with all relative values                                                                                                                                                                                                                                                             |
-| ******\_\_\_\_****** | ******\_\_\_\_******                  | ************************************\_\_\_\_************************************                                                                                                                                                                                                          |
-| 16                   | T (eX,eY)                             | Basically a Q command that assumes the first bezier control point is a reflection of the last bezier point used in the previous Q or T command                                                                                                                                            |
-| 17                   | t                                     | Same with all relative values                                                                                                                                                                                                                                                             |
-| ******\_\_\_\_****** | ******\_\_\_\_******                  | ************************************\_\_\_\_************************************                                                                                                                                                                                                          |
-| 18                   | A (rX,rY rotation, arc, sweep, eX,eY) | Draw an arc that is based on the curve an oval makes. First define the width and height of the oval. Then the rotation of the oval. Along with the end point, this makes two possible ovals. So the arc and sweep are either 0 or 1 and determine which oval and which path it will take. |
-| 19                   | a                                     | Same with relative values for eX,eY                                                                                                                                                                                                                                                       |
-
-> **Uppercase letters mean the position will absolutely positioned while lowercase letters mean relative positioning.**
-
-For instance
-
-    M 100,100 means "Pick up the pen and move it to the exact coordinates 100,100" ( this is absolute positioning)
-
-    m 100,100 means "Move the Pen 100 down and 100 right from wherever you currently are." (this is relative positioning)
-
 ## Straight lines
 
 Lets see an example
@@ -625,26 +520,83 @@ I will pick each attribute here on after another. First being the id attribute.
 
 ![marker](./img/marker.png).
 
+### **SVG text element** [Jenvokkov](http://tutorials.jenkov.com/svg/text-element.html#text-direction)
 
-### **SVG text element**
-SVG text offers the best of both worlds. It’s rendered like other graphic elements so you can do things like add strokes and fills that you can add to shapes, lines, and arrowheads. ***It’s also packaged as XML character data, which means it’s real text.***
+SVG text offers the best of both worlds. It’s rendered like other graphic elements so you can do things like add strokes and fills that you can add to shapes, lines, and arrowheads. **_It’s also packaged as XML character data, which means it’s real text._**
 [vanseodesign](https://vanseodesign.com/web-design/how-to-work-with-svg-text/)
-
 
 ![text Image](https://vanseodesign.com/blog/wp-content/uploads/2015/10/em-box.png)
 
-#### Text Definitions
- Before diving deeper into SVG text, here are three definitions that are good to know:
+#### Positioning Text
 
-   * Glyphs
-    Glyphs are visual representations of letters or symbols. Thus, the letter "a" can be drawn using many different glyphs, since there are many different visual representations of the letter "a".
+The position of the text is determined by the x and y attributes of the <code>text</code> element. The x-attribute determines where to locate the left edge of the text (the start of the text). The y-attribute determines where to locate the bottom of the text (not the top).
 
-   * Fonts
-    Fonts are collections of glyphs which can visualize a set of letters and symbols.
+Thus, there is a difference between the y-position of a text and the y-position of lines, rectangles, or other shapes.
 
-  *  Characters
-    Characters are a digital (binary) representation of a letter or symbol. A character may take 1 or more bytes to represent. When a computer renders characters, it maps those characters to glyphs in a font.
-[Jenvok](http://tutorials.jenkov.com/svg/text-element.html)
+#### Text Anchor
 
+The anchor of a text determines what part of the text that is positioned at the x-position specified in the x attribute of the text element. By default the anchor of a text is the left edge of the the text. Other values includes, `middle`, `start` and `end`
 
+#### Text Length
 
+You can set the length of a text using the textLength attribute of the `text` element. The length of the text is then made to fit the specified length by adjusting the space between the characters, and the size of the glyphs.
+The user agent will ensure that the text does not extend farther than that distance, using the method or methods specified by the `lengthAdjust` attribute.
+
+**`lengthAdjust`**
+
+This only applies when `tspan` or `text` has a set textLength
+The lengthAdjust attribute controls how the text is stretched into the length defined by the textLength attribute.
+The default value is `spacing` which preserves the letter shapes but adjusts the gaps between characters.
+
+```html
+<svg
+  width="400px"
+  height="400px"
+  viewbox="0 0 350 350"
+  preserveAspectRatio="none"
+  unicode-bidi:
+  bidi-override;
+>
+  <text x="20" y="20">Axample SVG text 1</text>
+  <text x="20" y="60" textLength="300">Axample SVG text 1</text>
+  <text x="20" y="100" textLength="300" lengthAdjust="spacing">
+    Axample SVG text 1
+  </text>
+  <text x="20" y="140" textLength="300" lengthAdjust="spacingAndGlyphs">
+    Axample SVG text 1
+  </text>
+</svg>
+
+<svg
+  width="400px"
+  height="400px"
+  viewbox="0 0 350 350"
+  preserveAspectRatio="none"
+  unicode-bidi:
+  bidi-override;
+>
+  <text x="20" y="20">Axample SVG text 1</text>
+  <text x="20" y="60" textLength="110">Axample SVG text 1</text>
+  <text x="20" y="100" textLength="110" lengthAdjust="spacing">
+    Axample SVG text 1
+  </text>
+  <text x="20" y="140" textLength="110" lengthAdjust="spacingAndGlyphs">
+    Axample SVG text 1
+  </text>
+</svg>
+```
+
+![marker](./img/textGlyph.png).
+
+![marker](./img/textHighlight.png).
+| Attribute       | Description                                                                                                                   |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| font-family     | The font to use, for instance 'Arial' or 'Verdana'.                                                                           |
+| font-size       | The size of the font, for instance '12px' or '24px'.                                                                          |
+| kerning         | Spacing between letters, for instance '2' or '3' (default=1).                                                                 |
+| letter-spacing  | Spacing between letters, for instance '2' or '3'. Similar to kerning.                                                         |
+| word-spacing    | Spacing between words, for instance '2' or '3'.                                                                               |
+| text-decoration | Can be any of none, underline, overline and line-through.                                                                     |
+| stroke          | The outline color of the font. By default text only has fill color, not stroke. Adding stroke will make the font appear bold. |
+| stroke-width    | The width of the outline color of the font.                                                                                   |
+| fill            | The fill color of the font.                                                                                                   |

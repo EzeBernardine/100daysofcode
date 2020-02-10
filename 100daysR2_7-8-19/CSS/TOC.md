@@ -1,0 +1,93 @@
+Pseudo-classes
+
+- ☑️ :active
+- ☑️ :any-link
+- ☑️ :checked
+- ☑️ :blank
+- ☑️ :default
+- ☑️ :defined
+- ☑️ :dir()
+- ☑️ :disabled
+- ☑️ :empty
+- ☑️ :enabled
+- ☑️ :first
+- ☑️ :first-child
+- ☑️ :first-of-type
+- ☑️ :fullscreen
+- ☑️ :focus
+- ☑️ :focus-visible
+- ☑️ :focus-within
+- ☑️ :has()
+- ☑️ :host()
+- ☑️ :host-context()
+- ☑️ :hover
+- ☑️ :indeterminate
+- ☑️ :in-range
+- ☑️ :invalid
+- ☑️ :is() (:matches(), :any())
+- ☑️ :lang()
+- ☑️ :last-child
+- ☑️ :last-of-type
+- ☑️ :left
+- ☑️ :link
+- ☑️ :not()
+- ☑️ :nth-child()
+- ☑️ :nth-last-child()
+- ☑️ :nth-last-of-type()
+- ☑️ :nth-of-type()
+- ☑️ :only-child
+- ☑️ :only-of-type
+- ☑️ :optional
+- ☑️ :out-of-range
+- ☑️ :placeholder-shown
+- ☑️ :read-only
+- ☑️ :read-write
+- ☑️ :required
+- ☑️ :right
+- ☑️ :root
+- ☑️ :scope
+- ☑️ :target
+- ☑️ :valid
+- ☑️ :visited
+- ☑️ :where()
+
+Pseudo-elements
+
+- ☑️ ::-moz-progress-bar
+- ☑️ ::-moz-range-progress
+- ☑️ ::-moz-range-thumb
+- ☑️ ::-moz-range-track
+- ☑️ ::-ms-browse
+- ☑️ ::-ms-check
+- ☑️ ::-ms-clear
+- ☑️ ::-ms-expand
+- ☑️ ::-ms-fill
+- ☑️ ::-ms-fill-lower
+- ☑️ ::-ms-fill-upper
+- ☑️ ::-ms-reveal
+- ☑️ ::-ms-thumb
+- ☑️ ::-ms-ticks-after
+- ☑️ ::-ms-ticks-before
+- ☑️ ::-ms-tooltip
+- ☑️ ::-ms-track
+- ☑️ ::-ms-value
+- ☑️ ::-webkit-progress-bar
+- ☑️ ::-webkit-progress-value
+- ☑️ ::-webkit-slider-runnable-track
+- ☑️ ::-webkit-slider-thumb
+- ☑️ ::after (:after)
+- ☑️ ::backdrop
+- ☑️ ::before (:before)
+- ☑️ ::cue
+- ☑️ ::first-letter (:first-letter)
+- ☑️ ::first-line (:first-line)
+- ☑️ ::grammar-error
+- ☑️ ::marker
+- ☑️ ::part()
+- ☑️ ::placeholder
+- ☑️ ::selection
+- ☑️ ::slotted()
+- ☑️ ::spelling-error
+
+
+
