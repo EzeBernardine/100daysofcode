@@ -6,75 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>SVG</title>
     <style>
-      svg {
-        background: yellow;
-      }
+    
 
-      body {
-        display: flex;
-        justify-content: center;
-        margin-top: 50px;
-        flex-wrap: wrap;
-      }
-
-      circle {
-        stroke-width: 1px;
-        stroke: blue;
-        stroke-dasharray: 70;
-        fill: transparent;
-        stroke-dashoffset: 20;
-      }
-
-      text {
-        background: red;
-        /* text-anchor: middle; */
-        kerning: 20px;
-      }
-
-      rect {
-        stroke: green;
-        fill: transparent;
-      }
+    text {
+      font-size: 5rem;
+      writing-mode: tb;
+    }
     </style>
   </head>
 
   <body>
     <div class="empyty"></div>
 
-    <svg
-      width="400px"
-      height="400px"
-      viewbox="0 0 350 350"
-      preserveAspectRatio="none"
-      unicode-bidi:
-      bidi-override;
-    >
-      <text x="20" y="20"> Axample SVG text 1</text>
-      <text x="20" y="60" textLength="300">Axample SVG text 1</text>
-      <text x="20" y="100" textLength="300" lengthAdjust="spacing">
-        Axample SVG text 1
-      </text>
-      <text x="20" y="140" textLength="300" lengthAdjust="spacingAndGlyphs">
-        Axample SVG text 1
+    <svg  viewbox="0 0 547 400"   class="svg1">
+      <text
+        transform="matrix(1 0 0 1 256.00085 72.51587)"
+        font-family="Roboto"
+      >
+        the
       </text>
     </svg>
 
-    <svg
-      width="400px"
-      height="400px"
-      viewbox="0 0 350 350"
-      preserveAspectRatio="none"
-      unicode-bidi:
-      bidi-override;
-    >
-      <text x="20" y="20"> Axample SVG text 1</text>
-      <text x="20" y="60" textLength="110">Axample SVG text 1</text>
-      <text x="20" y="100" textLength="110" lengthAdjust="spacing">
-        Axample SVG text 1
-      </text>
-      <text x="20" y="140" textLength="110" lengthAdjust="spacingAndGlyphs">
-        Axample SVG text 1
-      </text>
-    </svg>
+  
   </body>
 </html>

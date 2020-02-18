@@ -586,17 +586,25 @@ The default value is `spacing` which preserves the letter shapes but adjusts the
 </svg>
 ```
 
-![marker](./img/textGlyph.png).
+![marker](./img/textGlyph.png)
 
-![marker](./img/textHighlight.png).
-| Attribute       | Description                                                                                                                   |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| font-family     | The font to use, for instance 'Arial' or 'Verdana'.                                                                           |
-| font-size       | The size of the font, for instance '12px' or '24px'.                                                                          |
-| kerning         | Spacing between letters, for instance '2' or '3' (default=1).                                                                 |
-| letter-spacing  | Spacing between letters, for instance '2' or '3'. Similar to kerning.                                                         |
-| word-spacing    | Spacing between words, for instance '2' or '3'.                                                                               |
-| text-decoration | Can be any of none, underline, overline and line-through.                                                                     |
-| stroke          | The outline color of the font. By default text only has fill color, not stroke. Adding stroke will make the font appear bold. |
-| stroke-width    | The width of the outline color of the font.                                                                                   |
-| fill            | The fill color of the font.                                                                                                   |
+![marker](./img/textHighlight.png)
+
+| Attribute         | Description                                                                                                                   |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `font-family`     | The font to use, for instance 'Arial' or 'Verdana'.                                                                           |
+| `font-size`       | The size of the font, for instance '12px' or '24px'.                                                                          |
+| `kerning`         | Spacing between letters, for instance '2' or '3' (default=1).                                                                 |
+| `letter-spacing`  | Spacing between letters, for instance '2' or '3'. Similar to kerning.                                                         |
+| `word-spacing`    | Spacing between words, for instance '2' or '3'.                                                                               |
+| `text-decoratio`n | Can be any of none, underline, overline and line-through.                                                                     |
+| `stroke`          | The outline color of the font. By default text only has fill color, not stroke. Adding stroke will make the font appear bold. |
+| `stroke-width`    | The width of the outline color of the font.                                                                                   |
+| `fill`            | The fill color of the font.                                                                                                   |
+| `textLength`      | **It sets the length of a text**                                                                                              |
+| `lengthAdjust`    | **specify if both letter spacing and glyph size should be adjusted.**                                                         |
+
+| Properties   | Values                            |
+| ------------ | --------------------------------- |
+| writing-mood | Determines how to display a text  |
+| direction    | It sets the direction of the text |
