@@ -6,27 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>SVG</title>
     <style>
-    
+      h1 {
+        color: green;
+      }
+      svg {
+        fill: currentColor;
+      }
 
-    text {
-      font-size: 5rem;
-      writing-mode: tb;
-    }
+      text {
+        font-size: rem;
+        /* writing-mode: tb; */
+      }
     </style>
   </head>
 
   <body>
     <div class="empyty"></div>
-
-    <svg  viewbox="0 0 547 400"   class="svg1">
-      <text
-        transform="matrix(1 0 0 1 256.00085 72.51587)"
-        font-family="Roboto"
-      >
-        the
-      </text>
-    </svg>
-
-  
+    <!-- <use xlink:href="#icon-phone"></use> -->
+    <h1>
+      hello
+      <svg viewbox="0 0 547 400" class="svg1">
+        <text
+          transform="matrix(1 0 0 1 256.00085 72.51587)"
+          font-family="Roboto"
+        >
+          the
+        </text>
+      </svg>
+    </h1>
   </body>
 </html>

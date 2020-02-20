@@ -608,3 +608,17 @@ The default value is `spacing` which preserves the letter shapes but adjusts the
 | ------------ | --------------------------------- |
 | writing-mood | Determines how to display a text  |
 | direction    | It sets the direction of the text |
+
+### **SVG tspan element**
+
+[Jenvokkov](http://tutorials.jenkov.com/svg/tspan-element.html)
+
+While `tspan` it functions a lot like a normal `span` in HTML, it accepts attributes that unlock powerful text-shaping capabilities like `textLength`
+
+- tspan Example
+- Vertical Positioning
+- Horizontal Positioning
+- Styling tspan Elements
+- Superscript and Subscript with baseline-shift
+
+<!-- [read later](https://css-tricks.com/mega-list-svg-information/) -->

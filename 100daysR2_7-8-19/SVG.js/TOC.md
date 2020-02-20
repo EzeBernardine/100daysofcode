@@ -34,7 +34,7 @@
 *  ☑️  SVG textpath element
 *  ☑️  SVG switch element
 *  ☑️  SVG image element
-*  ☑️  SVG a element
+*  ☑️  SVG a element    
 *  ☑️  SVG defs Elements
 *  ☑️  SVG symbol Element
 *  ☑️  SVG use Element
