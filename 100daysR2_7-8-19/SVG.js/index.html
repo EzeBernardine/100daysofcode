@@ -6,33 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>SVG</title>
     <style>
-      h1 {
-        color: green;
+      body {
+        padding: 0;
+        margin: 200px;
+        display: flex;
+        flex-wrap: wrap;
       }
       svg {
         fill: currentColor;
+        background-color: orange;
+        min-width: 400px;
+        min-height: 400px;
+        margin: 20px;
       }
-
-      text {
-        font-size: rem;
-        /* writing-mode: tb; */
+      path, circle, rect {
+        fill: white;
       }
     </style>
   </head>
 
   <body>
-    <div class="empyty"></div>
-    <!-- <use xlink:href="#icon-phone"></use> -->
-    <h1>
-      hello
-      <svg viewbox="0 0 547 400" class="svg1">
-        <text
-          transform="matrix(1 0 0 1 256.00085 72.51587)"
-          font-family="Roboto"
-        >
-          the
-        </text>
-      </svg>
-    </h1>
+    <svg viewbox="0 0  400px 400px" width="400px" height="400px">
+        <switch>
+            <text y='50px' x='50px'  systemLanguage="ar">مرحبا</text>
+            <text y='50px' x='50px'  systemLanguage="en">Hello!</text>
+            <text y='50px' x='50px'  systemLanguage="en-gb">Wotcha!</text>
+            <text y='50px' x='50px'  systemLanguage="de,nl">Hallo!</text>  
+            <text y='50px' x='50px'  systemLanguage="en-us">Howdy!</text>
+            <text y='50px' x='50px'  systemLanguage="en-au">G'day!</text>
+            <text y='50px' x='50px'  systemLanguage="es">Hola!</text>
+            <text y='50px' x='50px'  systemLanguage="fr">Bonjour!</text>
+            <text y='50px' x='50px'  systemLanguage="ja">こんにちは</text>
+            <text y='50px' x='50px'  systemLanguage="ru">Привет!</text>
+            <text y='50px' x='50px' >☺</text>
+         </switch>
+    </svg>
+
+    </svg>
   </body>
 </html>

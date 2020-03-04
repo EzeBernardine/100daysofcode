@@ -255,7 +255,7 @@ Adding some lines accross them for more explanation,
 
 ### Arcs
 
-Will have grt back to this concept later.
+Will have to go back to this concept later.
 
 ## Fills and Strokes
 
@@ -615,10 +615,140 @@ The default value is `spacing` which preserves the letter shapes but adjusts the
 
 While `tspan` it functions a lot like a normal `span` in HTML, it accepts attributes that unlock powerful text-shaping capabilities like `textLength`
 
-- tspan Example
 - Vertical Positioning
+
+  If you want the lines to be positioned relative to each other vertically, you can do so using the dy attribute (delta y):
+
+```
+   <svg
+      viewbox="0   0  400px 400px"
+      width="400px"
+      height="400px"
+    >
+      <text y='20px'>
+        <tspan>tspan line 1</tspan>
+        <tspan dy="10">tspan line 2</tspan>
+      </text>
+    </svg>
+```
+
+**_If you write multiple numbers inside the dy attribute, each number is applied to the characters of the text inside the elem `tspan`ent. Here is an example:_**
+
+```
+  <tspan dy="5 10">123</tspan>
+```
+
 - Horizontal Positioning
-- Styling tspan Elements
-- Superscript and Subscript with baseline-shift
+
+  To position the text relatively on the x-axis you can use the dx attribute (delta x).
+
+```
+  <tspan dy="5 10" dx='1'>123</tspan>
+```
+
+**_If you specify more than one number inside the dx attribute, each number is applied to each letter inside the <tspan> element. Here is an example:_**
+
+```
+ <tspan dx="5 10 20">123</tspan>
+```
+
+**_You can also set the x attribute to fix the x-coordinate of the text lines._**
+
+```
+  <text y='20px'>
+        <tspan x='10'>tspan line 1</tspan>
+        <tspan x="10" dy='15'>tspan line 2</tspan>
+        <tspan x="10" dy='15'>123</tspan>
+ </text>
+```
+
+### **SVG textpath element**
+
+The SVG `textpath` element is used to layout text along a path, for instance in a circle.
+
+```
+   <svg viewbox="0 0  400px 400px" width="400px" height="400px">
+     <circle id='myTextPath' r='100px' cy='150px' cx='150px' ></circle>
+      <text x="0" y="0">
+        <textPath xlink:href="#myTextPath">
+          Text along a this curved path...
+        </textPath>
+      </text>
+    </svg>
+
+    <svg viewbox="0 0  400px 400px" width="400px" height="400px">
+     <circle id='myTextPath' r='100px' cy='150px' cx='150px' ></circle>
+      <text x="50" y="50">
+        <textPath xlink:href="#myTextPath">
+          Text along a this curved path...
+        </textPath>
+      </text>
+    </svg>
+
+    <svg viewbox="0 0  400px 400px" width="400px" height="400px">
+     <circle id='myTextPath' r='100px' cy='150px' cx='150px' ></circle>
+      <text x="-50" y="-50">
+        <textPath xlink:href="#myTextPath">
+          Text along a this curved path...
+        </textPath>
+      </text>
+    </svg>
+
+    <svg viewbox="0 0 400px 400px" width="400px" height="400px">
+      <path id="myTextPath2" d="M10,10 l100,0 l100,30 q0,100 150,100" />
+
+      <text x="10" y="100">
+        <textPath xlink:href="#myTextPath2">
+          111122223333444455556666777788889999
+        </textPath>
+      </text>
+```
+
+![textarea](./img/textArea.png)
+
+### **SVG switch element**
+ `switch` shows different  content depending on the browser's language settings. The switch element will display the first of its child elements whose `systemLanguage` attribute matches the user's language, or the fallback element with no `systemLanguage` attribute if none of them match.
+
+> **The display and visibility properties have no effect on <switch> element processing. In particular, setting display:none on a child has no effect on the true/false testing for <switch> processing**
+
+```
+<switch>
+    <g systemLanguage="en-UK">
+        <text x="10" y="20">UK English</text>
+    </g>
+    <g systemLanguage="en-us">
+        <text x="10" y="20">English</text>
+    </g>
+    <g systemLanguage="es">
+        <text x="10" y="20">Spanish</text>
+    </g>
+</switch> 
+
+      //      English
+```
+
+### **SVG a element**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- [read later](https://css-tricks.com/mega-list-svg-information/) -->

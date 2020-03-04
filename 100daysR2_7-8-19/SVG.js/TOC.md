@@ -28,18 +28,18 @@
    *  ☑️  fill-rule
    *  ☑️  stroke-miterlimit
 *  ☑️  SVG marker element
-*  ☑️  SVG text element
-*  ☑️  SVG tspan element
-*  ☑️  SVG tref element
-*  ☑️  SVG textpath element
-*  ☑️  SVG switch element
-*  ☑️  SVG image element
-*  ☑️  SVG a element    
+*  ☑️  SVG Animation
 *  ☑️  SVG defs Elements
+*  ☑️  SVG text element
+    *  ☑️  SVG tspan element
+    *  ☑️  SVG textpath element
+<!-- *  ☑️  SVG tref element -->
+*  ☑️  SVG switch element
+<!-- *  ☑️  SVG image element -->
+*  ☑️  SVG a element    
 *  ☑️  SVG symbol Element
 *  ☑️  SVG use Element
 *  ☑️  SVG and CSS - Cascading Style Sheets
-*  ☑️  SVG Animation
 *  ☑️  SVG Scripting
 *  ☑️  SVG Transformation
 *  ☑️  SVG Gradients
