@@ -707,7 +707,8 @@ The SVG `textpath` element is used to layout text along a path, for instance in 
 ![textarea](./img/textArea.png)
 
 ### **SVG switch element**
- `switch` shows different  content depending on the browser's language settings. The switch element will display the first of its child elements whose `systemLanguage` attribute matches the user's language, or the fallback element with no `systemLanguage` attribute if none of them match.
+
+`switch` shows different content depending on the browser's language settings. The switch element will display the first of its child elements whose `systemLanguage` attribute matches the user's language, or the fallback element with no `systemLanguage` attribute if none of them match.
 
 > **The display and visibility properties have no effect on <switch> element processing. In particular, setting display:none on a child has no effect on the true/false testing for <switch> processing**
 
@@ -722,33 +723,136 @@ The SVG `textpath` element is used to layout text along a path, for instance in 
     <g systemLanguage="es">
         <text x="10" y="20">Spanish</text>
     </g>
-</switch> 
+</switch>
 
       //      English
 ```
 
 ### **SVG a element**
 
+The SVG `<a>` element is used to create links in SVG images. SVG links work just like HTML links. Here are a few simple examples:
+
+- xlink:href ==> <span style="color: red;  ">**_Deprecated since SVG 2_**</span>  
+  The URL or URL fragment that the hyperlink points to.
+  You can set the xlink:show attribute on the `<a>`-element to either new or replace, to tell whether the content the link points to should be displayed in a new window, or replace the content of the existing window.
+
+<!-- > **You can set the** -->
+<!-- > -->
+
+> `xlink:show="replace"`--- **It tells the content the link points to to replace the content of the existing window.**
+>
+> `xlink:show="new"` --- **\*It tells the content the link points to to display in a new window.**
+
+- target  
+   Where to display the linked URL.
+  > `target='_blank'`--- **You can also set the target attribute to tell the browser to open the link in a specific frame or specific window.**
+  >
+  > `target='_top'` --- **\*It tells the content the link points to to display in a new window.**
+  >
+  > `target='_self'` --- **The current SVG image is replaced by the linked content in the same browsing context as the current SVG image.**
+  >
+  > `target='_parent'` --- **The immediate parent browsing context of the SVG image is replaced by the linked content, if it exists and can be securely accessed from this document.**
+
+### **SVG symbol element**
+
+The `<symbol>` element is used to define graphical template objects which can be instantiated by a `<use>` element. [mozilla](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/symbol)
+
+The SVG `<symbol>` element is used to define _reusable_ symbols.
+
+> The shapes nested inside a `<symbol>` are not displayed unless referenced by a `<use>` element. [Jenkov](http://tutorials.jenkov.com/svg/symbol-element.html)
+
+The `<symbol>` takes an `id`
+
+```
+ <symbol id="shape2">
+    <circle cx="25" cy="25" r="25" />
+  </symbol>
+```
+
+It is this `id` that the `use` element will use to refrence the symbol
+
+```
+ <use xlink:href="#shape2" x="50" y="25" />
+```
+
+![symbol elemt](./img/symbol_element.png)
+
+> The <symbol> element can carry it's own viewBox attribute and accessibility information, like`<title>`and `<desc>` tags.
+
+`<symbol>` with viewBox
+
+![symbol elemt](./img/symbol_withViewBox.png)
+
+`<symbol>` with no viewBox
+
+![symbol elemt](./img/symbol_noViewBox.png)
+
+### **SVG use element**
+It is used tfor reusing elements .
+SVG `<use>` element finds another bit of SVG code, referenced by ID, and clones it over inside the `<use>` element.
+
+example
+
+```
+<svg viewbox="0 0  400px 400px" width="400px" height="400px">
+  <g id="shape2">
+    <rect x="0" y="0" width="50" height="50" />
+  </g>
+
+  <use xlink:href="#shape2" x="200" y="50" />
+</svg>
+```
+
+### **SVG and CSS - Cascading Style Sheets**
+[Jenkov](http://tutorials.jenkov.com/svg/svg-and-css.html#css-attributes)
+
+#### Shape CSS properties
+
+| CSS Property      | Description                                                                                                      |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------- |
+| fill              | Sets fill color of the shape.                                                                                    |
+| fill-opacity      | Sets fill opacity of the shape.                                                                                  |
+| fill-rule         | Sets fill rule of the shape.                                                                                     |
+| marker            | Sets marker used along the lines (edges) of this shape.                                                          |
+| marker-start      | Sets start marker used along the lines (edges) of this shape.                                                    |
+| marker-mid        | Sets mid marker used along the lines (edges) of this shape.                                                      |
+| marker-end        | Sets end marker used along the lines (edges) of this shape.                                                      |
+| stroke            | Sets the stroke (line) color used to draw the outline of this shape.                                             |
+| stroke-dasharray  | Sets the stroke (line) dashing used to draw the outline of this shape.                                           |
+| stroke-dashoffset | Sets the stroke (line) dash offset used to draw the outline of this shape.                                       |
+| stroke-linecap    | Sets the stroke (line) line cap used to draw the outline of this shape. Valid values are round, butt and square. |
+| stroke-miterlimit | Sets the stroke (line) miter limit used to draw the outline of this shape.                                       |
+| stroke-opacity    | Sets the stroke (line) opacity used to draw the outline of this shape.                                           |
+| stroke-width      | Sets the stroke (line) width used to draw the outline of this shape.                                             |
+| text-rendering    | Sets the text-rendering used to draw the outline of this shape.                                                  |
+
+#### Text CSS properties
+
+| CSS Property                 | Description                                                        |
+| ---------------------------- | ------------------------------------------------------------------ |
+| alignment-baseline           | Sets how the text is aligned to its x and y coordinates.           |
+| baseline-shift               | Sets the baseline shift used to render text.                       |
+| dominant-baseline            | Sets the dominant baseline.                                        |
+| glyph-orientation-horizontal | Sets horizontal glyph orientation.                                 |
+| glyph-orientation-vertical   | Sets vertical glyph orientation.                                   |
+| kerning                      | Sets the kerning of the rendered text (kerning is letter spacing). |
 
 
 
 
+### SVG Fill Patterns
 
+Patterns are defined using `<pattern>` element and are used to fill graphics elements in tiled fashion.
 
+#### Note
+ 1. > First a <pattern> element is defined inside a <defs> element.
+ 2. > Second, the  element will be declared which references the <pattern> element ID from its style attribute, in the `fill` CSS property.
 
+<!-- #### Gradient CSS properties
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+| CSS Property | Description                                                      |
+| ------------ | ---------------------------------------------------------------- |
+| stop-color   | Sets the stop color used in a stop element used in a gradient.   |
+| stop-opacity | Sets the stop opacity used in a stop element used in a gradient. | -->
 
 <!-- [read later](https://css-tricks.com/mega-list-svg-information/) -->
