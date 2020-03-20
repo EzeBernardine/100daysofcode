@@ -11,45 +11,53 @@
         margin: 0px;
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 200px 50px;
+        grid-gap: 100px;
       }
       svg {
         fill: currentColor;
         background-color: orange;
         min-width: 400px;
         min-height: 400px;
-        margin: 100px 200px;
+      }
+      rect {
+        stroke-width: 3px;
       }
       symbol {
         fill: red;
         stroke-width: 2px;
       }
       circle {
-        fill: pink;
+        /* fill: pink; */
+      }
+      pattern {
+        fill: red;
       }
     </style>
   </head>
 
   <body>
     <svg viewbox="0 0  400px 400px" width="400px" height="400px">
-      <!-- <defs> -->
+      <defs>
         <pattern
           id="pattern1"
-          x="10"
-          y="10"
-          width="20"
-          height="20"
+          x="0"
+          y="0"
+          width="50"
+          height="50"
           patternUnits="userSpaceOnUse"
         >
-          <circle cx="10" cy="10" r="10" style="stroke: none; fill: pink" />
+          <circle cx="20" cy="20" r="20" style="stroke: none; fill: pink" />
         </pattern>
-      <!-- </defs> -->
+      </defs>
 
       <rect
-        x="100"
-        y="10"
-        width="100"
-        height="100"
-        style="stroke: #fff; fill: url(#pattern1);"
+        x="0"
+        y="0"
+        width="300"
+        height="300"
+        style="stroke: green; fill: url(#pattern1);"
       />
     </svg>
   </body>

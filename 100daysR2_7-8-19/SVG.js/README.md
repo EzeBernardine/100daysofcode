@@ -835,8 +835,7 @@ example
 | dominant-baseline            | Sets the dominant baseline.                                        |
 | glyph-orientation-horizontal | Sets horizontal glyph orientation.                                 |
 | glyph-orientation-vertical   | Sets vertical glyph orientation.                                   |
-| kerning                      | Sets the kerning of the rendered text (kerning is letter spacing). |
-
+| kerning                      | Sets the kerning of the 
 
 
 
@@ -846,8 +845,12 @@ Patterns are defined using `<pattern>` element and are used to fill graphics ele
 
 #### Note
  1. > First a <pattern> element is defined inside a <defs> element.
- 2. > Second, the  element will be declared which references the <pattern> element ID from its style attribute, in the `fill` CSS property.
+ 2. > Second, define the shapes inside of the pattern
+ 3. > Thirdly, the  element to be declared should references the <pattern> element ID from its style attribute, in the `fill` CSS property.
 
+
+
+![svg fill pattern](./img/svg_fill_Pattern.png)
 <!-- #### Gradient CSS properties
 
 | CSS Property | Description                                                      |
