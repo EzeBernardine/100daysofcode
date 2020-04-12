@@ -21,44 +21,17 @@
         min-width: 400px;
         min-height: 400px;
       }
-      rect {
-        stroke-width: 3px;
-      }
-      symbol {
-        fill: red;
-        stroke-width: 2px;
-      }
-      circle {
-        /* fill: pink; */
-      }
-      pattern {
-        fill: red;
+
+      path {
+        fill: white;
+        stroke: red;
       }
     </style>
   </head>
 
   <body>
     <svg viewbox="0 0  400px 400px" width="400px" height="400px">
-      <defs>
-        <pattern
-          id="pattern1"
-          x="0"
-          y="0"
-          width="50"
-          height="50"
-          patternUnits="userSpaceOnUse"
-        >
-          <circle cx="20" cy="20" r="20" style="stroke: none; fill: pink" />
-        </pattern>
-      </defs>
-
-      <rect
-        x="0"
-        y="0"
-        width="300"
-        height="300"
-        style="stroke: green; fill: url(#pattern1);"
-      />
+      <path d="M0 100  q 100 100, 200 0  , 100 -100, 200 -50 l 0 150 h -400 0 z" />
     </svg>
   </body>
 </html>

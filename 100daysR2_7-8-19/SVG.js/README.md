@@ -788,6 +788,7 @@ It is this `id` that the `use` element will use to refrence the symbol
 ![symbol elemt](./img/symbol_noViewBox.png)
 
 ### **SVG use element**
+
 It is used tfor reusing elements .
 SVG `<use>` element finds another bit of SVG code, referenced by ID, and clones it over inside the `<use>` element.
 
@@ -804,6 +805,7 @@ example
 ```
 
 ### **SVG and CSS - Cascading Style Sheets**
+
 [Jenkov](http://tutorials.jenkov.com/svg/svg-and-css.html#css-attributes)
 
 #### Shape CSS properties
@@ -828,29 +830,33 @@ example
 
 #### Text CSS properties
 
-| CSS Property                 | Description                                                        |
-| ---------------------------- | ------------------------------------------------------------------ |
-| alignment-baseline           | Sets how the text is aligned to its x and y coordinates.           |
-| baseline-shift               | Sets the baseline shift used to render text.                       |
-| dominant-baseline            | Sets the dominant baseline.                                        |
-| glyph-orientation-horizontal | Sets horizontal glyph orientation.                                 |
-| glyph-orientation-vertical   | Sets vertical glyph orientation.                                   |
-| kerning                      | Sets the kerning of the 
-
-
+| CSS Property                 | Description                                              |
+| ---------------------------- | -------------------------------------------------------- |
+| alignment-baseline           | Sets how the text is aligned to its x and y coordinates. |
+| baseline-shift               | Sets the baseline shift used to render text.             |
+| dominant-baseline            | Sets the dominant baseline.                              |
+| glyph-orientation-horizontal | Sets horizontal glyph orientation.                       |
+| glyph-orientation-vertical   | Sets vertical glyph orientation.                         |
+| kerning                      | Sets the kerning of the                                  |
 
 ### SVG Fill Patterns
 
 Patterns are defined using `<pattern>` element and are used to fill graphics elements in tiled fashion.
 
 #### Note
- 1. > First a <pattern> element is defined inside a <defs> element.
- 2. > Second, define the shapes inside of the pattern
- 3. > Thirdly, the  element to be declared should references the <pattern> element ID from its style attribute, in the `fill` CSS property.
 
-
+1.  > First a <pattern> element is defined inside a <defs> element.
+2.  > Second, define the shapes inside of the pattern
+3.  > Thirdly, the element to be declared should references the <pattern> element ID from its style attribute, in the `fill` CSS property.
 
 ![svg fill pattern](./img/svg_fill_Pattern.png)
+
+The `x` and `y` attributes of the `<pattern>` element defines how far into the shape in the `<pattern>` element the pattern starts.
+
+> Note: A pattern going deep into an element, will not stop the same pattern, occupying the top
+
+From the image above, in **_section C_**, the patterns went 30px deep into the `<rect>`, making it start 30px
+
 <!-- #### Gradient CSS properties
 
 | CSS Property | Description                                                      |
