@@ -846,7 +846,7 @@ Patterns are defined using `<pattern>` element and are used to fill graphics ele
 #### Note
 
 1.  > First a <pattern> element is defined inside a <defs> element.
-2.  > Second, define the shapes inside of the pattern
+2.  > Second, define the shape which is to serve as the tiless inside of the pattern
 3.  > Thirdly, the element to be declared should references the <pattern> element ID from its style attribute, in the `fill` CSS property.
 
 ![svg fill pattern](./img/svg_fill_Pattern.png)
@@ -856,6 +856,45 @@ The `x` and `y` attributes of the `<pattern>` element defines how far into the s
 > Note: A pattern going deep into an element, will not stop the same pattern, occupying the top
 
 From the image above, in **_section C_**, the patterns went 30px deep into the `<rect>`, making it start 30px
+
+- Example
+
+```css
+   <svg viewbox="0 0  400px 400px" width="400px" height="400px">
+      <defs>
+        <pattern
+          id="pattern1"
+          x="10"
+          y="10"
+          width="20"
+          height="20"
+          patternUnits="userSpaceOnUse"
+        >
+          <circle cx="10" cy="10" r="10" style="stroke: none; fill: #0000ff" />
+        </pattern>
+      </defs>
+
+      <rect
+        x="10"
+        y="10"
+        width="100"
+        height="100"
+        style="stroke: #000000; fill: url(#pattern1);"
+      />
+    </svg>
+```
+
+#### Props
+
+1. `patternUnits`="units to define x,y, width and height attributes."
+2. `patternContentUnits` ="units to define co-ordinate system of contents of pattern"
+3. `patternTransform` = "definition of an additional transformation from the pattern coordinate system onto the target coordinate system"
+4. `x`="x-axis co-ordinate"
+5. `y`="y-axis co-ordinate"
+6. `width`="length"
+7. `height`="length"
+8. `preserveAspectRatio`="to preserve width/height ratio of original content"
+9. `xlink:href`="reference to another pattern"
 
 <!-- #### Gradient CSS properties
 

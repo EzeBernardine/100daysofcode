@@ -31,7 +31,27 @@
 
   <body>
     <svg viewbox="0 0  400px 400px" width="400px" height="400px">
-      <path d="M0 100  q 100 100, 200 0  , 100 -100, 200 -50 l 0 150 h -400 0 z" />
+      <defs>
+        <pattern
+          id="pattern1"
+          x="10"
+          y="10"
+          width="20"
+          height="20"
+          patternUnits="userSpaceOnUse"
+          patternTransform="rotate(35)"
+        >
+          <circle cx="10" cy="10" r="10" style="stroke: none; fill: #0000ff" />
+        </pattern>
+      </defs>
+
+      <rect
+        x="10"
+        y="10"
+        width="100"
+        height="100"
+        style="stroke: #000000; fill: url(#pattern1);"
+      />
     </svg>
   </body>
 </html>
